@@ -1,1 +1,259 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — ODSAN Elektronik</title>
+<meta name="description" content="Elektronik kart tamiri, PCB tasarım ve endüstriyel elektronik hakkında teknik makaleler ve rehberler. ODSAN Elektronik mühendislik blogu.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* BLOG LAYOUT */
+.blog-layout{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+
+/* FEATURED POST */
+.post-featured{border:1px solid var(--border);overflow:hidden;margin-bottom:2px;transition:border-color .2s;display:block;color:inherit;text-decoration:none}
+.post-featured:hover{border-color:var(--alaz)}
+.pf-photo{height:380px;overflow:hidden;position:relative}
+.pf-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.post-featured:hover .pf-photo img{transform:scale(1.03)}
+.pf-label{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:8px;letter-spacing:2px;background:var(--alaz);color:white;padding:5px 10px;text-transform:uppercase}
+.pf-body{padding:32px}
+.post-meta{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.post-cat{font-family:var(--mono);font-size:8.5px;letter-spacing:1.5px;color:var(--alaz);text-transform:uppercase}
+.post-date{font-family:var(--mono);font-size:8.5px;color:var(--gray)}
+.post-title{font-family:var(--serif);font-size:clamp(18px,2.2vw,26px);font-weight:500;color:var(--onyx);line-height:1.3;margin-bottom:12px}
+.post-excerpt{font-size:14px;color:var(--text-soft);line-height:1.75;font-weight:300}
+.post-read{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--alaz);margin-top:16px;font-weight:500}
+.post-featured:hover .post-read{gap:10px}
+.post-read svg{transition:transform .2s}
+.post-featured:hover .post-read svg{transform:translateX(3px)}
+
+/* POST LIST */
+.post-list{display:flex;flex-direction:column;gap:2px}
+.post-item{border:1px solid var(--border);overflow:hidden;display:grid;grid-template-columns:200px 1fr;transition:border-color .2s;text-decoration:none;color:inherit}
+.post-item:hover{border-color:var(--alaz)}
+.pi-photo{overflow:hidden}
+.pi-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.post-item:hover .pi-photo img{transform:scale(1.05)}
+.pi-body{padding:20px 24px;display:flex;flex-direction:column;justify-content:center}
+.pi-body .post-title{font-size:16px;margin-bottom:8px}
+.pi-body .post-excerpt{font-size:13px;-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+
+/* SIDEBAR */
+.blog-sidebar{position:sticky;top:80px}
+.sidebar-box{border:1px solid var(--border);padding:24px;margin-bottom:16px}
+.sidebar-title{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);text-transform:uppercase;margin-bottom:16px}
+.cat-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.cat-list li a{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border-light);font-size:13px;color:var(--text-soft);transition:color .2s}
+.cat-list li:last-child a{border-bottom:none}
+.cat-list li a:hover{color:var(--alaz)}
+.cat-list li a span{font-family:var(--mono);font-size:10px;color:var(--gray)}
+
+.recent-post{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border-light);text-decoration:none;color:inherit}
+.recent-post:last-child{border-bottom:none}
+.rp-photo{width:60px;height:60px;flex-shrink:0;overflow:hidden}
+.rp-photo img{width:100%;height:100%;object-fit:cover}
+.rp-title{font-size:12px;color:var(--text);line-height:1.4;font-weight:500;margin-bottom:4px}
+.rp-date{font-family:var(--mono);font-size:9px;color:var(--gray)}
+.recent-post:hover .rp-title{color:var(--alaz)}
+
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.blog-tag{font-family:var(--mono);font-size:9px;letter-spacing:.5px;border:1px solid var(--border);padding:5px 10px;color:var(--gray-mid);transition:all .2s;cursor:pointer;text-decoration:none}
+.blog-tag:hover{border-color:var(--alaz);color:var(--alaz)}
+
+@media(max-width:1024px){
+  .blog-layout{grid-template-columns:1fr}
+  .blog-sidebar{position:static}
+  .pf-photo{height:280px}
+}
+@media(max-width:640px){
+  .post-item{grid-template-columns:1fr}
+  .pi-photo{height:180px}
+}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/905XXXXXXXXX" class="wa-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-badge"><div class="badge-line"></div><span class="badge-text">Teknik Blog</span></div>
+      <h1>Mühendislik<br><em>Bilgisi</em> & Rehberler</h1>
+    </div>
+    <p class="page-hero-lead">Elektronik kart tamiri, PCB tasarım ve endüstriyel elektronik hakkında pratik teknik içerikler. Sahadan gelen gerçek deneyimler.</p>
+  </div>
+</div>
+
+<div class="section-wrap">
+<div class="blog-layout">
+
+  <!-- MAIN CONTENT -->
+  <div>
+    <!-- Featured -->
+    <a href="#" class="post-featured reveal">
+      <div class="pf-photo">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80&fit=crop" alt="BGA yeniden lehimleme süreci">
+        <div class="pf-label">Öne Çıkan</div>
+      </div>
+      <div class="pf-body">
+        <div class="post-meta">
+          <span class="post-cat">Kart Tamiri</span>
+          <span class="post-date">15 Kasım 2024</span>
+        </div>
+        <h2 class="post-title">BGA Yeniden Lehimleme: Adım Adım Kapsamlı Rehber</h2>
+        <p class="post-excerpt">Ball Grid Array (BGA) bileşenler, modern elektronik kartların en kritik ve en hassas parçalarıdır. Bu rehberde X-ray doğrulamasından reballing sürecine kadar doğru BGA yeniden lehimleme tekniklerini ayrıntılı biçimde ele alıyoruz.</p>
+        <span class="post-read">Devamını oku <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Post list -->
+    <div class="post-list" style="margin-top:2px">
+
+      <a href="#" class="post-item reveal">
+        <div class="pi-photo">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80&fit=crop" alt="PLC tamiri">
+        </div>
+        <div class="pi-body">
+          <div class="post-meta"><span class="post-cat">Endüstriyel</span><span class="post-date">8 Kasım 2024</span></div>
+          <h3 class="post-title">PLC Arızası mı? Önce Şunu Kontrol Edin</h3>
+          <p class="post-excerpt">Siemens, ABB ve Mitsubishi PLC'lerde en sık karşılaşılan 5 arıza türü ve yerinde yapabileceğiniz ön teşhis adımları.</p>
+          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+        </div>
+      </a>
+
+      <a href="#" class="post-item reveal d1">
+        <div class="pi-photo">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&fit=crop" alt="Buzdolabı kart tamiri">
+        </div>
+        <div class="pi-body">
+          <div class="post-meta"><span class="post-cat">Beyaz Eşya</span><span class="post-date">2 Kasım 2024</span></div>
+          <h3 class="post-title">Buzdolabı Soğutmuyor: Kart Sorunu mu, Kompresör mü?</h3>
+          <p class="post-excerpt">Buzdolabı soğutma arızalarının %60'ı elektronik karttan kaynaklanır. Doğru teşhis için dikkat edilmesi gerekenler.</p>
+          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+        </div>
+      </a>
+
+      <a href="#" class="post-item reveal d2">
+        <div class="pi-photo">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80&fit=crop" alt="PCB tasarım ipuçları">
+        </div>
+        <div class="pi-body">
+          <div class="post-meta"><span class="post-cat">PCB Tasarım</span><span class="post-date">25 Ekim 2024</span></div>
+          <h3 class="post-title">Endüstriyel PCB Tasarımında 7 Kritik EMC Kuralı</h3>
+          <p class="post-excerpt">Üretim sonrası EMC testini geçemeyen kartların büyük çoğunluğunda yerleşim tasarım hatası bulunur. Baştan doğru yapmak için kritik kurallar.</p>
+          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+        </div>
+      </a>
+
+      <a href="#" class="post-item reveal">
+        <div class="pi-photo">
+          <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=400&q=80&fit=crop" alt="Medikal kart tamiri">
+        </div>
+        <div class="pi-body">
+          <div class="post-meta"><span class="post-cat">Medikal</span><span class="post-date">18 Ekim 2024</span></div>
+          <h3 class="post-title">Medikal Kart Tamirinde IEC 60601 Uyumu Neden Kritik?</h3>
+          <p class="post-excerpt">Hasta güvenliğini doğrudan etkileyen medikal elektroniklerin tamirinde standart uyumunun önemi ve dikkat edilmesi gerekenler.</p>
+          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+        </div>
+      </a>
+
+      <a href="#" class="post-item reveal d1">
+        <div class="pi-photo">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=80&fit=crop" alt="Solar inverter onarımı">
+        </div>
+        <div class="pi-body">
+          <div class="post-meta"><span class="post-cat">Enerji</span><span class="post-date">10 Ekim 2024</span></div>
+          <h3 class="post-title">Solar İnverter Kartı Arızalandığında Ne Yapmalısınız?</h3>
+          <p class="post-excerpt">Fotovoltaik sistem yatırımınızı korumak için inverter arızalarında izlenmesi gereken doğru adımlar ve onarılabilirlik değerlendirmesi.</p>
+          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+        </div>
+      </a>
+
+      <a href="#" class="post-item reveal d2">
+        <div class="pi-photo">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80&fit=crop" alt="İş makinesi elektronik arıza">
+        </div>
+        <div class="pi-body">
+          <div class="post-meta"><span class="post-cat">İş Makinesi</span><span class="post-date">3 Ekim 2024</span></div>
+          <h3 class="post-title">İş Makinesi ECU Arızası: Onarım mı, Yeni Alım mı?</h3>
+          <p class="post-excerpt">Bir iş makinesi ECU'sunun onarılıp onarılamayacağını değerlendirirken göz önünde bulundurulması gereken teknik ve ekonomik faktörler.</p>
+          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="blog-sidebar reveal d2">
+
+    <div class="sidebar-box">
+      <div class="sidebar-title">Kategoriler</div>
+      <ul class="cat-list">
+        <li><a href="#">Kart Tamiri <span>12</span></a></li>
+        <li><a href="#">Endüstriyel Otomasyon <span>8</span></a></li>
+        <li><a href="#">PCB Tasarım <span>6</span></a></li>
+        <li><a href="#">Beyaz Eşya <span>5</span></a></li>
+        <li><a href="#">Medikal Elektronik <span>4</span></a></li>
+        <li><a href="#">Enerji Sistemleri <span>3</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <div class="sidebar-title">Son Yazılar</div>
+      <a href="#" class="recent-post">
+        <div class="rp-photo"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=120&q=70&fit=crop" alt=""></div>
+        <div><div class="rp-title">BGA Yeniden Lehimleme Rehberi</div><div class="rp-date">15 Kasım 2024</div></div>
+      </a>
+      <a href="#" class="recent-post">
+        <div class="rp-photo"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=120&q=70&fit=crop" alt=""></div>
+        <div><div class="rp-title">PLC Arızası Ön Teşhis</div><div class="rp-date">8 Kasım 2024</div></div>
+      </a>
+      <a href="#" class="recent-post">
+        <div class="rp-photo"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&q=70&fit=crop" alt=""></div>
+        <div><div class="rp-title">Buzdolabı Soğutma Arızası</div><div class="rp-date">2 Kasım 2024</div></div>
+      </a>
+      <a href="#" class="recent-post">
+        <div class="rp-photo"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=120&q=70&fit=crop" alt=""></div>
+        <div><div class="rp-title">PCB Tasarım EMC Kuralları</div><div class="rp-date">25 Ekim 2024</div></div>
+      </a>
+    </div>
+
+    <div class="sidebar-box">
+      <div class="sidebar-title">Etiketler</div>
+      <div class="tag-cloud">
+        <a href="#" class="blog-tag">BGA</a>
+        <a href="#" class="blog-tag">PLC</a>
+        <a href="#" class="blog-tag">PCB Tasarım</a>
+        <a href="#" class="blog-tag">Inverter</a>
+        <a href="#" class="blog-tag">Servo</a>
+        <a href="#" class="blog-tag">EMC</a>
+        <a href="#" class="blog-tag">Buzdolabı</a>
+        <a href="#" class="blog-tag">Medikal</a>
+        <a href="#" class="blog-tag">IPC-7711</a>
+        <a href="#" class="blog-tag">Lehimleme</a>
+        <a href="#" class="blog-tag">IGBT</a>
+        <a href="#" class="blog-tag">CAN Bus</a>
+      </div>
+    </div>
+
+    <div style="background:var(--onyx);padding:24px">
+      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);text-transform:uppercase;margin-bottom:12px">Hızlı Teklif</div>
+      <p style="font-size:13px;color:rgba(255,255,255,.5);font-weight:300;line-height:1.6;margin-bottom:16px">Arızalı kartınız için hemen teklif alın.</p>
+      <a href="index.html#contact" class="btn-alaz" style="display:block;text-align:center">Teklif Al →</a>
+    </div>
+
+  </aside>
+
+</div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>
