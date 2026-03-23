@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sektörler — ODSAN Elektronik</title>
+<meta name="description" content="Endüstriyel otomasyon, medikal elektronik, iş makineleri, beyaz eşya, savunma sanayii ve raylı sistemler dahil 8 sektörde uzman elektronik kart tamiri hizmetleri.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* SECTOR DETAIL CARDS */
+.sector-detail{border:1px solid var(--border);background:var(--white);overflow:hidden;margin-bottom:2px;transition:border-color .2s}
+.sector-detail:hover{border-color:var(--alaz)}
+.sector-detail-inner{display:grid;grid-template-columns:360px 1fr;min-height:300px}
+.sector-detail.flip .sector-detail-inner{grid-template-columns:1fr 360px}
+.sector-photo{overflow:hidden;position:relative}
+.sector-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.sector-detail:hover .sector-photo img{transform:scale(1.04)}
+.sector-photo-label{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:8.5px;letter-spacing:2px;color:white;background:var(--alaz);padding:5px 10px;text-transform:uppercase}
+.sector-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
+.sector-num{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);text-transform:uppercase;margin-bottom:12px}
+.sector-body h2{font-size:clamp(20px,2.2vw,28px);margin-bottom:14px}
+.sector-body p{font-size:14px;color:var(--text-soft);line-height:1.8;font-weight:300;margin-bottom:20px}
+.sector-specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.spec-badge{font-family:var(--mono);font-size:9px;letter-spacing:.8px;color:var(--gray-mid);border:1px solid var(--border-light);padding:4px 10px;background:var(--off);text-transform:uppercase;transition:border-color .2s,color .2s}
+.sector-detail:hover .spec-badge{border-color:rgba(216,90,48,.25);color:var(--alaz)}
+
+/* QUICK GRID */
+.sector-quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:48px}
+.sqc{background:var(--white);padding:24px 20px;border-bottom:3px solid transparent;transition:background .2s,border-color .2s;cursor:pointer}
+.sqc:hover{background:var(--alaz-light);border-color:var(--alaz)}
+.sqc-icon{color:var(--onyx);margin-bottom:12px;transition:color .2s}
+.sqc:hover .sqc-icon{color:var(--alaz)}
+.sqc-name{font-family:var(--serif);font-size:14px;font-weight:500;color:var(--onyx)}
+.sqc-count{font-family:var(--mono);font-size:9px;letter-spacing:1px;color:var(--gray);margin-top:4px}
+
+@media(max-width:1024px){
+  .sector-detail-inner,.sector-detail.flip .sector-detail-inner{grid-template-columns:1fr}
+  .sector-photo{height:240px}
+}
+@media(max-width:640px){
+  .sector-quick-grid{grid-template-columns:repeat(2,1fr)}
+  .sector-body{padding:28px 24px}
+}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/905XXXXXXXXX" class="wa-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-badge"><div class="badge-line"></div><span class="badge-text">8 Sektör</span></div>
+      <h1>Her Sektörün<br><em>Uzman</em> Çözümü</h1>
+    </div>
+    <p class="page-hero-lead">Savunma sanayiinden medikal elektroniğe, iş makinelerinden beyaz eşyaya — her sektörün kendine özgü teknik ve kalite gereksinimlerini karşılıyoruz.</p>
+  </div>
+</div>
+
+<!-- QUICK NAV -->
+<div style="background:var(--off);border-bottom:1px solid var(--border)">
+<div style="max-width:1280px;margin:0 auto;padding:0 24px">
+  <div class="sector-quick-grid">
+    <div class="sqc" onclick="document.getElementById('is-makinesi').scrollIntoView({behavior:'smooth'})">
+      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="8" width="14" height="10"/><path d="M16 10l4-4v12l-4-4"/></svg></div>
+      <div class="sqc-name">İş Makinesi</div>
+      <div class="sqc-count">ECU · Hidrolik · CAN Bus</div>
+    </div>
+    <div class="sqc" onclick="document.getElementById('medikal').scrollIntoView({behavior:'smooth'})">
+      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="sqc-name">Medikal</div>
+      <div class="sqc-count">Görüntüleme · Monitör</div>
+    </div>
+    <div class="sqc" onclick="document.getElementById('beyaz-esya').scrollIntoView({behavior:'smooth'})">
+      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="1"/><line x1="9" y1="7" x2="15" y2="7"/></svg></div>
+      <div class="sqc-name">Beyaz Eşya</div>
+      <div class="sqc-count">Buzdolabı · Çamaşır</div>
+    </div>
+    <div class="sqc" onclick="document.getElementById('otomasyon').scrollIntoView({behavior:'smooth'})">
+      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16"/><rect x="9" y="9" width="6" height="6"/></svg></div>
+      <div class="sqc-name">Endüstriyel</div>
+      <div class="sqc-count">PLC · Servo · HMI</div>
+    </div>
+    <div class="sqc" onclick="document.getElementById('enerji').scrollIntoView({behavior:'smooth'})">
+      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+      <div class="sqc-name">Enerji</div>
+      <div class="sqc-count">UPS · Solar · IGBT</div>
+    </div>
+    <div class="sqc" onclick="document.getElementById('savunma').scrollIntoView({behavior:'smooth'})">
+      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="sqc-name">Savunma</div>
+      <div class="sqc-count">MIL-STD · ECU</div>
+    </div>
+    <div class="sqc" onclick="document.getElementById('rayli').scrollIntoView({behavior:'smooth'})">
+      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="14" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/></svg></div>
+      <div class="sqc-name">Raylı Sistemler</div>
+      <div class="sqc-count">Traksiyon · TCMS</div>
+    </div>
+    <div class="sqc" onclick="document.getElementById('telekom').scrollIntoView({behavior:'smooth'})">
+      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 6C1 6 5 2 12 2s11 4 11 4"/><path d="M5 10s2-2 7-2 7 2 7 2"/><path d="M9 14s1-1 3-1 3 1 3 1"/></svg></div>
+      <div class="sqc-name">Telekomünikasyon</div>
+      <div class="sqc-count">RF · Baz İstasyonu</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- SECTOR DETAILS -->
+<div style="max-width:1280px;margin:0 auto;padding:48px 24px;display:flex;flex-direction:column;gap:2px">
+
+  <div id="is-makinesi" class="sector-detail reveal">
+    <div class="sector-detail-inner">
+      <div class="sector-photo">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=720&q=80&fit=crop" alt="İş makinesi elektroniği">
+        <div class="sector-photo-label">İş Makinesi</div>
+      </div>
+      <div class="sector-body">
+        <div class="sector-num">01 — İş Makinesi Elektroniği</div>
+        <h2>Ekskavatör, Forklift<br>ve Ağır Taşıt Elektronikleri</h2>
+        <p>İş makinelerinin elektronik kontrol üniteleri, sert çalışma koşulları nedeniyle titreşim, ısı ve nem kaynaklı arızalara son derece duyarlıdır. Deneyimli ekibimiz bu kartları orijinal kalitede tamir eder, makine duruş sürelerini minimuma indirir.</p>
+        <div class="sector-specs">
+          <span class="spec-badge">ECU Onarımı</span><span class="spec-badge">Hidrolik Kontrol</span><span class="spec-badge">CAN Bus</span>
+          <span class="spec-badge">Motor Kontrol</span><span class="spec-badge">Transmisyon</span><span class="spec-badge">ABS/EBS</span>
+        </div>
+        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="medikal" class="sector-detail flip reveal">
+    <div class="sector-detail-inner">
+      <div class="sector-body">
+        <div class="sector-num">02 — Medikal Elektronik</div>
+        <h2>Görüntüleme Sistemleri<br>ve Hasta Monitörleri</h2>
+        <p>Medikal cihaz onarımı en yüksek kalite standartlarını gerektirir. IEC 60601 uyumlu çalışma prosedürlerimiz ve izole test altyapımızla; MRI, CT, röntgen ve hasta monitörü kartlarını güvenle onarıyoruz.</p>
+        <div class="sector-specs">
+          <span class="spec-badge">MRI Kartları</span><span class="spec-badge">CT Sistemleri</span><span class="spec-badge">Hasta Monitörü</span>
+          <span class="spec-badge">Laboratuvar</span><span class="spec-badge">IEC 60601</span><span class="spec-badge">Elektrosürreji</span>
+        </div>
+        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      </div>
+      <div class="sector-photo">
+        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=720&q=80&fit=crop" alt="Medikal elektronik ekipman">
+        <div class="sector-photo-label">Medikal Elektronik</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="beyaz-esya" class="sector-detail reveal">
+    <div class="sector-detail-inner">
+      <div class="sector-photo">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=720&q=80&fit=crop" alt="Beyaz eşya elektronik tamiri">
+        <div class="sector-photo-label">Beyaz Eşya</div>
+      </div>
+      <div class="sector-body">
+        <div class="sector-num">03 — Beyaz Eşya & Ev Elektroniği</div>
+        <h2>Buzdolabı, Çamaşır Makinesi<br>ve Klima Kart Tamiri</h2>
+        <p>Ev elektroniği kart arızaları genellikle güç elektroniği bileşenlerinden kaynaklanır. Hızlı teşhis ve uygun fiyatlı onarım politikamızla cihazlarınızı ekonomik biçimde hayata döndürüyoruz.</p>
+        <div class="sector-specs">
+          <span class="spec-badge">Buzdolabı</span><span class="spec-badge">Çamaşır Makinesi</span><span class="spec-badge">Bulaşık Makinesi</span>
+          <span class="spec-badge">Klima</span><span class="spec-badge">Fırın</span><span class="spec-badge">Kurutma Makinesi</span>
+        </div>
+        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="otomasyon" class="sector-detail flip reveal">
+    <div class="sector-detail-inner">
+      <div class="sector-body">
+        <div class="sector-num">04 — Endüstriyel Otomasyon</div>
+        <h2>PLC, Servo Sürücü<br>ve HMI Kart Onarımı</h2>
+        <p>Üretim hattı duruşları büyük ekonomik kayıplara yol açar. Siemens, ABB, Fanuc, Mitsubishi ve diğer markaların PLC, servo sürücü ve frekans invertörlerini günler içinde onarlıyoruz.</p>
+        <div class="sector-specs">
+          <span class="spec-badge">PLC</span><span class="spec-badge">Servo Sürücü</span><span class="spec-badge">Frekans İnvertörü</span>
+          <span class="spec-badge">HMI Panel</span><span class="spec-badge">I/O Modülü</span><span class="spec-badge">Robot Kontrol</span>
+        </div>
+        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      </div>
+      <div class="sector-photo">
+        <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=720&q=80&fit=crop" alt="Endüstriyel otomasyon PLC">
+        <div class="sector-photo-label">Endüstriyel Otomasyon</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="enerji" class="sector-detail reveal">
+    <div class="sector-detail-inner">
+      <div class="sector-photo">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=720&q=80&fit=crop" alt="Solar enerji panelleri ve inverter">
+        <div class="sector-photo-label">Enerji Sistemleri</div>
+      </div>
+      <div class="sector-body">
+        <div class="sector-num">05 — Enerji & Güç Sistemleri</div>
+        <h2>UPS, Solar İnverter<br>ve Güç Kaynağı Onarımı</h2>
+        <p>Kesintisiz güç kaynakları ve solar inverter sistemlerinde güç elektroniği bileşeni arızaları kritik önem taşır. IGBT, MOSFET ve güç modülü değişimlerini tam teçhizatlı altyapımızla gerçekleştiriyoruz.</p>
+        <div class="sector-specs">
+          <span class="spec-badge">UPS</span><span class="spec-badge">Solar İnverter</span><span class="spec-badge">IGBT Modül</span>
+          <span class="spec-badge">Şarj Regülatörü</span><span class="spec-badge">Akü Yönetim</span><span class="spec-badge">Güç Kaynağı</span>
+        </div>
+        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="savunma" class="sector-detail flip reveal">
+    <div class="sector-detail-inner">
+      <div class="sector-body">
+        <div class="sector-num">06 — Savunma Sanayii</div>
+        <h2>MIL-STD Standartlarında<br>Kritik Sistem Onarımı</h2>
+        <p>Askeri araç elektroniği ve savunma sistemleri en yüksek güvenilirlik standartlarını gerektirir. MIL-STD-810 ve MIL-PRF uyumlu onarım prosedürlerimizle kritik sistemlerinizi güvenle teslim ediyoruz.</p>
+        <div class="sector-specs">
+          <span class="spec-badge">MIL-STD-810</span><span class="spec-badge">Araç ECU</span><span class="spec-badge">STANAG</span>
+          <span class="spec-badge">Radyo Ekipmanı</span><span class="spec-badge">Gece Görüş</span><span class="spec-badge">Navigasyon</span>
+        </div>
+        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      </div>
+      <div class="sector-photo">
+        <img src="https://images.unsplash.com/photo-1611193984446-2bcbc56e2d4e?w=720&q=80&fit=crop" alt="Elektronik kart yakın çekim">
+        <div class="sector-photo-label">Savunma Elektroniği</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="rayli" class="sector-detail reveal">
+    <div class="sector-detail-inner">
+      <div class="sector-photo">
+        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=720&q=80&fit=crop" alt="Metro ve raylı sistem elektroniği">
+        <div class="sector-photo-label">Raylı Sistemler</div>
+      </div>
+      <div class="sector-body">
+        <div class="sector-num">07 — Raylı Sistemler</div>
+        <h2>Metro, Tramvay ve<br>Tren Kontrol Elektroniği</h2>
+        <p>Raylı sistemlerde elektronik arıza toleransı sıfıra yakındır. Traksiyon inverterlerinden TCMS kontrol kartlarına, kapı sistemlerinden fren elektroniğine kadar tüm bileşenleri sertifikalı prosedürlerle onarıyoruz.</p>
+        <div class="sector-specs">
+          <span class="spec-badge">Traksiyon İnverter</span><span class="spec-badge">TCMS</span><span class="spec-badge">Kapı Kontrolü</span>
+          <span class="spec-badge">Fren Sistemi</span><span class="spec-badge">Klima Kontrol</span><span class="spec-badge">Yolcu Bilgi</span>
+        </div>
+        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="telekom" class="sector-detail flip reveal">
+    <div class="sector-detail-inner">
+      <div class="sector-body">
+        <div class="sector-num">08 — Telekomünikasyon</div>
+        <h2>Baz İstasyonu ve<br>Ağ Altyapısı Onarımı</h2>
+        <p>Telekomünikasyon altyapısında devre dışı kalan her bileşen servis kesintisine yol açar. RF amplifier kartlarından ağ anahtarı donanımına kadar tüm telekom elektroniklerini hızla onarlıyoruz.</p>
+        <div class="sector-specs">
+          <span class="spec-badge">Baz İstasyonu</span><span class="spec-badge">RF Amplifier</span><span class="spec-badge">Ağ Anahtarı</span>
+          <span class="spec-badge">Optik Alıcı</span><span class="spec-badge">Güç Ünitesi</span><span class="spec-badge">Kontrol Kartı</span>
+        </div>
+        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      </div>
+      <div class="sector-photo">
+        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=720&q=80&fit=crop" alt="Telekomünikasyon ağ altyapısı">
+        <div class="sector-photo-label">Telekomünikasyon</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div style="background:var(--off);border-top:1px solid var(--border);padding:64px 24px">
+  <div style="max-width:680px;margin:0 auto;text-align:center" class="reveal">
+    <h2 style="margin-bottom:16px">Sektörünüzü Bulamadınız mı?</h2>
+    <p style="font-size:14px;color:var(--text-soft);font-weight:300;margin-bottom:28px">Listelediğimiz sektörler dışında da elektronik kart onarımı yapıyoruz. Cihaz ve arıza bilgilerinizi paylaşın, değerlendirelim.</p>
+    <a href="index.html#contact" class="btn-primary">Bize Ulaşın →</a>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>
