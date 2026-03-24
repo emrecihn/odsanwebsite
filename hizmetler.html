@@ -3,209 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hizmetler — ODSAN Elektronik</title>
-<meta name="description" content="Elektronik kart tamiri, PCB tasarım ve endüstriyel sistem mühendisliği hizmetleri. BGA yeniden lehimleme, X-ray teşhis, fonksiyonel test ve yazılı garanti.">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<title>Hizmetler — ODSAN Elektronik | Kart Tamiri, PCB Tasarım, Sistem Mühendisliği</title>
+<meta name="description" content="Elektronik kart tamiri, PCB tasarım ve endüstriyel sistem mühendisliği. BGA lehimleme, X-ray teşhis, IPC standartlarında onarım. Yazılı garanti.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://odsan.com.tr/hizmetler.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-/* SERVICE HERO CARDS */
-.service-hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-top:48px}
-.shc{background:var(--white);overflow:hidden;position:relative;cursor:default;transition:background .2s}
-.shc:hover{background:var(--alaz-light)}
-.shc-photo{height:220px;overflow:hidden}
-.shc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.shc:hover .shc-photo img{transform:scale(1.05)}
-.shc-body{padding:28px 26px}
-.shc-num{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);margin-bottom:10px;display:block}
-.shc h3{font-size:20px;margin-bottom:10px}
-.shc p{font-size:13px;color:var(--text-soft);line-height:1.7;font-weight:300}
-.shc-bar{height:3px;background:transparent;transition:background .2s}
-.shc:hover .shc-bar{background:var(--alaz)}
-
-/* DETAIL BLOCK */
-.service-detail-block{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;padding:56px 0;border-bottom:1px solid var(--border)}
-.service-detail-block:last-child{border-bottom:none}
-.sdb-photo{border-radius:4px;overflow:hidden;height:400px;position:relative}
-.sdb-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.sdb-photo:hover img{transform:scale(1.03)}
-.sdb-photo-badge{position:absolute;top:16px;right:16px;font-family:var(--mono);font-size:8px;letter-spacing:1.5px;background:var(--alaz);color:white;padding:5px 10px;text-transform:uppercase}
-.sdb-content p{font-size:14px;color:var(--text-soft);line-height:1.8;font-weight:300;margin-bottom:16px}
-.capability-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);margin:24px 0}
-.cap-item{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;border-bottom:1px solid var(--border-light);transition:background .15s}
-.cap-item:last-child{border-bottom:none}
-.cap-item:hover{background:var(--alaz-light)}
-.cap-check{width:20px;height:20px;border:1.5px solid var(--alaz);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.cap-check svg{color:var(--alaz)}
-.cap-text{font-size:13px;color:var(--text);line-height:1.5}
-.cap-text small{display:block;font-size:11px;color:var(--gray);margin-top:2px;font-family:var(--mono)}
-
-/* PROCESS STEPS */
-.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--border);margin-top:40px}
-.ps{background:var(--white);padding:24px 20px;position:relative;transition:background .2s}
-.ps:hover{background:var(--alaz-light)}
-.ps::after{content:'→';position:absolute;right:-12px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--alaz);z-index:1}
-.ps:last-child::after{display:none}
-.ps-num{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--alaz);line-height:1;margin-bottom:10px}
-.ps-title{font-family:var(--serif);font-size:14px;font-weight:500;color:var(--onyx);margin-bottom:6px}
-.ps-desc{font-size:11px;color:var(--gray-mid);line-height:1.55;font-weight:300}
-
-/* PRICING TABLE */
-.pricing-table{width:100%;border-collapse:collapse;margin-top:32px}
-.pricing-table th{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);text-transform:uppercase;padding:12px 16px;text-align:left;background:var(--onyx);color:rgba(255,255,255,.5);border-bottom:2px solid var(--alaz)}
-.pricing-table td{font-size:13px;color:var(--text-soft);padding:12px 16px;border-bottom:1px solid var(--border-light);vertical-align:top}
-.pricing-table tr:hover td{background:var(--alaz-light)}
-.pricing-table td:first-child{font-weight:500;color:var(--text)}
-.price-note{font-family:var(--mono);font-size:9px;color:var(--gray);margin-top:10px}
-
-@media(max-width:1024px){
-  .service-hero-grid{grid-template-columns:1fr}
-  .service-detail-block{grid-template-columns:1fr;gap:32px}
-  .sdb-photo{height:280px}
-  .process-steps{grid-template-columns:1fr 1fr}
-  .ps::after{display:none}
+:root{--serif:'DM Serif Display','Georgia',serif;--sans:'DM Sans','Segoe UI','Helvetica Neue',Arial,sans-serif;--mono:'Courier New',monospace;--onyx:#111214;--alaz:#D85A30;--alaz-l:#FAE9E2;--alaz-d:#993C1D;--off:#F7F5F2;--border:#DDD9D3;--borderl:#EAE7E2;--gray:#888780;--graym:#5a5750;--text:#1a1814;--texts:#3d3a34;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--white);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--alaz)}
+.rev{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}.rev.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav-w{max-width:1280px;margin:0 auto;padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none;flex-shrink:0}
+.nl-word{font-family:var(--sans);font-size:18px;font-weight:700;letter-spacing:5px;color:var(--onyx);line-height:1}
+.nl-line{height:2px;background:var(--alaz);margin:3px 0 2px}
+.nl-sub{font-size:9px;letter-spacing:3px;color:var(--gray);font-family:var(--mono);text-transform:uppercase}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{font-size:13px;color:var(--graym);transition:color .2s;white-space:nowrap;position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--alaz);transition:width .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--onyx)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{font-size:12px;font-weight:500;color:var(--white);background:var(--onyx);padding:8px 16px;transition:background .2s;white-space:nowrap;flex-shrink:0;border:none;cursor:pointer;display:inline-block}
+.nav-cta:hover{background:var(--alaz)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;width:36px;height:36px;justify-content:center;flex-shrink:0}
+.hamburger span{display:block;height:1.5px;background:var(--onyx);transition:all .25s;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{display:none;background:var(--white);border-bottom:1px solid var(--border)}
+.mob-menu.open{display:block}
+.mob-menu ul{list-style:none;padding:8px 16px}
+.mob-menu ul li a{display:block;font-size:15px;color:var(--texts);padding:12px 0;border-bottom:1px solid var(--borderl)}
+.mob-menu ul li:last-child a{border-bottom:none}
+.mob-menu .nav-cta{display:block;margin:12px 16px 16px;text-align:center}
+.sw{max-width:1280px;margin:0 auto;padding:56px 16px}
+.stag{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.stag-line{width:20px;height:1.5px;background:var(--alaz)}
+.stag-text{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase}
+h1{font-family:var(--serif);font-size:clamp(30px,4.5vw,54px);line-height:1.12;color:var(--onyx);letter-spacing:-.3px}
+h1 em{font-style:normal;color:var(--alaz)}
+h2{font-family:var(--serif);font-size:clamp(22px,3vw,36px);line-height:1.2;color:var(--onyx)}
+.page-hero{padding:80px 16px 0;max-width:1280px;margin:0 auto}
+.ph-inner{border-bottom:1px solid var(--border);padding-bottom:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.ph-lead{font-size:15px;line-height:1.8;color:var(--texts);font-weight:300}
+/* SERVICE CARDS TOP */
+.srv-top{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:40px}
+.stc{background:var(--white);overflow:hidden;transition:background .2s;position:relative}
+.stc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--alaz)}
+.stc-photo{height:200px;overflow:hidden}
+.stc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.stc:hover .stc-photo img{transform:scale(1.04)}
+.stc-body{padding:24px 22px}
+.stc-num{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);margin-bottom:8px;display:block}
+.stc h3{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--onyx);margin-bottom:8px}
+.stc p{font-size:13px;color:var(--texts);line-height:1.7;font-weight:300}
+/* DETAIL SECTIONS */
+.svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;padding:48px 0;border-bottom:1px solid var(--border)}
+.svc-detail:last-child{border-bottom:none}
+.sd-photo{border-radius:4px;overflow:hidden;height:380px;position:relative}
+.sd-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.sd-photo:hover img{transform:scale(1.03)}
+.sd-badge{position:absolute;top:14px;right:14px;font-size:8px;letter-spacing:1.5px;background:var(--alaz);color:white;padding:5px 10px;font-family:var(--mono);text-transform:uppercase}
+.sd-body p{font-size:14px;color:var(--texts);line-height:1.8;font-weight:300;margin-bottom:14px}
+.cap-list{border:1px solid var(--border);margin:20px 0}
+.cl-item{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-bottom:1px solid var(--borderl);transition:background .15s}
+.cl-item:last-child{border-bottom:none}
+.cl-item:hover{background:var(--alaz-l)}
+.cl-check{width:20px;height:20px;border:1.5px solid var(--alaz);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.cl-check svg{color:var(--alaz)}
+.cl-text{font-size:13px;color:var(--text);line-height:1.4}
+.cl-text small{display:block;font-size:11px;color:var(--gray);margin-top:2px;font-family:var(--mono)}
+/* PROCESS */
+.proc-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);margin-top:36px}
+.ps{background:var(--white);padding:22px 18px;transition:background .2s;position:relative}
+.ps:hover{background:var(--alaz-l)}
+.ps-num{font-family:var(--serif);font-size:26px;color:var(--alaz);line-height:1;margin-bottom:10px}
+.ps-title{font-size:13px;font-weight:600;color:var(--onyx);margin-bottom:5px}
+.ps-desc{font-size:11px;color:var(--graym);line-height:1.55;font-weight:300}
+/* BTN */
+.btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;padding:10px 18px;border:1.5px solid transparent;transition:all .18s;cursor:pointer;white-space:nowrap;text-decoration:none}
+.btn-dark{background:var(--onyx);color:var(--white);border-color:var(--onyx)}.btn-dark:hover{background:var(--alaz);border-color:var(--alaz)}
+/* FOOTER */
+footer{background:var(--onyx);border-top:3px solid var(--alaz)}
+.footer-main{max-width:1280px;margin:0 auto;padding:40px 16px;display:grid;grid-template-columns:180px 1fr;gap:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.fc-title{font-size:9px;letter-spacing:2.5px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:12px}
+.fc-links{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fc-links a{font-size:13px;color:rgba(255,255,255,.35);transition:color .2s}.fc-links a:hover{color:var(--alaz)}
+.fc-links li{font-size:13px;color:rgba(255,255,255,.25)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom span{font-size:10px;color:rgba(255,255,255,.2);font-family:var(--mono)}
+.wa-float{position:fixed;bottom:20px;right:20px;z-index:900;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);transition:transform .2s;text-decoration:none}
+.wa-float:hover{transform:scale(1.08)}.wa-float svg{width:26px;height:26px;fill:#fff}
+@media(max-width:1023px){
+  .nav-links,.nav-cta.desk{display:none}.hamburger{display:flex}
+  .ph-inner{grid-template-columns:1fr;gap:20px}
+  .srv-top{grid-template-columns:1fr}
+  .svc-detail{grid-template-columns:1fr;gap:24px}
+  .sd-photo{height:240px}
+  .proc-steps{grid-template-columns:repeat(2,1fr)}
+  .footer-main{grid-template-columns:1fr}.footer-cols{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:640px){
-  .process-steps{grid-template-columns:1fr}
+@media(max-width:600px){
+  body{font-size:15px}.nav-w{height:56px}.page-hero{padding:72px 14px 0}.sw{padding:44px 14px}
+  .proc-steps{grid-template-columns:1fr}
+  .footer-cols{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
-
 <a href="https://wa.me/905XXXXXXXXX" class="wa-float" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
+<nav>
+  <div class="nav-w">
+    <a href="index.html" class="nav-logo"><span class="nl-word">ODSAN</span><span class="nl-line"></span><span class="nl-sub">Electronics</span></a>
+    <ul class="nav-links">
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="sektorler.html">Sektörler</a></li>
+      <li><a href="hizmetler.html" class="active">Hizmetler</a></li>
+      <li><a href="urunler.html">Ürünler</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta desk">İletişim</a>
+    <button class="hamburger" id="ham" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-menu" id="mob">
+    <ul>
+      <li><a href="hakkimizda.html" class="ml">Hakkımızda</a></li>
+      <li><a href="sektorler.html" class="ml">Sektörler</a></li>
+      <li><a href="hizmetler.html" class="ml">Hizmetler</a></li>
+      <li><a href="urunler.html" class="ml">Ürünler</a></li>
+      <li><a href="blog.html" class="ml">Blog</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta ml">İletişim</a>
+  </div>
+</nav>
 
 <div class="page-hero">
-  <div class="page-hero-inner">
+  <div class="ph-inner">
     <div>
-      <div class="page-badge"><div class="badge-line"></div><span class="badge-text">3 Yetkinlik Alanı</span></div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">3 Yetkinlik Alanı</span></div>
       <h1>Tam Kapsamlı<br><em>Mühendislik</em> Hizmetleri</h1>
     </div>
-    <p class="page-hero-lead">Kart tamirinden PCB tasarımına, sistem mühendisliğine kadar — tek çatı altında kapsamlı çözüm ortaklığı sunuyoruz.</p>
+    <p class="ph-lead">Kart tamirinden PCB tasarımına, sistem mühendisliğine kadar tek çatı altında kapsamlı çözüm ortaklığı.</p>
   </div>
 </div>
 
-<!-- SERVICE OVERVIEW CARDS -->
 <div style="background:var(--off);border-bottom:1px solid var(--border)">
-<div style="max-width:1280px;margin:0 auto;padding:0 24px 0">
-  <div class="service-hero-grid">
-    <div class="shc reveal">
-      <div class="shc-bar" style="background:var(--alaz)"></div>
-      <div class="shc-photo">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&fit=crop" alt="Elektronik kart tamiri">
-      </div>
-      <div class="shc-body">
-        <span class="shc-num">I — Kart Tamiri</span>
-        <h3>Elektronik Kart Tamiri</h3>
-        <p>Tüm marka ve modeller için kapsamlı teşhis ve onarım. Yazılı garanti ile teslim.</p>
-      </div>
+<div style="max-width:1280px;margin:0 auto;padding:0 16px">
+  <div class="srv-top">
+    <div class="stc rev">
+      <div class="stc-photo"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80&fit=crop" alt="Elektronik kart tamiri"></div>
+      <div class="stc-body"><span class="stc-num">I — Kart Tamiri</span><h3>Elektronik Kart Tamiri</h3><p>Tüm marka ve modeller için kapsamlı teşhis ve onarım. Yazılı garanti.</p></div>
     </div>
-    <div class="shc reveal d1">
-      <div class="shc-bar"></div>
-      <div class="shc-photo">
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80&fit=crop" alt="PCB tasarım">
-      </div>
-      <div class="shc-body">
-        <span class="shc-num">II — PCB Tasarım</span>
-        <h3>PCB Tasarım & Geliştirme</h3>
-        <p>Konseptten seri üretime yüksek güvenilirlikli PCB tasarımı. RF ve çok katmanlı uygulamalar.</p>
-      </div>
+    <div class="stc rev d1">
+      <div class="stc-photo"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80&fit=crop" alt="PCB tasarım"></div>
+      <div class="stc-body"><span class="stc-num">II — PCB Tasarım</span><h3>PCB Tasarım & Geliştirme</h3><p>Konseptten seri üretime. RF ve çok katmanlı uygulamalar dahil.</p></div>
     </div>
-    <div class="shc reveal d2">
-      <div class="shc-bar"></div>
-      <div class="shc-photo">
-        <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=600&q=80&fit=crop" alt="Endüstriyel sistem">
-      </div>
-      <div class="shc-body">
-        <span class="shc-num">III — Sistem Mühendisliği</span>
-        <h3>Endüstriyel Sistem Mühendisliği</h3>
-        <p>PLC/SCADA sistem tasarımı, kontrol panosu mühendisliği ve saha devreye alma.</p>
-      </div>
+    <div class="stc rev d2">
+      <div class="stc-photo"><img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=600&q=80&fit=crop" alt="Endüstriyel sistem mühendisliği"></div>
+      <div class="stc-body"><span class="stc-num">III — Sistem Mühendisliği</span><h3>Endüstriyel Sistem Mühendisliği</h3><p>PLC/SCADA tasarımı ve devreye alma. Saha destek güvencesi.</p></div>
     </div>
   </div>
 </div>
 </div>
 
-<!-- DETAIL SECTIONS -->
-<div class="section-wrap">
-
-  <div class="service-detail-block reveal">
-    <div class="sdb-photo">
-      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80&fit=crop" alt="Elektronik kart onarım süreci">
-      <div class="sdb-photo-badge">Yazılı Garanti</div>
-    </div>
-    <div class="sdb-content">
-      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Hizmet I</span></div>
-      <h2 style="margin-bottom:16px">Elektronik Kart<br>Tamiri & Onarımı</h2>
-      <p>Endüstriyel, medikal, iş makinesi ve beyaz eşya elektronik kartlarının kapsamlı teşhis ve onarımı. X-ray inceleme, mikroskop destekli lehimleme ve fonksiyonel test altyapımızla kalıcı çözümler üretiyoruz.</p>
-      <div class="capability-list">
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">BGA & Fine-Pitch Komponent Değişimi<small>0.3mm pitch'e kadar SMD lehimleme</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">X-Ray ve Mikroskop Destekli Teşhis<small>BGA bağlantı kalitesi görsel kontrolü</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">Tersine Mühendislik & Dokümantasyon<small>Şematik çıkarma, BOM analizi</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">Fonksiyonel Test & Yazılı Garanti<small>Standart 6 ay garanti, opsiyonel 12 ay</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">IPC-7711/7721 Standart Uyumlu Çalışma<small>Sertifikalı onarım prosedürleri</small></div></div>
+<div class="sw">
+  <div class="svc-detail rev">
+    <div class="sd-photo"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80&fit=crop" alt="Elektronik kart onarım"><div class="sd-badge">Yazılı Garanti</div></div>
+    <div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Hizmet I</span></div>
+      <h2 style="margin-bottom:14px">Elektronik Kart<br>Tamiri & Onarımı</h2>
+      <p>X-ray inceleme, mikroskop destekli lehimleme ve fonksiyonel test altyapımızla tüm marka ve modellerde kalıcı çözümler üretiyoruz.</p>
+      <div class="cap-list">
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">BGA & Fine-Pitch Komponent Değişimi<small>0.3mm pitch'e kadar SMD lehimleme</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">X-Ray ve Mikroskop Destekli Teşhis<small>BGA bağlantı kalitesi görsel kontrolü</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Tersine Mühendislik & Dokümantasyon<small>Şematik çıkarma, BOM analizi</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Fonksiyonel Test & Yazılı Garanti<small>Standart 6 ay, opsiyonel 12 ay</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">IPC-7711/7721 Standart Uyumu<small>Sertifikalı onarım prosedürleri</small></div></div>
       </div>
-      <a href="index.html#contact" class="btn-primary">Onarım Talebi Oluştur →</a>
+      <a href="index.html#contact" class="btn btn-dark">Onarım Talebi →</a>
     </div>
   </div>
 
-  <div class="service-detail-block reveal">
-    <div class="sdb-content">
-      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Hizmet II</span></div>
-      <h2 style="margin-bottom:16px">PCB Tasarım<br>& Geliştirme</h2>
-      <p>Konsept aşamasından seri üretime kadar tüm PCB geliştirme sürecini yönetiyoruz. EMC uyumluluğu, DFM analizi ve prototip üretiminden başlayarak müşterilerimize anahtar teslim çözümler sunuyoruz.</p>
-      <div class="capability-list">
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">Çok Katmanlı PCB Tasarımı (2–16 Katman)<small>Altium Designer, KiCad ortamlarında</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">Yüksek Frekanslı RF Tasarımı<small>Anten, impedans eşleştirme, RF filtre</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">EMC Uyumlu Yerleşim & Yönlendirme<small>EN 55032 / FCC Part 15 uyumu</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">DFM / DFT Analizi<small>Üretilebilirlik ve test edilebilirlik için tasarım</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">Prototip & Seri Üretim Desteği<small>Yerli üretici ağıyla hızlı prototip</small></div></div>
+  <div class="svc-detail rev">
+    <div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Hizmet II</span></div>
+      <h2 style="margin-bottom:14px">PCB Tasarım<br>& Geliştirme</h2>
+      <p>Konsept aşamasından seri üretime kadar tüm PCB geliştirme sürecini yönetiyoruz. EMC uyumu, prototip ve anahtar teslim çözümler.</p>
+      <div class="cap-list">
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Çok Katmanlı PCB Tasarımı (2–16 Katman)<small>Altium Designer, KiCad</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Yüksek Frekanslı RF Tasarımı<small>Anten, impedans eşleştirme, RF filtre</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">EMC Uyumlu Yerleşim & Yönlendirme<small>EN 55032 / FCC Part 15 uyumu</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">DFM / DFT Analizi<small>Üretilebilirlik ve test edilebilirlik</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Prototip & Seri Üretim Desteği<small>Yerli üretici ağıyla hızlı prototip</small></div></div>
       </div>
-      <a href="index.html#contact" class="btn-primary">PCB Proje Talebi →</a>
+      <a href="index.html#contact" class="btn btn-dark">PCB Proje Talebi →</a>
     </div>
-    <div class="sdb-photo">
-      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80&fit=crop" alt="PCB tasarım mühendisi">
-      <div class="sdb-photo-badge">Anahtar Teslim</div>
-    </div>
+    <div class="sd-photo"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80&fit=crop" alt="PCB tasarım mühendisi"><div class="sd-badge">Anahtar Teslim</div></div>
   </div>
 
-  <div class="service-detail-block reveal">
-    <div class="sdb-photo">
-      <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=800&q=80&fit=crop" alt="Endüstriyel kontrol sistemi">
-      <div class="sdb-photo-badge">Saha Desteği</div>
-    </div>
-    <div class="sdb-content">
-      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Hizmet III</span></div>
-      <h2 style="margin-bottom:16px">Endüstriyel Sistem<br>Mühendisliği</h2>
-      <p>PLC/SCADA sistem tasarımı ve entegrasyonundan kontrol panosu mühendisliğine, devreye almadan saha teknik desteğine kadar eksiksiz endüstriyel mühendislik hizmetleri sunuyoruz.</p>
-      <div class="capability-list">
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">PLC / SCADA Sistem Tasarımı<small>Siemens, Allen-Bradley, Mitsubishi platformları</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">Kontrol Panosu Mühendisliği<small>IEC 60439 uyumlu pano tasarım ve üretim</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">Endüstriyel Protokol Entegrasyonu<small>Profibus, Profinet, EtherCAT, Modbus</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">Devreye Alma ve Saha Desteği<small>Yerinde kurulum, kalibrasyon, personel eğitimi</small></div></div>
-        <div class="cap-item"><div class="cap-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cap-text">IEC 61508 İşlevsel Güvenlik<small>SIL sınıflandırma ve güvenlik analizi</small></div></div>
+  <div class="svc-detail rev">
+    <div class="sd-photo"><img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=800&q=80&fit=crop" alt="Endüstriyel kontrol sistemi"><div class="sd-badge">Saha Desteği</div></div>
+    <div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Hizmet III</span></div>
+      <h2 style="margin-bottom:14px">Endüstriyel Sistem<br>Mühendisliği</h2>
+      <p>PLC/SCADA sistem tasarımından kontrol panosu mühendisliğine, devreye almadan saha teknik desteğine kadar eksiksiz hizmet.</p>
+      <div class="cap-list">
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">PLC / SCADA Sistem Tasarımı<small>Siemens, Allen-Bradley, Mitsubishi</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Kontrol Panosu Mühendisliği<small>IEC 60439 uyumlu tasarım ve üretim</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Protokol Entegrasyonu<small>Profibus, Profinet, EtherCAT, Modbus</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">Devreye Alma ve Saha Desteği<small>Kurulum, kalibrasyon, personel eğitimi</small></div></div>
+        <div class="cl-item"><div class="cl-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><div class="cl-text">IEC 61508 İşlevsel Güvenlik<small>SIL sınıflandırma ve güvenlik analizi</small></div></div>
       </div>
-      <a href="index.html#contact" class="btn-primary">Sistem Talebi Oluştur →</a>
+      <a href="index.html#contact" class="btn btn-dark">Sistem Talebi →</a>
     </div>
   </div>
-
 </div>
 
-<!-- PROCESS -->
 <div style="background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-<div class="section-wrap">
-  <div class="section-tag reveal"><div class="tag-line"></div><span class="tag-text">Çalışma Süreci</span></div>
-  <h2 class="reveal">Her Projede Aynı<br>Titiz Süreç</h2>
-  <div class="process-steps">
-    <div class="ps reveal"><div class="ps-num">I</div><div class="ps-title">Talep & Analiz</div><div class="ps-desc">Cihaz ve arıza bilgileri değerlendirilir, ön teknik analiz yapılır.</div></div>
-    <div class="ps reveal d1"><div class="ps-num">II</div><div class="ps-title">Teklif & Onay</div><div class="ps-desc">Maliyet, süre ve kapsam netleştirilir, müşteri onayı alınır.</div></div>
-    <div class="ps reveal d2"><div class="ps-num">III</div><div class="ps-title">Teşhis</div><div class="ps-desc">X-ray, mikroskop ve ölçüm altyapısıyla kök neden tespiti yapılır.</div></div>
-    <div class="ps reveal d3"><div class="ps-num">IV</div><div class="ps-title">Onarım & Test</div><div class="ps-desc">IPC standartlarında onarım yapılır, fonksiyonel test uygulanır.</div></div>
-    <div class="ps reveal d4"><div class="ps-num">V</div><div class="ps-title">Teslim & Destek</div><div class="ps-desc">Belgeli teslim, yazılı garanti, satış sonrası teknik destek.</div></div>
+<div class="sw">
+  <div class="stag rev"><div class="stag-line"></div><span class="stag-text">Çalışma Süreci</span></div>
+  <h2 class="rev" style="margin-bottom:0">Her Projede Aynı Titiz Süreç</h2>
+  <div class="proc-steps">
+    <div class="ps rev"><div class="ps-num">I</div><div class="ps-title">Talep & Analiz</div><div class="ps-desc">Cihaz ve arıza bilgileri değerlendirilir, ön teknik analiz yapılır.</div></div>
+    <div class="ps rev d1"><div class="ps-num">II</div><div class="ps-title">Teklif & Onay</div><div class="ps-desc">Maliyet, süre ve kapsam netleştirilir, müşteri onayı alınır.</div></div>
+    <div class="ps rev d2"><div class="ps-num">III</div><div class="ps-title">Teşhis</div><div class="ps-desc">X-ray, mikroskop ve ölçüm altyapısıyla kök neden tespiti yapılır.</div></div>
+    <div class="ps rev d3"><div class="ps-num">IV</div><div class="ps-title">Onarım & Test</div><div class="ps-desc">IPC standartlarında onarım yapılır, fonksiyonel test uygulanır.</div></div>
+    <div class="ps rev"><div class="ps-num">V</div><div class="ps-title">Teslim & Destek</div><div class="ps-desc">Belgeli teslim, yazılı garanti, satış sonrası teknik destek.</div></div>
   </div>
 </div>
 </div>
 
-<script src="shared.js"></script>
+<footer>
+  <div class="footer-main">
+    <div>
+      <svg width="130" height="38" viewBox="0 0 130 38" style="margin-bottom:14px"><rect x="1" y="1" width="128" height="36" rx="5" fill="#F0EEE8"/><clipPath id="fl"><rect x="1" y="1" width="128" height="36" rx="5"/></clipPath><rect clip-path="url(#fl)" x="1" y="29" width="128" height="8" fill="#D85A30"/><text x="65" y="18" font-family="'DM Sans',sans-serif" font-size="15" font-weight="700" fill="#111214" text-anchor="middle" dominant-baseline="central" letter-spacing="5">ODSAN</text></svg>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);line-height:1.6;font-family:var(--mono)">Where Sparks<br>Become Solutions</p>
+    </div>
+    <div class="footer-cols">
+      <div><div class="fc-title">Sayfalar</div><ul class="fc-links"><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="sektorler.html">Sektörler</a></li><li><a href="hizmetler.html">Hizmetler</a></li><li><a href="urunler.html">Ürünler</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><div class="fc-title">Hizmetler</div><ul class="fc-links"><li><a href="hizmetler.html">Kart Tamiri</a></li><li><a href="hizmetler.html">PCB Tasarım</a></li><li><a href="hizmetler.html">Sistem Mühendisliği</a></li></ul></div>
+      <div><div class="fc-title">İletişim</div><ul class="fc-links"><li><a href="tel:+903120000000">+90 (312) 000 00 00</a></li><li><a href="mailto:info@odsan.com.tr">info@odsan.com.tr</a></li><li>Ankara / Türkiye</li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 ODSAN Elektronik San. Tic. A.Ş.</span><span>Tüm hakları saklıdır.</span></div>
+</footer>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',()=>{mob.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded','false')}));
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+</script>
 </body>
 </html>
