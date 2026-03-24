@@ -1,200 +1,251 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — ODSAN Elektronik</title>
-<meta name="description" content="Elektronik kart tamiri, PCB tasarım ve endüstriyel elektronik hakkında teknik makaleler ve rehberler. ODSAN Elektronik mühendislik blogu.">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<title>Blog — ODSAN Elektronik | Elektronik Kart Tamiri Rehberleri</title>
+<meta name="description" content="Elektronik kart tamiri, PCB tasarım ve endüstriyel elektronik hakkında teknik makaleler. BGA lehimleme, PLC arızaları, buzdolabı kart tamiri rehberleri.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://odsan.com.tr/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
+:root{--serif:'DM Serif Display','Georgia',serif;--sans:'DM Sans','Segoe UI','Helvetica Neue',Arial,sans-serif;--mono:'Courier New',monospace;--onyx:#111214;--alaz:#D85A30;--alaz-l:#FAE9E2;--off:#F7F5F2;--border:#DDD9D3;--borderl:#EAE7E2;--gray:#888780;--graym:#5a5750;--text:#1a1814;--texts:#3d3a34;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--white);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--alaz)}
+.rev{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}.rev.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav-w{max-width:1280px;margin:0 auto;padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none;flex-shrink:0}
+.nl-word{font-family:var(--sans);font-size:18px;font-weight:700;letter-spacing:5px;color:var(--onyx);line-height:1}
+.nl-line{height:2px;background:var(--alaz);margin:3px 0 2px}
+.nl-sub{font-size:9px;letter-spacing:3px;color:var(--gray);font-family:var(--mono);text-transform:uppercase}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{font-size:13px;color:var(--graym);transition:color .2s;white-space:nowrap;position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--alaz);transition:width .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--onyx)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{font-size:12px;font-weight:500;color:var(--white);background:var(--onyx);padding:8px 16px;transition:background .2s;white-space:nowrap;flex-shrink:0;border:none;cursor:pointer;display:inline-block}
+.nav-cta:hover{background:var(--alaz)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;width:36px;height:36px;justify-content:center;flex-shrink:0}
+.hamburger span{display:block;height:1.5px;background:var(--onyx);transition:all .25s;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{display:none;background:var(--white);border-bottom:1px solid var(--border)}
+.mob-menu.open{display:block}
+.mob-menu ul{list-style:none;padding:8px 16px}
+.mob-menu ul li a{display:block;font-size:15px;color:var(--texts);padding:12px 0;border-bottom:1px solid var(--borderl)}
+.mob-menu ul li:last-child a{border-bottom:none}
+.mob-menu .nav-cta{display:block;margin:12px 16px 16px;text-align:center}
+.sw{max-width:1280px;margin:0 auto;padding:56px 16px}
+.stag{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.stag-line{width:20px;height:1.5px;background:var(--alaz)}
+.stag-text{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase}
+h1{font-family:var(--serif);font-size:clamp(30px,4.5vw,54px);line-height:1.12;color:var(--onyx);letter-spacing:-.3px}
+h1 em{font-style:normal;color:var(--alaz)}
+h2,h3{font-family:var(--serif);color:var(--onyx)}
+.page-hero{padding:80px 16px 0;max-width:1280px;margin:0 auto}
+.ph-inner{border-bottom:1px solid var(--border);padding-bottom:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.ph-lead{font-size:15px;line-height:1.8;color:var(--texts);font-weight:300}
 /* BLOG LAYOUT */
-.blog-layout{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
-
-/* FEATURED POST */
-.post-featured{border:1px solid var(--border);overflow:hidden;margin-bottom:2px;transition:border-color .2s;display:block;color:inherit;text-decoration:none}
-.post-featured:hover{border-color:var(--alaz)}
-.pf-photo{height:380px;overflow:hidden;position:relative}
-.pf-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.post-featured:hover .pf-photo img{transform:scale(1.03)}
-.pf-label{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:8px;letter-spacing:2px;background:var(--alaz);color:white;padding:5px 10px;text-transform:uppercase}
-.pf-body{padding:32px}
-.post-meta{display:flex;align-items:center;gap:16px;margin-bottom:12px}
-.post-cat{font-family:var(--mono);font-size:8.5px;letter-spacing:1.5px;color:var(--alaz);text-transform:uppercase}
-.post-date{font-family:var(--mono);font-size:8.5px;color:var(--gray)}
-.post-title{font-family:var(--serif);font-size:clamp(18px,2.2vw,26px);font-weight:500;color:var(--onyx);line-height:1.3;margin-bottom:12px}
-.post-excerpt{font-size:14px;color:var(--text-soft);line-height:1.75;font-weight:300}
-.post-read{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--alaz);margin-top:16px;font-weight:500}
-.post-featured:hover .post-read{gap:10px}
-.post-read svg{transition:transform .2s}
-.post-featured:hover .post-read svg{transform:translateX(3px)}
-
+.blog-wrap{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}
+/* FEATURED */
+.post-feat{border:1px solid var(--border);overflow:hidden;margin-bottom:2px;display:block;text-decoration:none;transition:border-color .2s}
+.post-feat:hover{border-color:var(--alaz)}
+.pf-img{height:340px;overflow:hidden;position:relative}
+.pf-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.post-feat:hover .pf-img img{transform:scale(1.03)}
+.pf-lbl{position:absolute;top:14px;left:14px;font-size:8px;letter-spacing:2px;background:var(--alaz);color:white;padding:5px 10px;font-family:var(--mono);text-transform:uppercase}
+.pf-body{padding:28px}
+.pmeta{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.pcat{font-size:8.5px;letter-spacing:1.5px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase}
+.pdate{font-size:8.5px;color:var(--gray);font-family:var(--mono)}
+.ptitle{font-family:var(--serif);font-size:clamp(17px,2.2vw,24px);color:var(--onyx);line-height:1.3;margin-bottom:10px}
+.pexcerpt{font-size:14px;color:var(--texts);line-height:1.75;font-weight:300}
+.pread{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--alaz);margin-top:14px;font-weight:500;transition:gap .2s}
+.post-feat:hover .pread{gap:10px}
 /* POST LIST */
 .post-list{display:flex;flex-direction:column;gap:2px}
-.post-item{border:1px solid var(--border);overflow:hidden;display:grid;grid-template-columns:200px 1fr;transition:border-color .2s;text-decoration:none;color:inherit}
-.post-item:hover{border-color:var(--alaz)}
-.pi-photo{overflow:hidden}
-.pi-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.post-item:hover .pi-photo img{transform:scale(1.05)}
-.pi-body{padding:20px 24px;display:flex;flex-direction:column;justify-content:center}
-.pi-body .post-title{font-size:16px;margin-bottom:8px}
-.pi-body .post-excerpt{font-size:13px;-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
-
+.pi{border:1px solid var(--border);overflow:hidden;display:grid;grid-template-columns:180px 1fr;text-decoration:none;transition:border-color .2s}
+.pi:hover{border-color:var(--alaz)}
+.pi-img{overflow:hidden}
+.pi-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;display:block}
+.pi:hover .pi-img img{transform:scale(1.05)}
+.pi-body{padding:18px 20px;display:flex;flex-direction:column;justify-content:center}
+.pi-body .ptitle{font-size:15px;margin-bottom:6px}
+.pi-body .pexcerpt{font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pi-read{font-size:11px;color:var(--alaz);font-weight:500;margin-top:8px;display:inline-block}
 /* SIDEBAR */
-.blog-sidebar{position:sticky;top:80px}
-.sidebar-box{border:1px solid var(--border);padding:24px;margin-bottom:16px}
-.sidebar-title{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);text-transform:uppercase;margin-bottom:16px}
-.cat-list{list-style:none;display:flex;flex-direction:column;gap:0}
-.cat-list li a{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border-light);font-size:13px;color:var(--text-soft);transition:color .2s}
+.sidebar{position:sticky;top:76px}
+.sb-box{border:1px solid var(--border);padding:20px;margin-bottom:14px}
+.sb-title{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:14px}
+.cat-list{list-style:none}
+.cat-list li a{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--borderl);font-size:13px;color:var(--texts);transition:color .2s}
 .cat-list li:last-child a{border-bottom:none}
 .cat-list li a:hover{color:var(--alaz)}
-.cat-list li a span{font-family:var(--mono);font-size:10px;color:var(--gray)}
-
-.recent-post{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border-light);text-decoration:none;color:inherit}
-.recent-post:last-child{border-bottom:none}
-.rp-photo{width:60px;height:60px;flex-shrink:0;overflow:hidden}
-.rp-photo img{width:100%;height:100%;object-fit:cover}
-.rp-title{font-size:12px;color:var(--text);line-height:1.4;font-weight:500;margin-bottom:4px}
-.rp-date{font-family:var(--mono);font-size:9px;color:var(--gray)}
-.recent-post:hover .rp-title{color:var(--alaz)}
-
-.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
-.blog-tag{font-family:var(--mono);font-size:9px;letter-spacing:.5px;border:1px solid var(--border);padding:5px 10px;color:var(--gray-mid);transition:all .2s;cursor:pointer;text-decoration:none}
-.blog-tag:hover{border-color:var(--alaz);color:var(--alaz)}
-
-@media(max-width:1024px){
-  .blog-layout{grid-template-columns:1fr}
-  .blog-sidebar{position:static}
-  .pf-photo{height:280px}
+.cat-list li a span{font-size:10px;color:var(--gray);font-family:var(--mono)}
+.rp{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--borderl);text-decoration:none}
+.rp:last-child{border-bottom:none}
+.rp-img{width:56px;height:56px;flex-shrink:0;overflow:hidden}
+.rp-img img{width:100%;height:100%;object-fit:cover}
+.rp-title{font-size:12px;color:var(--text);line-height:1.4;font-weight:500;margin-bottom:3px}
+.rp-date{font-size:9px;color:var(--gray);font-family:var(--mono)}
+.rp:hover .rp-title{color:var(--alaz)}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:9px;letter-spacing:.5px;border:1px solid var(--border);padding:4px 9px;color:var(--graym);transition:all .2s;cursor:pointer;font-family:var(--mono)}
+.tag:hover{border-color:var(--alaz);color:var(--alaz)}
+.btn-dark{display:inline-block;font-size:12px;font-weight:500;color:var(--white);background:var(--onyx);padding:10px 18px;transition:background .2s;text-align:center}
+.btn-dark:hover{background:var(--alaz)}
+/* FOOTER */
+footer{background:var(--onyx);border-top:3px solid var(--alaz)}
+.footer-main{max-width:1280px;margin:0 auto;padding:40px 16px;display:grid;grid-template-columns:180px 1fr;gap:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.fc-title{font-size:9px;letter-spacing:2.5px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:12px}
+.fc-links{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fc-links a{font-size:13px;color:rgba(255,255,255,.35);transition:color .2s}.fc-links a:hover{color:var(--alaz)}
+.fc-links li{font-size:13px;color:rgba(255,255,255,.25)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom span{font-size:10px;color:rgba(255,255,255,.2);font-family:var(--mono)}
+.wa-float{position:fixed;bottom:20px;right:20px;z-index:900;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);transition:transform .2s;text-decoration:none}
+.wa-float:hover{transform:scale(1.08)}.wa-float svg{width:26px;height:26px;fill:#fff}
+@media(max-width:1023px){
+  .nav-links,.nav-cta.desk{display:none}.hamburger{display:flex}
+  .ph-inner{grid-template-columns:1fr;gap:20px}
+  .blog-wrap{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .pf-img{height:240px}
+  .footer-main{grid-template-columns:1fr}.footer-cols{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:640px){
-  .post-item{grid-template-columns:1fr}
-  .pi-photo{height:180px}
+@media(max-width:600px){
+  body{font-size:15px}.nav-w{height:56px}.page-hero{padding:72px 14px 0}.sw{padding:44px 14px}
+  .pi{grid-template-columns:1fr}.pi-img{height:160px}
+  .footer-cols{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
-
 <a href="https://wa.me/905XXXXXXXXX" class="wa-float" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
+<nav>
+  <div class="nav-w">
+    <a href="index.html" class="nav-logo"><span class="nl-word">ODSAN</span><span class="nl-line"></span><span class="nl-sub">Electronics</span></a>
+    <ul class="nav-links">
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="sektorler.html">Sektörler</a></li>
+      <li><a href="hizmetler.html">Hizmetler</a></li>
+      <li><a href="urunler.html">Ürünler</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta desk">İletişim</a>
+    <button class="hamburger" id="ham" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-menu" id="mob">
+    <ul>
+      <li><a href="hakkimizda.html" class="ml">Hakkımızda</a></li>
+      <li><a href="sektorler.html" class="ml">Sektörler</a></li>
+      <li><a href="hizmetler.html" class="ml">Hizmetler</a></li>
+      <li><a href="urunler.html" class="ml">Ürünler</a></li>
+      <li><a href="blog.html" class="ml">Blog</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta ml">İletişim</a>
+  </div>
+</nav>
 
 <div class="page-hero">
-  <div class="page-hero-inner">
+  <div class="ph-inner">
     <div>
-      <div class="page-badge"><div class="badge-line"></div><span class="badge-text">Teknik Blog</span></div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Teknik Blog</span></div>
       <h1>Mühendislik<br><em>Bilgisi</em> & Rehberler</h1>
     </div>
-    <p class="page-hero-lead">Elektronik kart tamiri, PCB tasarım ve endüstriyel elektronik hakkında pratik teknik içerikler. Sahadan gelen gerçek deneyimler.</p>
+    <p class="ph-lead">Elektronik kart tamiri, PCB tasarım ve endüstriyel elektronik hakkında pratik teknik içerikler. Sahadan gelen gerçek deneyimler.</p>
   </div>
 </div>
 
-<div class="section-wrap">
-<div class="blog-layout">
-
-  <!-- MAIN CONTENT -->
+<div class="sw">
+<div class="blog-wrap">
   <div>
-    <!-- Featured -->
-    <a href="#" class="post-featured reveal">
-      <div class="pf-photo">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80&fit=crop" alt="BGA yeniden lehimleme süreci">
-        <div class="pf-label">Öne Çıkan</div>
+    <a href="#" class="post-feat rev">
+      <div class="pf-img">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=80&fit=crop" alt="BGA yeniden lehimleme">
+        <div class="pf-lbl">Öne Çıkan</div>
       </div>
       <div class="pf-body">
-        <div class="post-meta">
-          <span class="post-cat">Kart Tamiri</span>
-          <span class="post-date">15 Kasım 2024</span>
-        </div>
-        <h2 class="post-title">BGA Yeniden Lehimleme: Adım Adım Kapsamlı Rehber</h2>
-        <p class="post-excerpt">Ball Grid Array (BGA) bileşenler, modern elektronik kartların en kritik ve en hassas parçalarıdır. Bu rehberde X-ray doğrulamasından reballing sürecine kadar doğru BGA yeniden lehimleme tekniklerini ayrıntılı biçimde ele alıyoruz.</p>
-        <span class="post-read">Devamını oku <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        <div class="pmeta"><span class="pcat">Kart Tamiri</span><span class="pdate">15 Kasım 2024</span></div>
+        <h2 class="ptitle">BGA Yeniden Lehimleme: Adım Adım Kapsamlı Rehber</h2>
+        <p class="pexcerpt">Ball Grid Array bileşenler modern elektronik kartların en kritik parçalarıdır. X-ray doğrulamasından reballing sürecine kadar doğru BGA yeniden lehimleme tekniklerini ele alıyoruz.</p>
+        <span class="pread">Devamını oku →</span>
       </div>
     </a>
 
-    <!-- Post list -->
     <div class="post-list" style="margin-top:2px">
-
-      <a href="#" class="post-item reveal">
-        <div class="pi-photo">
-          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80&fit=crop" alt="PLC tamiri">
-        </div>
+      <a href="#" class="pi rev">
+        <div class="pi-img"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80&fit=crop" alt="PLC tamiri"></div>
         <div class="pi-body">
-          <div class="post-meta"><span class="post-cat">Endüstriyel</span><span class="post-date">8 Kasım 2024</span></div>
-          <h3 class="post-title">PLC Arızası mı? Önce Şunu Kontrol Edin</h3>
-          <p class="post-excerpt">Siemens, ABB ve Mitsubishi PLC'lerde en sık karşılaşılan 5 arıza türü ve yerinde yapabileceğiniz ön teşhis adımları.</p>
-          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+          <div class="pmeta"><span class="pcat">Endüstriyel</span><span class="pdate">8 Kasım 2024</span></div>
+          <h3 class="ptitle">PLC Arızası mı? Önce Şunu Kontrol Edin</h3>
+          <p class="pexcerpt">Siemens, ABB ve Mitsubishi PLC'lerde en sık 5 arıza türü ve yerinde yapabileceğiniz ön teşhis adımları.</p>
+          <span class="pi-read">Devamını oku →</span>
         </div>
       </a>
-
-      <a href="#" class="post-item reveal d1">
-        <div class="pi-photo">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&fit=crop" alt="Buzdolabı kart tamiri">
-        </div>
+      <a href="#" class="pi rev d1">
+        <div class="pi-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&fit=crop" alt="Buzdolabı kart tamiri"></div>
         <div class="pi-body">
-          <div class="post-meta"><span class="post-cat">Beyaz Eşya</span><span class="post-date">2 Kasım 2024</span></div>
-          <h3 class="post-title">Buzdolabı Soğutmuyor: Kart Sorunu mu, Kompresör mü?</h3>
-          <p class="post-excerpt">Buzdolabı soğutma arızalarının %60'ı elektronik karttan kaynaklanır. Doğru teşhis için dikkat edilmesi gerekenler.</p>
-          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+          <div class="pmeta"><span class="pcat">Beyaz Eşya</span><span class="pdate">2 Kasım 2024</span></div>
+          <h3 class="ptitle">Buzdolabı Soğutmuyor: Kart Sorunu mu, Kompresör mü?</h3>
+          <p class="pexcerpt">Buzdolabı arızalarının %60'ı elektronik karttan kaynaklanır. Doğru teşhis için dikkat edilmesi gerekenler.</p>
+          <span class="pi-read">Devamını oku →</span>
         </div>
       </a>
-
-      <a href="#" class="post-item reveal d2">
-        <div class="pi-photo">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80&fit=crop" alt="PCB tasarım ipuçları">
-        </div>
+      <a href="#" class="pi rev">
+        <div class="pi-img"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80&fit=crop" alt="PCB tasarım EMC"></div>
         <div class="pi-body">
-          <div class="post-meta"><span class="post-cat">PCB Tasarım</span><span class="post-date">25 Ekim 2024</span></div>
-          <h3 class="post-title">Endüstriyel PCB Tasarımında 7 Kritik EMC Kuralı</h3>
-          <p class="post-excerpt">Üretim sonrası EMC testini geçemeyen kartların büyük çoğunluğunda yerleşim tasarım hatası bulunur. Baştan doğru yapmak için kritik kurallar.</p>
-          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+          <div class="pmeta"><span class="pcat">PCB Tasarım</span><span class="pdate">25 Ekim 2024</span></div>
+          <h3 class="ptitle">Endüstriyel PCB Tasarımında 7 Kritik EMC Kuralı</h3>
+          <p class="pexcerpt">EMC testini geçemeyen kartların büyük çoğunluğunda yerleşim tasarım hatası bulunur. Baştan doğru yapmak için kurallar.</p>
+          <span class="pi-read">Devamını oku →</span>
         </div>
       </a>
-
-      <a href="#" class="post-item reveal">
-        <div class="pi-photo">
-          <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=400&q=80&fit=crop" alt="Medikal kart tamiri">
-        </div>
+      <a href="#" class="pi rev d1">
+        <div class="pi-img"><img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=400&q=80&fit=crop" alt="Medikal kart tamiri"></div>
         <div class="pi-body">
-          <div class="post-meta"><span class="post-cat">Medikal</span><span class="post-date">18 Ekim 2024</span></div>
-          <h3 class="post-title">Medikal Kart Tamirinde IEC 60601 Uyumu Neden Kritik?</h3>
-          <p class="post-excerpt">Hasta güvenliğini doğrudan etkileyen medikal elektroniklerin tamirinde standart uyumunun önemi ve dikkat edilmesi gerekenler.</p>
-          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+          <div class="pmeta"><span class="pcat">Medikal</span><span class="pdate">18 Ekim 2024</span></div>
+          <h3 class="ptitle">Medikal Kart Tamirinde IEC 60601 Uyumu Neden Kritik?</h3>
+          <p class="pexcerpt">Hasta güvenliğini doğrudan etkileyen medikal elektroniklerin tamirinde standart uyumunun önemi.</p>
+          <span class="pi-read">Devamını oku →</span>
         </div>
       </a>
-
-      <a href="#" class="post-item reveal d1">
-        <div class="pi-photo">
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=80&fit=crop" alt="Solar inverter onarımı">
-        </div>
+      <a href="#" class="pi rev">
+        <div class="pi-img"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=80&fit=crop" alt="Solar inverter arızası"></div>
         <div class="pi-body">
-          <div class="post-meta"><span class="post-cat">Enerji</span><span class="post-date">10 Ekim 2024</span></div>
-          <h3 class="post-title">Solar İnverter Kartı Arızalandığında Ne Yapmalısınız?</h3>
-          <p class="post-excerpt">Fotovoltaik sistem yatırımınızı korumak için inverter arızalarında izlenmesi gereken doğru adımlar ve onarılabilirlik değerlendirmesi.</p>
-          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+          <div class="pmeta"><span class="pcat">Enerji</span><span class="pdate">10 Ekim 2024</span></div>
+          <h3 class="ptitle">Solar İnverter Kartı Arızalandığında Ne Yapmalısınız?</h3>
+          <p class="pexcerpt">Fotovoltaik sistem yatırımınızı korumak için inverter arızalarında izlenmesi gereken doğru adımlar.</p>
+          <span class="pi-read">Devamını oku →</span>
         </div>
       </a>
-
-      <a href="#" class="post-item reveal d2">
-        <div class="pi-photo">
-          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80&fit=crop" alt="İş makinesi elektronik arıza">
-        </div>
+      <a href="#" class="pi rev d1">
+        <div class="pi-img"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80&fit=crop" alt="İş makinesi ECU"></div>
         <div class="pi-body">
-          <div class="post-meta"><span class="post-cat">İş Makinesi</span><span class="post-date">3 Ekim 2024</span></div>
-          <h3 class="post-title">İş Makinesi ECU Arızası: Onarım mı, Yeni Alım mı?</h3>
-          <p class="post-excerpt">Bir iş makinesi ECU'sunun onarılıp onarılamayacağını değerlendirirken göz önünde bulundurulması gereken teknik ve ekonomik faktörler.</p>
-          <span class="post-read" style="font-size:12px;color:var(--alaz);display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:500">Devamını oku →</span>
+          <div class="pmeta"><span class="pcat">İş Makinesi</span><span class="pdate">3 Ekim 2024</span></div>
+          <h3 class="ptitle">İş Makinesi ECU Arızası: Onarım mı, Yeni Alım mı?</h3>
+          <p class="pexcerpt">ECU onarılabilirliğini değerlendirirken göz önünde bulundurulması gereken teknik ve ekonomik faktörler.</p>
+          <span class="pi-read">Devamını oku →</span>
         </div>
       </a>
-
     </div>
   </div>
 
-  <!-- SIDEBAR -->
-  <aside class="blog-sidebar reveal d2">
-
-    <div class="sidebar-box">
-      <div class="sidebar-title">Kategoriler</div>
+  <aside class="sidebar rev d2">
+    <div class="sb-box">
+      <div class="sb-title">Kategoriler</div>
       <ul class="cat-list">
         <li><a href="#">Kart Tamiri <span>12</span></a></li>
         <li><a href="#">Endüstriyel Otomasyon <span>8</span></a></li>
@@ -204,56 +255,50 @@
         <li><a href="#">Enerji Sistemleri <span>3</span></a></li>
       </ul>
     </div>
-
-    <div class="sidebar-box">
-      <div class="sidebar-title">Son Yazılar</div>
-      <a href="#" class="recent-post">
-        <div class="rp-photo"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=120&q=70&fit=crop" alt=""></div>
-        <div><div class="rp-title">BGA Yeniden Lehimleme Rehberi</div><div class="rp-date">15 Kasım 2024</div></div>
-      </a>
-      <a href="#" class="recent-post">
-        <div class="rp-photo"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=120&q=70&fit=crop" alt=""></div>
-        <div><div class="rp-title">PLC Arızası Ön Teşhis</div><div class="rp-date">8 Kasım 2024</div></div>
-      </a>
-      <a href="#" class="recent-post">
-        <div class="rp-photo"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&q=70&fit=crop" alt=""></div>
-        <div><div class="rp-title">Buzdolabı Soğutma Arızası</div><div class="rp-date">2 Kasım 2024</div></div>
-      </a>
-      <a href="#" class="recent-post">
-        <div class="rp-photo"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=120&q=70&fit=crop" alt=""></div>
-        <div><div class="rp-title">PCB Tasarım EMC Kuralları</div><div class="rp-date">25 Ekim 2024</div></div>
-      </a>
+    <div class="sb-box">
+      <div class="sb-title">Son Yazılar</div>
+      <a href="#" class="rp"><div class="rp-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=120&q=70&fit=crop" alt=""></div><div><div class="rp-title">BGA Yeniden Lehimleme Rehberi</div><div class="rp-date">15 Kasım 2024</div></div></a>
+      <a href="#" class="rp"><div class="rp-img"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=120&q=70&fit=crop" alt=""></div><div><div class="rp-title">PLC Arızası Ön Teşhis</div><div class="rp-date">8 Kasım 2024</div></div></a>
+      <a href="#" class="rp"><div class="rp-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=120&q=70&fit=crop" alt=""></div><div><div class="rp-title">Buzdolabı Soğutma Arızası</div><div class="rp-date">2 Kasım 2024</div></div></a>
     </div>
-
-    <div class="sidebar-box">
-      <div class="sidebar-title">Etiketler</div>
-      <div class="tag-cloud">
-        <a href="#" class="blog-tag">BGA</a>
-        <a href="#" class="blog-tag">PLC</a>
-        <a href="#" class="blog-tag">PCB Tasarım</a>
-        <a href="#" class="blog-tag">Inverter</a>
-        <a href="#" class="blog-tag">Servo</a>
-        <a href="#" class="blog-tag">EMC</a>
-        <a href="#" class="blog-tag">Buzdolabı</a>
-        <a href="#" class="blog-tag">Medikal</a>
-        <a href="#" class="blog-tag">IPC-7711</a>
-        <a href="#" class="blog-tag">Lehimleme</a>
-        <a href="#" class="blog-tag">IGBT</a>
-        <a href="#" class="blog-tag">CAN Bus</a>
+    <div class="sb-box">
+      <div class="sb-title">Etiketler</div>
+      <div class="tags">
+        <span class="tag">BGA</span><span class="tag">PLC</span><span class="tag">PCB Tasarım</span>
+        <span class="tag">İnverter</span><span class="tag">Servo</span><span class="tag">EMC</span>
+        <span class="tag">Buzdolabı</span><span class="tag">Medikal</span><span class="tag">IPC-7711</span>
+        <span class="tag">Lehimleme</span><span class="tag">IGBT</span><span class="tag">CAN Bus</span>
       </div>
     </div>
-
-    <div style="background:var(--onyx);padding:24px">
-      <div style="font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);text-transform:uppercase;margin-bottom:12px">Hızlı Teklif</div>
-      <p style="font-size:13px;color:rgba(255,255,255,.5);font-weight:300;line-height:1.6;margin-bottom:16px">Arızalı kartınız için hemen teklif alın.</p>
-      <a href="index.html#contact" class="btn-alaz" style="display:block;text-align:center">Teklif Al →</a>
+    <div style="background:var(--onyx);padding:22px">
+      <div style="font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:10px">Hızlı Teklif</div>
+      <p style="font-size:13px;color:rgba(255,255,255,.45);font-weight:300;line-height:1.6;margin-bottom:14px">Arızalı kartınız için hemen teklif alın.</p>
+      <a href="index.html#contact" class="btn-dark" style="display:block;text-align:center">Teklif Al →</a>
     </div>
-
   </aside>
-
 </div>
 </div>
 
-<script src="shared.js"></script>
+<footer>
+  <div class="footer-main">
+    <div>
+      <svg width="130" height="38" viewBox="0 0 130 38" style="margin-bottom:14px"><rect x="1" y="1" width="128" height="36" rx="5" fill="#F0EEE8"/><clipPath id="fl"><rect x="1" y="1" width="128" height="36" rx="5"/></clipPath><rect clip-path="url(#fl)" x="1" y="29" width="128" height="8" fill="#D85A30"/><text x="65" y="18" font-family="'DM Sans',sans-serif" font-size="15" font-weight="700" fill="#111214" text-anchor="middle" dominant-baseline="central" letter-spacing="5">ODSAN</text></svg>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);line-height:1.6;font-family:var(--mono)">Where Sparks<br>Become Solutions</p>
+    </div>
+    <div class="footer-cols">
+      <div><div class="fc-title">Sayfalar</div><ul class="fc-links"><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="sektorler.html">Sektörler</a></li><li><a href="hizmetler.html">Hizmetler</a></li><li><a href="urunler.html">Ürünler</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><div class="fc-title">Hizmetler</div><ul class="fc-links"><li><a href="hizmetler.html">Kart Tamiri</a></li><li><a href="hizmetler.html">PCB Tasarım</a></li><li><a href="hizmetler.html">Sistem Mühendisliği</a></li></ul></div>
+      <div><div class="fc-title">İletişim</div><ul class="fc-links"><li><a href="tel:+903120000000">+90 (312) 000 00 00</a></li><li><a href="mailto:info@odsan.com.tr">info@odsan.com.tr</a></li><li>Ankara / Türkiye</li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 ODSAN Elektronik San. Tic. A.Ş.</span><span>Tüm hakları saklıdır.</span></div>
+</footer>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',()=>{mob.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded','false')}));
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+</script>
 </body>
 </html>
