@@ -3,251 +3,308 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hakkımızda — ODSAN Elektronik</title>
-<meta name="description" content="2008'den bu yana Ankara merkezli ODSAN Elektronik, elektronik kart tamiri ve mühendislik alanında 15 yılı aşkın deneyimiyle güvenilir çözümler sunmaktadır.">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<title>Hakkımızda — ODSAN Elektronik | Ankara</title>
+<meta name="description" content="2008'den bu yana Ankara merkezli ODSAN Elektronik, 15+ yıl deneyimiyle elektronik kart tamiri ve mühendislik alanında güvenilir çözümler sunmaktadır.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://odsan.com.tr/hakkimizda.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-/* ── ABOUT PAGE ── */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:72px}
-.about-grid.reverse{direction:rtl}
-.about-grid.reverse>*{direction:ltr}
-
-.about-img{height:420px;border-radius:4px;overflow:hidden;position:relative}
-.about-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+:root{--serif:'DM Serif Display','Georgia',serif;--sans:'DM Sans','Segoe UI','Helvetica Neue',Arial,sans-serif;--mono:'Courier New',monospace;--onyx:#111214;--alaz:#D85A30;--alaz-l:#FAE9E2;--alaz-d:#993C1D;--off:#F7F5F2;--krem:#F0EEE8;--border:#DDD9D3;--borderl:#EAE7E2;--gray:#888780;--graym:#5a5750;--text:#1a1814;--texts:#3d3a34;--white:#fff;--green:#1a8a4a;--greenl:#e6f4ed}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--white);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--alaz)}
+.rev{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}.rev.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav-w{max-width:1280px;margin:0 auto;padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none;flex-shrink:0}
+.nl-word{font-family:var(--sans);font-size:18px;font-weight:700;letter-spacing:5px;color:var(--onyx);line-height:1}
+.nl-line{height:2px;background:var(--alaz);margin:3px 0 2px}
+.nl-sub{font-size:9px;letter-spacing:3px;color:var(--gray);font-family:var(--mono);text-transform:uppercase}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{font-size:13px;color:var(--graym);transition:color .2s;white-space:nowrap;position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--alaz);transition:width .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--onyx)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{font-size:12px;font-weight:500;color:var(--white);background:var(--onyx);padding:8px 16px;transition:background .2s;white-space:nowrap;flex-shrink:0;border:none;cursor:pointer;display:inline-block}
+.nav-cta:hover{background:var(--alaz)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;width:36px;height:36px;justify-content:center;flex-shrink:0}
+.hamburger span{display:block;height:1.5px;background:var(--onyx);transition:all .25s;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{display:none;background:var(--white);border-bottom:1px solid var(--border)}
+.mob-menu.open{display:block}
+.mob-menu ul{list-style:none;padding:8px 16px}
+.mob-menu ul li a{display:block;font-size:15px;color:var(--texts);padding:12px 0;border-bottom:1px solid var(--borderl)}
+.mob-menu ul li:last-child a{border-bottom:none}
+.mob-menu .nav-cta{display:block;margin:12px 16px 16px;text-align:center}
+/* LAYOUT */
+.sw{max-width:1280px;margin:0 auto;padding:56px 16px}
+.stag{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.stag-line{width:20px;height:1.5px;background:var(--alaz)}
+.stag-text{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase}
+h1{font-family:var(--serif);font-size:clamp(30px,4.5vw,54px);line-height:1.12;color:var(--onyx);letter-spacing:-.3px}
+h1 em{font-style:normal;color:var(--alaz)}
+h2{font-family:var(--serif);font-size:clamp(22px,3vw,38px);line-height:1.2;color:var(--onyx)}
+h3{font-family:var(--serif);font-weight:400;color:var(--onyx)}
+/* PAGE HERO */
+.page-hero{padding:80px 16px 0;max-width:1280px;margin:0 auto}
+.ph-inner{border-bottom:1px solid var(--border);padding-bottom:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.ph-lead{font-size:15px;line-height:1.8;color:var(--texts);font-weight:300}
+/* STATS BAND */
+.stats-band{background:var(--onyx);border-top:3px solid var(--alaz)}
+.stats-inner{max-width:1280px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07)}
+.sb{background:var(--onyx);padding:32px 24px;transition:background .2s}
+.sb:hover{background:#1a1c1f}
+.sb-num{font-family:var(--serif);font-size:44px;color:var(--white);line-height:1;margin-bottom:6px}
+.sb-num sup{font-size:20px;color:var(--alaz)}
+.sb-label{font-size:13px;color:rgba(255,255,255,.4);font-weight:300}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-bottom:64px}
+.about-grid.flip{direction:rtl}.about-grid.flip>*{direction:ltr}
+.about-img{height:400px;border-radius:4px;overflow:hidden;position:relative}
+.about-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .about-img:hover img{transform:scale(1.04)}
-.about-img-caption{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(17,18,20,.7));font-family:var(--mono);font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.65);text-transform:uppercase}
-
-.about-text-block p{font-size:14px;line-height:1.85;color:var(--text-soft);font-weight:300;margin-bottom:14px}
-
-/* STATS ROW */
-.stats-band{background:var(--onyx);padding:48px 24px;border-top:3px solid var(--alaz)}
-.stats-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08)}
-.stat-box{background:var(--onyx);padding:32px 28px;transition:background .2s}
-.stat-box:hover{background:#1a1c1f}
-.stat-box-num{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--white);line-height:1;margin-bottom:6px}
-.stat-box-num sup{font-size:22px;color:var(--alaz)}
-.stat-box-label{font-size:13px;color:rgba(255,255,255,.45);font-weight:300}
-
-/* TEAM */
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
-.team-card{border:1px solid var(--border);background:var(--white);overflow:hidden;transition:border-color .2s}
-.team-card:hover{border-color:var(--alaz)}
-.team-photo{height:240px;overflow:hidden}
-.team-photo img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
-.team-card:hover .team-photo img{transform:scale(1.04)}
-.team-info{padding:20px 22px}
-.team-name{font-family:var(--serif);font-size:17px;font-weight:500;color:var(--onyx);margin-bottom:3px}
-.team-role{font-family:var(--mono);font-size:9px;letter-spacing:1.5px;color:var(--alaz);text-transform:uppercase;margin-bottom:10px}
-.team-bio{font-size:13px;color:var(--text-soft);line-height:1.65;font-weight:300}
-
-/* VALUES */
-.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:40px}
-.value-card{background:var(--white);padding:28px 24px;transition:background .2s;position:relative}
-.value-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background .2s}
-.value-card:hover{background:var(--alaz-light)}
-.value-card:hover::before{background:var(--alaz)}
-.value-icon{width:44px;height:44px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--onyx);transition:border-color .2s,color .2s}
-.value-card:hover .value-icon{border-color:var(--alaz);color:var(--alaz)}
-.value-title{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--onyx);margin-bottom:8px}
-.value-desc{font-size:12px;color:var(--gray-mid);line-height:1.65;font-weight:300}
-
-/* CERTS */
-.cert-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-.cert{font-family:var(--mono);font-size:9px;letter-spacing:1px;color:var(--gray-mid);border:1px solid var(--border);padding:8px 14px;background:var(--white);transition:border-color .2s,color .2s}
+.img-cap{position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(transparent,rgba(17,18,20,.65));font-size:9px;letter-spacing:1.5px;color:rgba(255,255,255,.6);font-family:var(--mono);text-transform:uppercase}
+.at p{font-size:14px;line-height:1.85;color:var(--texts);font-weight:300;margin-bottom:12px}
+.cert-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;padding-top:18px;border-top:1px solid var(--border)}
+.cert{font-size:9px;letter-spacing:.8px;color:var(--graym);border:1px solid var(--border);padding:5px 10px;font-family:var(--mono);background:var(--white);transition:border-color .2s,color .2s;cursor:default}
 .cert:hover{border-color:var(--alaz);color:var(--alaz)}
-
+/* VALUES */
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:36px}
+.vc{background:var(--white);padding:26px 22px;position:relative;transition:background .2s}
+.vc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background .2s}
+.vc:hover{background:var(--alaz-l)}.vc:hover::before{background:var(--alaz)}
+.vc-icon{width:40px;height:40px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--onyx);transition:all .2s}
+.vc:hover .vc-icon{border-color:var(--alaz);color:var(--alaz)}
+.vc h3{font-size:15px;margin-bottom:8px}
+.vc p{font-size:12px;color:var(--graym);line-height:1.6;font-weight:300}
 /* TIMELINE */
-.timeline{margin-top:40px;position:relative;padding-left:32px}
-.timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:0;width:1.5px;background:var(--border)}
-.tl-item{position:relative;margin-bottom:32px}
-.tl-dot{position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--white);border:2px solid var(--alaz)}
-.tl-year{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);text-transform:uppercase;margin-bottom:4px}
-.tl-title{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--onyx);margin-bottom:4px}
-.tl-desc{font-size:13px;color:var(--text-soft);font-weight:300;line-height:1.6}
-
-@media(max-width:1024px){
-  .about-grid{grid-template-columns:1fr;gap:32px}
-  .about-grid.reverse{direction:ltr}
+.tl{margin-top:36px;position:relative;padding-left:28px}
+.tl::before{content:'';position:absolute;left:4px;top:8px;bottom:0;width:1.5px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:28px}
+.tl-dot{position:absolute;left:-27px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--white);border:2px solid var(--alaz)}
+.tl-year{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:3px}
+.tl-title{font-family:var(--serif);font-size:15px;color:var(--onyx);margin-bottom:3px}
+.tl-desc{font-size:13px;color:var(--texts);font-weight:300;line-height:1.6}
+/* BTN */
+.btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;padding:11px 20px;border:1.5px solid transparent;transition:all .18s;cursor:pointer;white-space:nowrap;text-decoration:none}
+.btn-dark{background:var(--onyx);color:var(--white);border-color:var(--onyx)}.btn-dark:hover{background:var(--alaz);border-color:var(--alaz)}
+.btn-ghost{background:transparent;color:var(--onyx);border-color:var(--border)}.btn-ghost:hover{border-color:var(--alaz);color:var(--alaz)}
+.btn-orange{background:var(--alaz);color:var(--white);border-color:var(--alaz)}.btn-orange:hover{background:var(--alaz-d);border-color:var(--alaz-d)}
+/* FOOTER */
+footer{background:var(--onyx);border-top:3px solid var(--alaz)}
+.footer-main{max-width:1280px;margin:0 auto;padding:40px 16px;display:grid;grid-template-columns:180px 1fr;gap:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.fc-title{font-size:9px;letter-spacing:2.5px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:12px}
+.fc-links{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fc-links a{font-size:13px;color:rgba(255,255,255,.35);transition:color .2s}.fc-links a:hover{color:var(--alaz)}
+.fc-links li{font-size:13px;color:rgba(255,255,255,.25)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom span{font-size:10px;color:rgba(255,255,255,.2);font-family:var(--mono)}
+/* WA */
+.wa-float{position:fixed;bottom:20px;right:20px;z-index:900;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);transition:transform .2s;text-decoration:none}
+.wa-float:hover{transform:scale(1.08)}.wa-float svg{width:26px;height:26px;fill:#fff}
+/* RESPONSIVE */
+@media(max-width:1023px){
+  .nav-links,.nav-cta.desk{display:none}.hamburger{display:flex}
+  .ph-inner{grid-template-columns:1fr;gap:20px}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
-  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.about-grid.flip{grid-template-columns:1fr;direction:ltr;gap:28px}
   .values-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-main{grid-template-columns:1fr}.footer-cols{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:640px){
-  .team-grid{grid-template-columns:1fr}
-  .values-grid{grid-template-columns:1fr}
+@media(max-width:600px){
+  body{font-size:15px}.nav-w{height:56px}
+  .page-hero{padding:72px 14px 0}
+  .sw{padding:44px 14px}
   .stats-inner{grid-template-columns:1fr 1fr}
+  .values-grid{grid-template-columns:1fr}
+  .about-img{height:260px}
+  .footer-cols{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
-
 <a href="https://wa.me/905XXXXXXXXX" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
+<nav>
+  <div class="nav-w">
+    <a href="index.html" class="nav-logo"><span class="nl-word">ODSAN</span><span class="nl-line"></span><span class="nl-sub">Electronics</span></a>
+    <ul class="nav-links">
+      <li><a href="hakkimizda.html" class="active">Hakkımızda</a></li>
+      <li><a href="sektorler.html">Sektörler</a></li>
+      <li><a href="hizmetler.html">Hizmetler</a></li>
+      <li><a href="urunler.html">Ürünler</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta desk">İletişim</a>
+    <button class="hamburger" id="ham" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-menu" id="mob">
+    <ul>
+      <li><a href="hakkimizda.html" class="ml">Hakkımızda</a></li>
+      <li><a href="sektorler.html" class="ml">Sektörler</a></li>
+      <li><a href="hizmetler.html" class="ml">Hizmetler</a></li>
+      <li><a href="urunler.html" class="ml">Ürünler</a></li>
+      <li><a href="blog.html" class="ml">Blog</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta ml">İletişim</a>
+  </div>
+</nav>
 
-<!-- PAGE HERO -->
 <div class="page-hero">
-  <div class="page-hero-inner">
+  <div class="ph-inner">
     <div>
-      <div class="page-badge"><div class="badge-line"></div><span class="badge-text">Kuruluş 2008</span></div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Kuruluş 2008</span></div>
       <h1>Güvenilir Elektronik<br>Mühendisliğinin <em>Adresi</em></h1>
     </div>
-    <p class="page-hero-lead">15 yılı aşkın deneyimimizle Ankara'dan Türkiye geneline; endüstriyel, medikal ve beyaz eşya elektronik kart tamirinde kalıcı çözümler sunuyoruz.</p>
+    <p class="ph-lead">15 yılı aşkın deneyimimizle Ankara'dan Türkiye geneline; endüstriyel, medikal ve beyaz eşya elektronik kart tamirinde kalıcı çözümler sunuyoruz.</p>
   </div>
 </div>
 
-<!-- STATS BAND -->
 <div class="stats-band">
   <div class="stats-inner">
-    <div class="stat-box reveal">
-      <div class="stat-box-num"><span class="counter" data-target="15">0</span><sup>+</sup></div>
-      <div class="stat-box-label">Yıl Deneyim</div>
-    </div>
-    <div class="stat-box reveal d1">
-      <div class="stat-box-num"><span class="counter" data-target="500">0</span><sup>+</sup></div>
-      <div class="stat-box-label">Tamamlanan Onarım</div>
-    </div>
-    <div class="stat-box reveal d2">
-      <div class="stat-box-num"><span class="counter" data-target="98">0</span><sup>%</sup></div>
-      <div class="stat-box-label">Müşteri Memnuniyeti</div>
-    </div>
-    <div class="stat-box reveal d3">
-      <div class="stat-box-num"><span class="counter" data-target="8">0</span><sup>+</sup></div>
-      <div class="stat-box-label">Sektör Uzmanlığı</div>
-    </div>
+    <div class="sb rev"><div class="sb-num"><span class="cnt" data-t="15">0</span><sup>+</sup></div><div class="sb-label">Yıl Deneyim</div></div>
+    <div class="sb rev d1"><div class="sb-num"><span class="cnt" data-t="500">0</span><sup>+</sup></div><div class="sb-label">Tamamlanan Onarım</div></div>
+    <div class="sb rev d2"><div class="sb-num"><span class="cnt" data-t="98">0</span><sup>%</sup></div><div class="sb-label">Müşteri Memnuniyeti</div></div>
+    <div class="sb rev d3"><div class="sb-num"><span class="cnt" data-t="8">0</span><sup>+</sup></div><div class="sb-label">Sektör Uzmanlığı</div></div>
   </div>
 </div>
 
-<!-- HIKAYE -->
-<div class="section-wrap">
-  <div class="about-grid reveal">
+<div class="sw">
+  <div class="about-grid rev">
     <div class="about-img">
-      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80&fit=crop" alt="Elektronik kart tamir atölyesi">
-      <div class="about-img-caption">ODSAN — Ankara Atölyesi</div>
+      <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80&fit=crop" alt="ODSAN Elektronik atölye">
+      <div class="img-cap">ODSAN — Ankara Atölyesi</div>
     </div>
-    <div class="about-text-block">
-      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Hikayemiz</span></div>
-      <h2 style="margin-bottom:20px">2008'den Bu Yana<br>Değer Üretiyoruz</h2>
-      <p>ODSAN Elektronik, 2008 yılında Ankara'da küçük bir elektronik tamir atölyesi olarak kuruldu. Kuruluşumuzdan itibaren temel ilkemiz değişmedi: her onarımda gerçek bir çözüm üretmek ve müşterilerimize ekipmanlarını sanki yeni gibi teslim etmek.</p>
-      <p>Bugün endüstriyel otomasyon, medikal elektronik, savunma sanayii, iş makineleri ve beyaz eşya sektörlerinde faaliyet gösteren köklü bir mühendislik firmasıyız. BGA yeniden lehimleme, X-ray inceleme ve mikroskop destekli teşhis altyapımızla sektörün en kapsamlı hizmetlerini sunuyoruz.</p>
-      <p>Kalıcı çözüm anlayışımız ve yazılı garanti politikamız, bizi kısa vadeli tamirci anlayışından ayıran temel farktır.</p>
+    <div class="at">
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Hikayemiz</span></div>
+      <h2 style="margin-bottom:18px">2008'den Bu Yana<br>Değer Üretiyoruz</h2>
+      <p>ODSAN Elektronik, 2008 yılında Ankara'da küçük bir elektronik tamir atölyesi olarak kuruldu. Temel ilkemiz hiç değişmedi: her onarımda gerçek bir çözüm üretmek.</p>
+      <p>Bugün endüstriyel otomasyon, medikal elektronik, savunma sanayii, iş makineleri ve beyaz eşya sektörlerinde faaliyet gösteren köklü bir mühendislik firmasıyız.</p>
+      <p>BGA yeniden lehimleme, X-ray inceleme ve mikroskop destekli teşhis altyapımızla sektörün en kapsamlı hizmetlerini sunuyoruz.</p>
+      <div class="cert-row">
+        <span class="cert">ISO 9001:2015</span><span class="cert">IPC Class 3</span>
+        <span class="cert">IPC-7711/21</span><span class="cert">MIL-STD</span>
+        <span class="cert">CE Uyumlu</span><span class="cert">TSE Onaylı</span>
+      </div>
     </div>
   </div>
 
-  <div class="about-grid reverse reveal">
+  <div class="about-grid flip rev">
     <div class="about-img">
       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&fit=crop" alt="PCB devre kartı yakın çekim">
-      <div class="about-img-caption">PCB Tasarım & Test Merkezi</div>
+      <div class="img-cap">PCB Tasarım & Test Merkezi</div>
     </div>
-    <div class="about-text-block">
-      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Altyapımız</span></div>
-      <h2 style="margin-bottom:20px">Doğru Teşhis,<br>Kalıcı Çözüm</h2>
-      <p>Modern elektronik onarımında doğru teşhis, başarının yarısıdır. Atölyemizde X-ray inceleme sistemi, stereo mikroskoplar, osiloskoplar ve profesyonel lehimleme istasyonları bulunmaktadır.</p>
-      <p>IPC-7711/7721 standartlarına uygun çalışma prosedürlerimiz ve ISO 9001:2015 kalite yönetim sistemimiz sayesinde her onarımı aynı titizlikle gerçekleştiriyoruz.</p>
-      <div class="cert-row">
-        <span class="cert">ISO 9001:2015</span>
-        <span class="cert">IPC Class 3</span>
-        <span class="cert">IPC-7711/21</span>
-        <span class="cert">MIL-STD</span>
-        <span class="cert">CE Uyumlu</span>
-        <span class="cert">TSE Onaylı</span>
-      </div>
+    <div class="at">
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Altyapımız</span></div>
+      <h2 style="margin-bottom:18px">Doğru Teşhis,<br>Kalıcı Çözüm</h2>
+      <p>Atölyemizde X-ray inceleme sistemi, stereo mikroskoplar, osiloskoplar ve profesyonel lehimleme istasyonları bulunmaktadır.</p>
+      <p>IPC-7711/7721 standartlarına uygun çalışma prosedürlerimiz ve ISO 9001:2015 kalite yönetim sistemimizle her onarımı aynı titizlikle gerçekleştiriyoruz.</p>
+      <a href="hizmetler.html" class="btn btn-dark" style="margin-top:20px">Hizmetlerimiz →</a>
     </div>
   </div>
 </div>
 
-<!-- DEĞERLER -->
 <div style="background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-<div class="section-wrap">
-  <div class="section-tag reveal"><div class="tag-line"></div><span class="tag-text">Değerlerimiz</span></div>
-  <h2 class="reveal">Bizi Farklı Kılan<br>Dört İlke</h2>
+<div class="sw">
+  <div class="stag rev"><div class="stag-line"></div><span class="stag-text">Değerlerimiz</span></div>
+  <h2 class="rev" style="margin-bottom:0">Bizi Farklı Kılan Dört İlke</h2>
   <div class="values-grid">
-    <div class="value-card reveal">
-      <div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <div class="value-title">Güvenilirlik</div>
-      <div class="value-desc">Her onarımda yazılı garanti veriyoruz. Söz verdiğimizi yerine getirir, müşterilerimizi hiçbir zaman yarım çözümle uğurlamayız.</div>
+    <div class="vc rev">
+      <div class="vc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Güvenilirlik</h3>
+      <p>Her onarımda yazılı garanti veriyoruz. Söz verdiğimizi yerine getirir, yarım çözümle uğurlamayız.</p>
     </div>
-    <div class="value-card reveal d1">
-      <div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-      <div class="value-title">Doğru Teşhis</div>
-      <div class="value-desc">Teknik altyapımızla arızanın gerçek kaynağını bulur, semptom değil neden odaklı çözüm üretiriz. Tahmine dayalı onarım yapmayız.</div>
+    <div class="vc rev d1">
+      <div class="vc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      <h3>Doğru Teşhis</h3>
+      <p>Teknik altyapımızla arızanın gerçek kaynağını bulur, neden odaklı çözüm üretiriz.</p>
     </div>
-    <div class="value-card reveal d2">
-      <div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <div class="value-title">Şeffaflık</div>
-      <div class="value-desc">Fiyatlandırmamız açık, süreç bilgilendirmemiz düzenlidir. Müşterilerimiz her aşamada ne yapıldığını ve neden yapıldığını bilir.</div>
+    <div class="vc rev d2">
+      <div class="vc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <h3>Şeffaflık</h3>
+      <p>Fiyatlandırmamız açık, süreç bilgilendirmemiz düzenlidir. Her adımda müşteriyi bilgilendiririz.</p>
     </div>
-    <div class="value-card reveal d3">
-      <div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-      <div class="value-title">Kalite Taahhüdü</div>
-      <div class="value-desc">Kullandığımız her parça orijinal veya sertifikalı eşdeğerdir. IPC standartlarına uygun çalışma prosedürlerimizden asla taviz vermeyiz.</div>
+    <div class="vc rev d3">
+      <div class="vc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <h3>Kalite Taahhüdü</h3>
+      <p>Kullandığımız her parça orijinal veya sertifikalıdır. IPC standartlarından asla taviz vermeyiz.</p>
     </div>
   </div>
 </div>
 </div>
 
-<!-- TARİHÇE -->
-<div class="section-wrap">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
-    <div class="reveal">
-      <div class="section-tag"><div class="tag-line"></div><span class="tag-text">Tarihçe</span></div>
-      <h2>15 Yılda<br>Nereden Nereye</h2>
-      <div class="timeline" style="margin-top:32px">
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">2008</div>
-          <div class="tl-title">Kuruluş</div>
-          <div class="tl-desc">Ankara'da küçük bir atölye ile beyaz eşya kart tamiri hizmetleri başladı.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">2011</div>
-          <div class="tl-title">Endüstriyel Genişleme</div>
-          <div class="tl-desc">PLC, servo sürücü ve endüstriyel otomasyon kart tamiri hizmetleri eklendi.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">2015</div>
-          <div class="tl-title">ISO 9001 Sertifikasyonu</div>
-          <div class="tl-desc">Kalite yönetim sistemi kuruldu, ilk ISO 9001 sertifikası alındı.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">2018</div>
-          <div class="tl-title">PCB Tasarım Birimi</div>
-          <div class="tl-desc">PCB tasarım ve geliştirme hizmetleri ile savunma sanayii projeleri başladı.</div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-year">2023</div>
-          <div class="tl-title">Global Büyüme</div>
-          <div class="tl-desc">Uluslararası müşteri portföyü genişledi, ihracat odaklı mühendislik projeleri arttı.</div>
-        </div>
+<div class="sw">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+    <div class="rev">
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Tarihçe</span></div>
+      <h2>15 Yılda Nereden Nereye</h2>
+      <div class="tl">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2008</div><div class="tl-title">Kuruluş</div><div class="tl-desc">Ankara'da beyaz eşya kart tamiri hizmetleriyle başladık.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2011</div><div class="tl-title">Endüstriyel Genişleme</div><div class="tl-desc">PLC, servo sürücü ve endüstriyel otomasyon kart tamiri eklendi.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2015</div><div class="tl-title">ISO 9001 Sertifikasyonu</div><div class="tl-desc">Kalite yönetim sistemi kuruldu, ilk ISO 9001 sertifikası alındı.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2018</div><div class="tl-title">PCB Tasarım Birimi</div><div class="tl-desc">PCB tasarım ve savunma sanayii projeleri başladı.</div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2023</div><div class="tl-title">Global Büyüme</div><div class="tl-desc">Uluslararası müşteri portföyü genişledi, ihracat projeleri arttı.</div></div>
       </div>
     </div>
-    <div class="reveal d2">
-      <div class="about-img" style="height:480px;margin-top:56px">
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80&fit=crop" alt="Elektronik mühendis çalışırken">
-        <div class="about-img-caption">Mühendislik Ekibimiz</div>
+    <div class="rev d2">
+      <div class="about-img" style="height:460px;margin-top:48px">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80&fit=crop" alt="ODSAN Elektronik mühendis">
+        <div class="img-cap">Mühendislik Ekibimiz</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- CTA -->
-<div style="background:var(--onyx);padding:64px 24px">
-  <div style="max-width:680px;margin:0 auto;text-align:center" class="reveal">
-    <div class="section-tag" style="justify-content:center"><div class="tag-line"></div><span class="tag-text">Birlikte Çalışalım</span><div class="tag-line"></div></div>
-    <h2 style="color:var(--white);margin:16px 0 20px">Projenizi Değerlendirelim</h2>
-    <p style="font-size:14px;color:rgba(255,255,255,.5);font-weight:300;margin-bottom:32px">Teknik gereksinimlerinizi paylaşın, mühendislik ekibimiz en kısa sürede dönüş yapsın.</p>
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="index.html#contact" class="btn-alaz">Teklif Al →</a>
-      <a href="hizmetler.html" class="btn-ghost" style="color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.2)">Hizmetlerimiz</a>
+<div style="background:var(--onyx);padding:56px 16px">
+  <div style="max-width:680px;margin:0 auto;text-align:center" class="rev">
+    <div class="stag" style="justify-content:center"><div class="stag-line"></div><span class="stag-text">Birlikte Çalışalım</span><div class="stag-line"></div></div>
+    <h2 style="color:var(--white);margin:14px 0 16px">Projenizi Değerlendirelim</h2>
+    <p style="font-size:14px;color:rgba(255,255,255,.45);font-weight:300;margin-bottom:28px">Teknik gereksinimlerinizi paylaşın, ekibimiz hemen dönüş yapsın.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a href="index.html#contact" class="btn btn-orange">Teklif Al →</a>
+      <a href="hizmetler.html" class="btn btn-ghost" style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.15)">Hizmetlerimiz</a>
     </div>
   </div>
 </div>
 
-<script src="shared.js"></script>
+<footer>
+  <div class="footer-main">
+    <div>
+      <svg width="130" height="38" viewBox="0 0 130 38" style="margin-bottom:14px">
+        <rect x="1" y="1" width="128" height="36" rx="5" fill="#F0EEE8"/>
+        <clipPath id="fl"><rect x="1" y="1" width="128" height="36" rx="5"/></clipPath>
+        <rect clip-path="url(#fl)" x="1" y="29" width="128" height="8" fill="#D85A30"/>
+        <text x="65" y="18" font-family="'DM Sans',sans-serif" font-size="15" font-weight="700" fill="#111214" text-anchor="middle" dominant-baseline="central" letter-spacing="5">ODSAN</text>
+      </svg>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);line-height:1.6;font-family:var(--mono)">Where Sparks<br>Become Solutions</p>
+    </div>
+    <div class="footer-cols">
+      <div><div class="fc-title">Sayfalar</div><ul class="fc-links"><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="sektorler.html">Sektörler</a></li><li><a href="hizmetler.html">Hizmetler</a></li><li><a href="urunler.html">Ürünler</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><div class="fc-title">Hizmetler</div><ul class="fc-links"><li><a href="hizmetler.html">Kart Tamiri</a></li><li><a href="hizmetler.html">PCB Tasarım</a></li><li><a href="hizmetler.html">Sistem Mühendisliği</a></li></ul></div>
+      <div><div class="fc-title">İletişim</div><ul class="fc-links"><li><a href="tel:+903120000000">+90 (312) 000 00 00</a></li><li><a href="mailto:info@odsan.com.tr">info@odsan.com.tr</a></li><li>Ankara / Türkiye</li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 ODSAN Elektronik San. Tic. A.Ş.</span><span>Tüm hakları saklıdır.</span></div>
+</footer>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',()=>{mob.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded','false')}));
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+const co=new IntersectionObserver(e=>{e.forEach(x=>{if(!x.isIntersecting)return;const el=x.target,t=+el.dataset.t,step=Math.ceil(t/70);let c=0;const tmr=setInterval(()=>{c+=step;if(c>=t){el.textContent=t;clearInterval(tmr)}else el.textContent=c},18);co.unobserve(el)})},{threshold:.5});
+document.querySelectorAll('.cnt').forEach(el=>co.observe(el));
+</script>
 </body>
 </html>
