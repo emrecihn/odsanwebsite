@@ -3,277 +3,326 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sektörler — ODSAN Elektronik</title>
-<meta name="description" content="Endüstriyel otomasyon, medikal elektronik, iş makineleri, beyaz eşya, savunma sanayii ve raylı sistemler dahil 8 sektörde uzman elektronik kart tamiri hizmetleri.">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
+<title>Sektörler — ODSAN Elektronik | 8 Sektörde Uzman Kart Tamiri</title>
+<meta name="description" content="İş makinesi, medikal, beyaz eşya, endüstriyel otomasyon, enerji, savunma, raylı sistem ve telekomünikasyon sektörlerinde uzman elektronik kart tamiri hizmetleri.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://odsan.com.tr/sektorler.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-/* SECTOR DETAIL CARDS */
-.sector-detail{border:1px solid var(--border);background:var(--white);overflow:hidden;margin-bottom:2px;transition:border-color .2s}
-.sector-detail:hover{border-color:var(--alaz)}
-.sector-detail-inner{display:grid;grid-template-columns:360px 1fr;min-height:300px}
-.sector-detail.flip .sector-detail-inner{grid-template-columns:1fr 360px}
-.sector-photo{overflow:hidden;position:relative}
-.sector-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
-.sector-detail:hover .sector-photo img{transform:scale(1.04)}
-.sector-photo-label{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:8.5px;letter-spacing:2px;color:white;background:var(--alaz);padding:5px 10px;text-transform:uppercase}
-.sector-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
-.sector-num{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--alaz);text-transform:uppercase;margin-bottom:12px}
-.sector-body h2{font-size:clamp(20px,2.2vw,28px);margin-bottom:14px}
-.sector-body p{font-size:14px;color:var(--text-soft);line-height:1.8;font-weight:300;margin-bottom:20px}
-.sector-specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
-.spec-badge{font-family:var(--mono);font-size:9px;letter-spacing:.8px;color:var(--gray-mid);border:1px solid var(--border-light);padding:4px 10px;background:var(--off);text-transform:uppercase;transition:border-color .2s,color .2s}
-.sector-detail:hover .spec-badge{border-color:rgba(216,90,48,.25);color:var(--alaz)}
-
-/* QUICK GRID */
-.sector-quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:48px}
-.sqc{background:var(--white);padding:24px 20px;border-bottom:3px solid transparent;transition:background .2s,border-color .2s;cursor:pointer}
-.sqc:hover{background:var(--alaz-light);border-color:var(--alaz)}
-.sqc-icon{color:var(--onyx);margin-bottom:12px;transition:color .2s}
-.sqc:hover .sqc-icon{color:var(--alaz)}
-.sqc-name{font-family:var(--serif);font-size:14px;font-weight:500;color:var(--onyx)}
-.sqc-count{font-family:var(--mono);font-size:9px;letter-spacing:1px;color:var(--gray);margin-top:4px}
-
-@media(max-width:1024px){
-  .sector-detail-inner,.sector-detail.flip .sector-detail-inner{grid-template-columns:1fr}
-  .sector-photo{height:240px}
+:root{--serif:'DM Serif Display','Georgia',serif;--sans:'DM Sans','Segoe UI','Helvetica Neue',Arial,sans-serif;--mono:'Courier New',monospace;--onyx:#111214;--alaz:#D85A30;--alaz-l:#FAE9E2;--alaz-d:#993C1D;--off:#F7F5F2;--border:#DDD9D3;--borderl:#EAE7E2;--gray:#888780;--graym:#5a5750;--text:#1a1814;--texts:#3d3a34;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--white);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--alaz)}
+.rev{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}.rev.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav-w{max-width:1280px;margin:0 auto;padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none;flex-shrink:0}
+.nl-word{font-family:var(--sans);font-size:18px;font-weight:700;letter-spacing:5px;color:var(--onyx);line-height:1}
+.nl-line{height:2px;background:var(--alaz);margin:3px 0 2px}
+.nl-sub{font-size:9px;letter-spacing:3px;color:var(--gray);font-family:var(--mono);text-transform:uppercase}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{font-size:13px;color:var(--graym);transition:color .2s;white-space:nowrap;position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--alaz);transition:width .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--onyx)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{font-size:12px;font-weight:500;color:var(--white);background:var(--onyx);padding:8px 16px;transition:background .2s;white-space:nowrap;flex-shrink:0;border:none;cursor:pointer;display:inline-block}
+.nav-cta:hover{background:var(--alaz)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;width:36px;height:36px;justify-content:center;flex-shrink:0}
+.hamburger span{display:block;height:1.5px;background:var(--onyx);transition:all .25s;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{display:none;background:var(--white);border-bottom:1px solid var(--border)}
+.mob-menu.open{display:block}
+.mob-menu ul{list-style:none;padding:8px 16px}
+.mob-menu ul li a{display:block;font-size:15px;color:var(--texts);padding:12px 0;border-bottom:1px solid var(--borderl)}
+.mob-menu ul li:last-child a{border-bottom:none}
+.mob-menu .nav-cta{display:block;margin:12px 16px 16px;text-align:center}
+.sw{max-width:1280px;margin:0 auto;padding:56px 16px}
+.stag{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.stag-line{width:20px;height:1.5px;background:var(--alaz)}
+.stag-text{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase}
+h1{font-family:var(--serif);font-size:clamp(30px,4.5vw,54px);line-height:1.12;color:var(--onyx);letter-spacing:-.3px}
+h1 em{font-style:normal;color:var(--alaz)}
+h2{font-family:var(--serif);font-size:clamp(20px,2.5vw,32px);line-height:1.2;color:var(--onyx)}
+.page-hero{padding:80px 16px 0;max-width:1280px;margin:0 auto}
+.ph-inner{border-bottom:1px solid var(--border);padding-bottom:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.ph-lead{font-size:15px;line-height:1.8;color:var(--texts);font-weight:300}
+/* QUICK NAV */
+.qnav{background:var(--off);border-bottom:1px solid var(--border)}
+.qnav-inner{max-width:1280px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:repeat(8,1fr);gap:1px;background:var(--border)}
+.qn{background:var(--off);padding:16px 12px;text-align:center;cursor:pointer;transition:background .2s;border-bottom:3px solid transparent}
+.qn:hover{background:var(--alaz-l);border-color:var(--alaz)}
+.qn svg{color:var(--graym);margin:0 auto 6px;transition:color .2s;display:block}
+.qn:hover svg{color:var(--alaz)}
+.qn-label{font-size:10px;color:var(--graym);line-height:1.3;font-weight:500}
+.qn:hover .qn-label{color:var(--alaz)}
+/* SECTOR CARDS */
+.sector-card{border:1px solid var(--border);overflow:hidden;margin-bottom:2px;transition:border-color .2s}
+.sector-card:hover{border-color:var(--alaz)}
+.sc-inner{display:grid;grid-template-columns:380px 1fr;min-height:280px}
+.sector-card.flip .sc-inner{grid-template-columns:1fr 380px}
+.sc-photo{overflow:hidden;position:relative}
+.sc-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.sector-card:hover .sc-photo img{transform:scale(1.04)}
+.sc-label{position:absolute;top:14px;left:14px;font-size:8.5px;letter-spacing:2px;color:white;background:var(--alaz);padding:5px 10px;font-family:var(--mono);text-transform:uppercase}
+.sc-body{padding:36px 40px;display:flex;flex-direction:column;justify-content:center}
+.sc-num{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:10px}
+.sc-body p{font-size:14px;color:var(--texts);line-height:1.8;font-weight:300;margin-bottom:18px}
+.sc-specs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px}
+.ss{font-size:9px;letter-spacing:.5px;color:var(--graym);border:1px solid var(--borderl);padding:3px 9px;font-family:var(--mono);text-transform:uppercase;background:var(--off);transition:all .2s}
+.sector-card:hover .ss{border-color:rgba(216,90,48,.3);color:var(--alaz)}
+.btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;padding:10px 18px;border:1.5px solid transparent;transition:all .18s;cursor:pointer;white-space:nowrap;text-decoration:none;align-self:flex-start}
+.btn-dark{background:var(--onyx);color:var(--white);border-color:var(--onyx)}.btn-dark:hover{background:var(--alaz);border-color:var(--alaz)}
+/* FOOTER */
+footer{background:var(--onyx);border-top:3px solid var(--alaz)}
+.footer-main{max-width:1280px;margin:0 auto;padding:40px 16px;display:grid;grid-template-columns:180px 1fr;gap:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.fc-title{font-size:9px;letter-spacing:2.5px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:12px}
+.fc-links{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fc-links a{font-size:13px;color:rgba(255,255,255,.35);transition:color .2s}.fc-links a:hover{color:var(--alaz)}
+.fc-links li{font-size:13px;color:rgba(255,255,255,.25)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom span{font-size:10px;color:rgba(255,255,255,.2);font-family:var(--mono)}
+.wa-float{position:fixed;bottom:20px;right:20px;z-index:900;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);transition:transform .2s;text-decoration:none}
+.wa-float:hover{transform:scale(1.08)}.wa-float svg{width:26px;height:26px;fill:#fff}
+@media(max-width:1023px){
+  .nav-links,.nav-cta.desk{display:none}.hamburger{display:flex}
+  .ph-inner{grid-template-columns:1fr;gap:20px}
+  .qnav-inner{grid-template-columns:repeat(4,1fr)}
+  .sc-inner,.sector-card.flip .sc-inner{grid-template-columns:1fr}
+  .sc-photo{height:220px}
+  .sc-body{padding:24px 22px}
+  .footer-main{grid-template-columns:1fr}.footer-cols{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:640px){
-  .sector-quick-grid{grid-template-columns:repeat(2,1fr)}
-  .sector-body{padding:28px 24px}
+@media(max-width:600px){
+  body{font-size:15px}.nav-w{height:56px}.page-hero{padding:72px 14px 0}.sw{padding:44px 14px}
+  .qnav-inner{grid-template-columns:repeat(4,1fr)}
+  .qn{padding:12px 8px}
+  .qn svg{width:18px;height:18px}
+  .footer-cols{grid-template-columns:1fr}
 }
+@media(max-width:420px){.qnav-inner{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-
 <a href="https://wa.me/905XXXXXXXXX" class="wa-float" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
+<nav>
+  <div class="nav-w">
+    <a href="index.html" class="nav-logo"><span class="nl-word">ODSAN</span><span class="nl-line"></span><span class="nl-sub">Electronics</span></a>
+    <ul class="nav-links">
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="sektorler.html" class="active">Sektörler</a></li>
+      <li><a href="hizmetler.html">Hizmetler</a></li>
+      <li><a href="urunler.html">Ürünler</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta desk">İletişim</a>
+    <button class="hamburger" id="ham" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-menu" id="mob">
+    <ul>
+      <li><a href="hakkimizda.html" class="ml">Hakkımızda</a></li>
+      <li><a href="sektorler.html" class="ml">Sektörler</a></li>
+      <li><a href="hizmetler.html" class="ml">Hizmetler</a></li>
+      <li><a href="urunler.html" class="ml">Ürünler</a></li>
+      <li><a href="blog.html" class="ml">Blog</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta ml">İletişim</a>
+  </div>
+</nav>
 
 <div class="page-hero">
-  <div class="page-hero-inner">
+  <div class="ph-inner">
     <div>
-      <div class="page-badge"><div class="badge-line"></div><span class="badge-text">8 Sektör</span></div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">8 Sektör</span></div>
       <h1>Her Sektörün<br><em>Uzman</em> Çözümü</h1>
     </div>
-    <p class="page-hero-lead">Savunma sanayiinden medikal elektroniğe, iş makinelerinden beyaz eşyaya — her sektörün kendine özgü teknik ve kalite gereksinimlerini karşılıyoruz.</p>
+    <p class="ph-lead">Savunma sanayiinden medikal elektroniğe, iş makinelerinden beyaz eşyaya — her sektörün teknik gereksinimlerini karşılıyoruz.</p>
   </div>
 </div>
 
-<!-- QUICK NAV -->
-<div style="background:var(--off);border-bottom:1px solid var(--border)">
-<div style="max-width:1280px;margin:0 auto;padding:0 24px">
-  <div class="sector-quick-grid">
-    <div class="sqc" onclick="document.getElementById('is-makinesi').scrollIntoView({behavior:'smooth'})">
-      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="8" width="14" height="10"/><path d="M16 10l4-4v12l-4-4"/></svg></div>
-      <div class="sqc-name">İş Makinesi</div>
-      <div class="sqc-count">ECU · Hidrolik · CAN Bus</div>
+<div class="qnav">
+  <div class="qnav-inner">
+    <div class="qn" onclick="document.getElementById('s1').scrollIntoView({behavior:'smooth'})">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="8" width="14" height="10"/><path d="M16 10l4-4v12l-4-4"/></svg>
+      <div class="qn-label">İş Makinesi</div>
     </div>
-    <div class="sqc" onclick="document.getElementById('medikal').scrollIntoView({behavior:'smooth'})">
-      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-      <div class="sqc-name">Medikal</div>
-      <div class="sqc-count">Görüntüleme · Monitör</div>
+    <div class="qn" onclick="document.getElementById('s2').scrollIntoView({behavior:'smooth'})">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      <div class="qn-label">Medikal</div>
     </div>
-    <div class="sqc" onclick="document.getElementById('beyaz-esya').scrollIntoView({behavior:'smooth'})">
-      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="1"/><line x1="9" y1="7" x2="15" y2="7"/></svg></div>
-      <div class="sqc-name">Beyaz Eşya</div>
-      <div class="sqc-count">Buzdolabı · Çamaşır</div>
+    <div class="qn" onclick="document.getElementById('s3').scrollIntoView({behavior:'smooth'})">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="1"/><line x1="9" y1="7" x2="15" y2="7"/></svg>
+      <div class="qn-label">Beyaz Eşya</div>
     </div>
-    <div class="sqc" onclick="document.getElementById('otomasyon').scrollIntoView({behavior:'smooth'})">
-      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16"/><rect x="9" y="9" width="6" height="6"/></svg></div>
-      <div class="sqc-name">Endüstriyel</div>
-      <div class="sqc-count">PLC · Servo · HMI</div>
+    <div class="qn" onclick="document.getElementById('s4').scrollIntoView({behavior:'smooth'})">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16"/><rect x="9" y="9" width="6" height="6"/></svg>
+      <div class="qn-label">Endüstriyel</div>
     </div>
-    <div class="sqc" onclick="document.getElementById('enerji').scrollIntoView({behavior:'smooth'})">
-      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-      <div class="sqc-name">Enerji</div>
-      <div class="sqc-count">UPS · Solar · IGBT</div>
+    <div class="qn" onclick="document.getElementById('s5').scrollIntoView({behavior:'smooth'})">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      <div class="qn-label">Enerji</div>
     </div>
-    <div class="sqc" onclick="document.getElementById('savunma').scrollIntoView({behavior:'smooth'})">
-      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <div class="sqc-name">Savunma</div>
-      <div class="sqc-count">MIL-STD · ECU</div>
+    <div class="qn" onclick="document.getElementById('s6').scrollIntoView({behavior:'smooth'})">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="qn-label">Savunma</div>
     </div>
-    <div class="sqc" onclick="document.getElementById('rayli').scrollIntoView({behavior:'smooth'})">
-      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="14" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/></svg></div>
-      <div class="sqc-name">Raylı Sistemler</div>
-      <div class="sqc-count">Traksiyon · TCMS</div>
+    <div class="qn" onclick="document.getElementById('s7').scrollIntoView({behavior:'smooth'})">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="14" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/></svg>
+      <div class="qn-label">Raylı Sistem</div>
     </div>
-    <div class="sqc" onclick="document.getElementById('telekom').scrollIntoView({behavior:'smooth'})">
-      <div class="sqc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 6C1 6 5 2 12 2s11 4 11 4"/><path d="M5 10s2-2 7-2 7 2 7 2"/><path d="M9 14s1-1 3-1 3 1 3 1"/></svg></div>
-      <div class="sqc-name">Telekomünikasyon</div>
-      <div class="sqc-count">RF · Baz İstasyonu</div>
+    <div class="qn" onclick="document.getElementById('s8').scrollIntoView({behavior:'smooth'})">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 6C1 6 5 2 12 2s11 4 11 4"/><path d="M5 10s2-2 7-2 7 2 7 2"/></svg>
+      <div class="qn-label">Telekom</div>
     </div>
   </div>
 </div>
-</div>
 
-<!-- SECTOR DETAILS -->
-<div style="max-width:1280px;margin:0 auto;padding:48px 24px;display:flex;flex-direction:column;gap:2px">
+<div style="max-width:1280px;margin:0 auto;padding:32px 16px;display:flex;flex-direction:column;gap:2px">
 
-  <div id="is-makinesi" class="sector-detail reveal">
-    <div class="sector-detail-inner">
-      <div class="sector-photo">
-        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=720&q=80&fit=crop" alt="İş makinesi elektroniği">
-        <div class="sector-photo-label">İş Makinesi</div>
-      </div>
-      <div class="sector-body">
-        <div class="sector-num">01 — İş Makinesi Elektroniği</div>
-        <h2>Ekskavatör, Forklift<br>ve Ağır Taşıt Elektronikleri</h2>
-        <p>İş makinelerinin elektronik kontrol üniteleri, sert çalışma koşulları nedeniyle titreşim, ısı ve nem kaynaklı arızalara son derece duyarlıdır. Deneyimli ekibimiz bu kartları orijinal kalitede tamir eder, makine duruş sürelerini minimuma indirir.</p>
-        <div class="sector-specs">
-          <span class="spec-badge">ECU Onarımı</span><span class="spec-badge">Hidrolik Kontrol</span><span class="spec-badge">CAN Bus</span>
-          <span class="spec-badge">Motor Kontrol</span><span class="spec-badge">Transmisyon</span><span class="spec-badge">ABS/EBS</span>
-        </div>
-        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+  <div id="s1" class="sector-card rev">
+    <div class="sc-inner">
+      <div class="sc-photo"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=720&q=80&fit=crop" alt="İş makinesi elektroniği"><div class="sc-label">İş Makinesi</div></div>
+      <div class="sc-body">
+        <div class="sc-num">01 — İş Makinesi Elektroniği</div>
+        <h2>Ekskavatör, Forklift<br>ve Ağır Taşıt Elektroniği</h2>
+        <p>İş makinelerinin kontrol kartları titreşim, ısı ve nem kaynaklı arızalara duyarlıdır. Deneyimli ekibimiz makinenizi en kısa sürede devreye alır.</p>
+        <div class="sc-specs"><span class="ss">ECU Onarımı</span><span class="ss">Hidrolik Kontrol</span><span class="ss">CAN Bus</span><span class="ss">Motor Kontrol</span><span class="ss">ABS/EBS</span></div>
+        <a href="index.html#contact" class="btn btn-dark">Teklif Al →</a>
       </div>
     </div>
   </div>
 
-  <div id="medikal" class="sector-detail flip reveal">
-    <div class="sector-detail-inner">
-      <div class="sector-body">
-        <div class="sector-num">02 — Medikal Elektronik</div>
-        <h2>Görüntüleme Sistemleri<br>ve Hasta Monitörleri</h2>
-        <p>Medikal cihaz onarımı en yüksek kalite standartlarını gerektirir. IEC 60601 uyumlu çalışma prosedürlerimiz ve izole test altyapımızla; MRI, CT, röntgen ve hasta monitörü kartlarını güvenle onarıyoruz.</p>
-        <div class="sector-specs">
-          <span class="spec-badge">MRI Kartları</span><span class="spec-badge">CT Sistemleri</span><span class="spec-badge">Hasta Monitörü</span>
-          <span class="spec-badge">Laboratuvar</span><span class="spec-badge">IEC 60601</span><span class="spec-badge">Elektrosürreji</span>
-        </div>
-        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+  <div id="s2" class="sector-card flip rev">
+    <div class="sc-inner">
+      <div class="sc-body">
+        <div class="sc-num">02 — Medikal Elektronik</div>
+        <h2>MRI, CT ve<br>Hasta Monitörü Kartları</h2>
+        <p>IEC 60601 uyumlu prosedürlerimiz ve izole test altyapımızla medikal cihaz kartlarını güvenle onarıyoruz. Hasta güvenliği her şeyin önünde.</p>
+        <div class="sc-specs"><span class="ss">MRI Kartları</span><span class="ss">CT Sistemleri</span><span class="ss">Hasta Monitörü</span><span class="ss">IEC 60601</span><span class="ss">Laboratuvar</span></div>
+        <a href="index.html#contact" class="btn btn-dark">Teklif Al →</a>
       </div>
-      <div class="sector-photo">
-        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=720&q=80&fit=crop" alt="Medikal elektronik ekipman">
-        <div class="sector-photo-label">Medikal Elektronik</div>
+      <div class="sc-photo"><img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=720&q=80&fit=crop" alt="Medikal elektronik cihaz"><div class="sc-label">Medikal</div></div>
+    </div>
+  </div>
+
+  <div id="s3" class="sector-card rev">
+    <div class="sc-inner">
+      <div class="sc-photo"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=720&q=80&fit=crop" alt="Beyaz eşya tamiri"><div class="sc-label">Beyaz Eşya</div></div>
+      <div class="sc-body">
+        <div class="sc-num">03 — Beyaz Eşya & Ev Elektroniği</div>
+        <h2>Buzdolabı, Çamaşır<br>ve Klima Kart Tamiri</h2>
+        <p>Ev elektroniği kart arızalarının büyük çoğunluğu ekonomik biçimde onarılabilir. Hızlı teşhis ve uygun fiyatla cihazınızı hayata döndürüyoruz.</p>
+        <div class="sc-specs"><span class="ss">Buzdolabı</span><span class="ss">Çamaşır Makinesi</span><span class="ss">Bulaşık Makinesi</span><span class="ss">Klima</span><span class="ss">Fırın</span></div>
+        <a href="index.html#contact" class="btn btn-dark">Teklif Al →</a>
       </div>
     </div>
   </div>
 
-  <div id="beyaz-esya" class="sector-detail reveal">
-    <div class="sector-detail-inner">
-      <div class="sector-photo">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=720&q=80&fit=crop" alt="Beyaz eşya elektronik tamiri">
-        <div class="sector-photo-label">Beyaz Eşya</div>
+  <div id="s4" class="sector-card flip rev">
+    <div class="sc-inner">
+      <div class="sc-body">
+        <div class="sc-num">04 — Endüstriyel Otomasyon</div>
+        <h2>PLC, Servo Sürücü<br>ve HMI Onarımı</h2>
+        <p>Siemens, ABB, Fanuc, Mitsubishi ve diğer markaların otomasyon kartlarını günler içinde onarlıyoruz. Üretim hattı duruşlarını minimuma indiriyoruz.</p>
+        <div class="sc-specs"><span class="ss">PLC</span><span class="ss">Servo Sürücü</span><span class="ss">İnvertör</span><span class="ss">HMI Panel</span><span class="ss">Robot Kontrol</span></div>
+        <a href="index.html#contact" class="btn btn-dark">Teklif Al →</a>
       </div>
-      <div class="sector-body">
-        <div class="sector-num">03 — Beyaz Eşya & Ev Elektroniği</div>
-        <h2>Buzdolabı, Çamaşır Makinesi<br>ve Klima Kart Tamiri</h2>
-        <p>Ev elektroniği kart arızaları genellikle güç elektroniği bileşenlerinden kaynaklanır. Hızlı teşhis ve uygun fiyatlı onarım politikamızla cihazlarınızı ekonomik biçimde hayata döndürüyoruz.</p>
-        <div class="sector-specs">
-          <span class="spec-badge">Buzdolabı</span><span class="spec-badge">Çamaşır Makinesi</span><span class="spec-badge">Bulaşık Makinesi</span>
-          <span class="spec-badge">Klima</span><span class="spec-badge">Fırın</span><span class="spec-badge">Kurutma Makinesi</span>
-        </div>
-        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+      <div class="sc-photo"><img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=720&q=80&fit=crop" alt="Endüstriyel otomasyon PLC"><div class="sc-label">Endüstriyel</div></div>
+    </div>
+  </div>
+
+  <div id="s5" class="sector-card rev">
+    <div class="sc-inner">
+      <div class="sc-photo"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=720&q=80&fit=crop" alt="Solar enerji inverter"><div class="sc-label">Enerji</div></div>
+      <div class="sc-body">
+        <div class="sc-num">05 — Enerji & Güç Sistemleri</div>
+        <h2>UPS, Solar İnverter<br>ve Güç Kaynağı</h2>
+        <p>IGBT, MOSFET ve güç modülü değişimlerini tam teçhizatlı altyapımızla gerçekleştiriyoruz. Enerji yatırımınızı koruyoruz.</p>
+        <div class="sc-specs"><span class="ss">UPS</span><span class="ss">Solar İnverter</span><span class="ss">IGBT Modül</span><span class="ss">Akü Yönetim</span><span class="ss">Güç Kaynağı</span></div>
+        <a href="index.html#contact" class="btn btn-dark">Teklif Al →</a>
       </div>
     </div>
   </div>
 
-  <div id="otomasyon" class="sector-detail flip reveal">
-    <div class="sector-detail-inner">
-      <div class="sector-body">
-        <div class="sector-num">04 — Endüstriyel Otomasyon</div>
-        <h2>PLC, Servo Sürücü<br>ve HMI Kart Onarımı</h2>
-        <p>Üretim hattı duruşları büyük ekonomik kayıplara yol açar. Siemens, ABB, Fanuc, Mitsubishi ve diğer markaların PLC, servo sürücü ve frekans invertörlerini günler içinde onarlıyoruz.</p>
-        <div class="sector-specs">
-          <span class="spec-badge">PLC</span><span class="spec-badge">Servo Sürücü</span><span class="spec-badge">Frekans İnvertörü</span>
-          <span class="spec-badge">HMI Panel</span><span class="spec-badge">I/O Modülü</span><span class="spec-badge">Robot Kontrol</span>
-        </div>
-        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
-      </div>
-      <div class="sector-photo">
-        <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=720&q=80&fit=crop" alt="Endüstriyel otomasyon PLC">
-        <div class="sector-photo-label">Endüstriyel Otomasyon</div>
-      </div>
-    </div>
-  </div>
-
-  <div id="enerji" class="sector-detail reveal">
-    <div class="sector-detail-inner">
-      <div class="sector-photo">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=720&q=80&fit=crop" alt="Solar enerji panelleri ve inverter">
-        <div class="sector-photo-label">Enerji Sistemleri</div>
-      </div>
-      <div class="sector-body">
-        <div class="sector-num">05 — Enerji & Güç Sistemleri</div>
-        <h2>UPS, Solar İnverter<br>ve Güç Kaynağı Onarımı</h2>
-        <p>Kesintisiz güç kaynakları ve solar inverter sistemlerinde güç elektroniği bileşeni arızaları kritik önem taşır. IGBT, MOSFET ve güç modülü değişimlerini tam teçhizatlı altyapımızla gerçekleştiriyoruz.</p>
-        <div class="sector-specs">
-          <span class="spec-badge">UPS</span><span class="spec-badge">Solar İnverter</span><span class="spec-badge">IGBT Modül</span>
-          <span class="spec-badge">Şarj Regülatörü</span><span class="spec-badge">Akü Yönetim</span><span class="spec-badge">Güç Kaynağı</span>
-        </div>
-        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="savunma" class="sector-detail flip reveal">
-    <div class="sector-detail-inner">
-      <div class="sector-body">
-        <div class="sector-num">06 — Savunma Sanayii</div>
+  <div id="s6" class="sector-card flip rev">
+    <div class="sc-inner">
+      <div class="sc-body">
+        <div class="sc-num">06 — Savunma Sanayii</div>
         <h2>MIL-STD Standartlarında<br>Kritik Sistem Onarımı</h2>
-        <p>Askeri araç elektroniği ve savunma sistemleri en yüksek güvenilirlik standartlarını gerektirir. MIL-STD-810 ve MIL-PRF uyumlu onarım prosedürlerimizle kritik sistemlerinizi güvenle teslim ediyoruz.</p>
-        <div class="sector-specs">
-          <span class="spec-badge">MIL-STD-810</span><span class="spec-badge">Araç ECU</span><span class="spec-badge">STANAG</span>
-          <span class="spec-badge">Radyo Ekipmanı</span><span class="spec-badge">Gece Görüş</span><span class="spec-badge">Navigasyon</span>
-        </div>
-        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+        <p>MIL-STD-810 ve MIL-PRF uyumlu onarım prosedürlerimizle askeri araç elektroniği ve kritik sistemleri güvenle teslim ediyoruz.</p>
+        <div class="sc-specs"><span class="ss">MIL-STD-810</span><span class="ss">Araç ECU</span><span class="ss">STANAG</span><span class="ss">Radyo Ekipmanı</span><span class="ss">Navigasyon</span></div>
+        <a href="index.html#contact" class="btn btn-dark">Teklif Al →</a>
       </div>
-      <div class="sector-photo">
-        <img src="https://images.unsplash.com/photo-1611193984446-2bcbc56e2d4e?w=720&q=80&fit=crop" alt="Elektronik kart yakın çekim">
-        <div class="sector-photo-label">Savunma Elektroniği</div>
-      </div>
+      <div class="sc-photo"><img src="https://images.unsplash.com/photo-1611193984446-2bcbc56e2d4e?w=720&q=80&fit=crop" alt="Elektronik kart savunma"><div class="sc-label">Savunma</div></div>
     </div>
   </div>
 
-  <div id="rayli" class="sector-detail reveal">
-    <div class="sector-detail-inner">
-      <div class="sector-photo">
-        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=720&q=80&fit=crop" alt="Metro ve raylı sistem elektroniği">
-        <div class="sector-photo-label">Raylı Sistemler</div>
-      </div>
-      <div class="sector-body">
-        <div class="sector-num">07 — Raylı Sistemler</div>
+  <div id="s7" class="sector-card rev">
+    <div class="sc-inner">
+      <div class="sc-photo"><img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=720&q=80&fit=crop" alt="Raylı sistem elektroniği"><div class="sc-label">Raylı Sistem</div></div>
+      <div class="sc-body">
+        <div class="sc-num">07 — Raylı Sistemler</div>
         <h2>Metro, Tramvay ve<br>Tren Kontrol Elektroniği</h2>
-        <p>Raylı sistemlerde elektronik arıza toleransı sıfıra yakındır. Traksiyon inverterlerinden TCMS kontrol kartlarına, kapı sistemlerinden fren elektroniğine kadar tüm bileşenleri sertifikalı prosedürlerle onarıyoruz.</p>
-        <div class="sector-specs">
-          <span class="spec-badge">Traksiyon İnverter</span><span class="spec-badge">TCMS</span><span class="spec-badge">Kapı Kontrolü</span>
-          <span class="spec-badge">Fren Sistemi</span><span class="spec-badge">Klima Kontrol</span><span class="spec-badge">Yolcu Bilgi</span>
-        </div>
-        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+        <p>Traksiyon inverterlerinden TCMS kontrol kartlarına kadar tüm raylı sistem bileşenlerini sertifikalı prosedürlerle onarıyoruz.</p>
+        <div class="sc-specs"><span class="ss">Traksiyon İnverter</span><span class="ss">TCMS</span><span class="ss">Kapı Kontrolü</span><span class="ss">Fren Sistemi</span><span class="ss">Klima Kontrol</span></div>
+        <a href="index.html#contact" class="btn btn-dark">Teklif Al →</a>
       </div>
     </div>
   </div>
 
-  <div id="telekom" class="sector-detail flip reveal">
-    <div class="sector-detail-inner">
-      <div class="sector-body">
-        <div class="sector-num">08 — Telekomünikasyon</div>
+  <div id="s8" class="sector-card flip rev">
+    <div class="sc-inner">
+      <div class="sc-body">
+        <div class="sc-num">08 — Telekomünikasyon</div>
         <h2>Baz İstasyonu ve<br>Ağ Altyapısı Onarımı</h2>
-        <p>Telekomünikasyon altyapısında devre dışı kalan her bileşen servis kesintisine yol açar. RF amplifier kartlarından ağ anahtarı donanımına kadar tüm telekom elektroniklerini hızla onarlıyoruz.</p>
-        <div class="sector-specs">
-          <span class="spec-badge">Baz İstasyonu</span><span class="spec-badge">RF Amplifier</span><span class="spec-badge">Ağ Anahtarı</span>
-          <span class="spec-badge">Optik Alıcı</span><span class="spec-badge">Güç Ünitesi</span><span class="spec-badge">Kontrol Kartı</span>
-        </div>
-        <a href="index.html#contact" class="btn-primary" style="align-self:flex-start">Teklif Al →</a>
+        <p>RF amplifier kartlarından ağ anahtarı donanımına kadar tüm telekom elektroniklerini hızla onarlıyoruz. Servis kesintilerini minimize ediyoruz.</p>
+        <div class="sc-specs"><span class="ss">Baz İstasyonu</span><span class="ss">RF Amplifier</span><span class="ss">Ağ Anahtarı</span><span class="ss">Optik Alıcı</span><span class="ss">Güç Ünitesi</span></div>
+        <a href="index.html#contact" class="btn btn-dark">Teklif Al →</a>
       </div>
-      <div class="sector-photo">
-        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=720&q=80&fit=crop" alt="Telekomünikasyon ağ altyapısı">
-        <div class="sector-photo-label">Telekomünikasyon</div>
-      </div>
+      <div class="sc-photo"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=720&q=80&fit=crop" alt="Telekomünikasyon altyapısı"><div class="sc-label">Telekomünikasyon</div></div>
     </div>
   </div>
 
 </div>
 
-<!-- CTA -->
-<div style="background:var(--off);border-top:1px solid var(--border);padding:64px 24px">
-  <div style="max-width:680px;margin:0 auto;text-align:center" class="reveal">
-    <h2 style="margin-bottom:16px">Sektörünüzü Bulamadınız mı?</h2>
-    <p style="font-size:14px;color:var(--text-soft);font-weight:300;margin-bottom:28px">Listelediğimiz sektörler dışında da elektronik kart onarımı yapıyoruz. Cihaz ve arıza bilgilerinizi paylaşın, değerlendirelim.</p>
-    <a href="index.html#contact" class="btn-primary">Bize Ulaşın →</a>
+<div style="background:var(--off);border-top:1px solid var(--border);padding:56px 16px">
+  <div style="max-width:640px;margin:0 auto;text-align:center" class="rev">
+    <h2 style="margin-bottom:14px">Sektörünüzü Bulamadınız mı?</h2>
+    <p style="font-size:14px;color:var(--texts);font-weight:300;margin-bottom:24px">Listelediğimiz alanlar dışında da elektronik kart onarımı yapıyoruz. Cihaz bilgilerinizi paylaşın, değerlendirelim.</p>
+    <a href="index.html#contact" class="btn btn-dark">Bize Ulaşın →</a>
   </div>
 </div>
 
-<script src="shared.js"></script>
+<footer>
+  <div class="footer-main">
+    <div>
+      <svg width="130" height="38" viewBox="0 0 130 38" style="margin-bottom:14px"><rect x="1" y="1" width="128" height="36" rx="5" fill="#F0EEE8"/><clipPath id="fl"><rect x="1" y="1" width="128" height="36" rx="5"/></clipPath><rect clip-path="url(#fl)" x="1" y="29" width="128" height="8" fill="#D85A30"/><text x="65" y="18" font-family="'DM Sans',sans-serif" font-size="15" font-weight="700" fill="#111214" text-anchor="middle" dominant-baseline="central" letter-spacing="5">ODSAN</text></svg>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);line-height:1.6;font-family:var(--mono)">Where Sparks<br>Become Solutions</p>
+    </div>
+    <div class="footer-cols">
+      <div><div class="fc-title">Sayfalar</div><ul class="fc-links"><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="sektorler.html">Sektörler</a></li><li><a href="hizmetler.html">Hizmetler</a></li><li><a href="urunler.html">Ürünler</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><div class="fc-title">Hizmetler</div><ul class="fc-links"><li><a href="hizmetler.html">Kart Tamiri</a></li><li><a href="hizmetler.html">PCB Tasarım</a></li><li><a href="hizmetler.html">Sistem Mühendisliği</a></li></ul></div>
+      <div><div class="fc-title">İletişim</div><ul class="fc-links"><li><a href="tel:+903120000000">+90 (312) 000 00 00</a></li><li><a href="mailto:info@odsan.com.tr">info@odsan.com.tr</a></li><li>Ankara / Türkiye</li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 ODSAN Elektronik San. Tic. A.Ş.</span><span>Tüm hakları saklıdır.</span></div>
+</footer>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.classList.toggle('open',o);ham.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',()=>{mob.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded','false')}));
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+</script>
 </body>
 </html>
