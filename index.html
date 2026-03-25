@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ODSAN Elektronik — Elektronik Kart Tamiri Ankara | PCB Tasarım</title>
+<meta name="description" content="Ankara'nın güvenilir elektronik kart tamiri firması ODSAN Elektronik. Endüstriyel, medikal, iş makinesi, beyaz eşya kart tamiri ve PCB tasarım hizmetleri. Yazılı garanti.">
+<meta name="keywords" content="elektronik kart tamiri, elektronik kart tamiri Ankara, endüstriyel kart tamiri, PLC tamiri, servo sürücü tamiri, buzdolabı kart tamiri, çamaşır makinesi kart tamiri, PCB tasarım Ankara, BGA tamiri, inverter tamiri">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://odsan.com.tr/">
+<meta property="og:title" content="ODSAN Elektronik — Elektronik Kart Tamiri Ankara">
+<meta property="og:description" content="Endüstriyel, medikal, iş makinesi ve beyaz eşya elektronik kart tamiri. 15+ yıl deneyim, yazılı garanti.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://odsan.com.tr/">
+<meta property="og:locale" content="tr_TR">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"ODSAN Elektronik","description":"Elektronik kart tamiri, PCB tasarım ve endüstriyel elektronik mühendislik hizmetleri","url":"https://odsan.com.tr","telephone":"+90-312-000-00-00","email":"info@odsan.com.tr","address":{"@type":"PostalAddress","addressLocality":"Ankara","addressCountry":"TR"},"areaServed":"TR","serviceType":["Elektronik Kart Tamiri","PCB Tasarım","Endüstriyel Elektronik Onarım"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --serif:'DM Serif Display','Georgia',serif;
+  --sans:'DM Sans','Segoe UI','Helvetica Neue',Arial,sans-serif;
+  --mono:'Courier New',monospace;
+  --onyx:#111214;
+  --alaz:#D85A30;
+  --alaz-l:#FAE9E2;
+  --alaz-d:#993C1D;
+  --off:#F7F5F2;
+  --krem:#F0EEE8;
+  --border:#DDD9D3;
+  --borderl:#EAE7E2;
+  --gray:#888780;
+  --graym:#5a5750;
+  --text:#1a1814;
+  --texts:#3d3a34;
+  --white:#fff;
+  --green:#1a8a4a;
+  --greenl:#e6f4ed;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--white);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans)}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--alaz)}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}
+.rev.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav-w{max-width:1280px;margin:0 auto;padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.nav-logo{display:flex;flex-direction:column;text-decoration:none;flex-shrink:0}
+.nl-word{font-family:var(--sans);font-size:18px;font-weight:700;letter-spacing:5px;color:var(--onyx);line-height:1}
+.nl-line{height:2px;background:var(--alaz);margin:3px 0 2px}
+.nl-sub{font-size:9px;letter-spacing:3px;color:var(--gray);font-family:var(--mono);text-transform:uppercase}
+.nav-links{display:flex;gap:20px;list-style:none}
+.nav-links a{font-size:13px;color:var(--graym);transition:color .2s;white-space:nowrap;position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--alaz);transition:width .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--onyx)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{font-size:12px;font-weight:500;color:var(--white);background:var(--onyx);padding:8px 16px;transition:background .2s;white-space:nowrap;flex-shrink:0;border:none;cursor:pointer;display:inline-block}
+.nav-cta:hover{background:var(--alaz)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;width:36px;height:36px;justify-content:center;flex-shrink:0}
+.hamburger span{display:block;height:1.5px;background:var(--onyx);transition:all .25s;transform-origin:center}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob-menu{display:none;background:var(--white);border-bottom:1px solid var(--border)}
+.mob-menu.open{display:block}
+.mob-menu ul{list-style:none;padding:8px 16px}
+.mob-menu ul li a{display:block;font-size:15px;color:var(--texts);padding:12px 0;border-bottom:1px solid var(--borderl)}
+.mob-menu ul li:last-child a{border-bottom:none}
+.mob-menu .nav-cta{display:block;margin:12px 16px 16px;text-align:center}
+
+/* HERO */
+#hero{padding:80px 16px 56px;max-width:1280px;margin:0 auto}
+.hero-grid{display:grid;grid-template-columns:1fr 260px;gap:48px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px}
+.hb-line{width:20px;height:1.5px;background:var(--alaz)}
+.hb-text{font-size:10px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase}
+h1{font-family:var(--serif);font-size:clamp(32px,5vw,58px);line-height:1.12;color:var(--onyx);margin-bottom:18px;letter-spacing:-.3px}
+h1 em{font-style:normal;color:var(--alaz)}
+.hero-lead{font-size:15px;line-height:1.8;color:var(--texts);font-weight:300;max-width:500px;margin-bottom:32px}
+.ticker{overflow:hidden;border-top:1px solid var(--borderl);border-bottom:1px solid var(--borderl);padding:8px 0;margin-bottom:28px}
+.ticker-track{display:flex;width:max-content;animation:tick 28s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+.ti{font-size:10px;letter-spacing:1.5px;color:var(--gray);text-transform:uppercase;padding:0 20px;white-space:nowrap;border-right:1px solid var(--borderl);font-family:var(--mono)}
+.ti b{color:var(--alaz);font-weight:400;margin-right:4px}
+@keyframes tick{to{transform:translateX(-50%)}}
+.hero-btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;padding:11px 20px;border:1.5px solid transparent;transition:all .18s;cursor:pointer;white-space:nowrap;text-decoration:none}
+.btn-dark{background:var(--onyx);color:var(--white);border-color:var(--onyx)}
+.btn-dark:hover{background:var(--alaz);border-color:var(--alaz)}
+.btn-orange{background:var(--alaz);color:var(--white);border-color:var(--alaz)}
+.btn-orange:hover{background:var(--alaz-d);border-color:var(--alaz-d)}
+.btn-ghost{background:transparent;color:var(--onyx);border-color:var(--border)}
+.btn-ghost:hover{border-color:var(--alaz);color:var(--alaz)}
+.btn-wa{background:#25d366;color:var(--white);border-color:#25d366}
+.btn-wa:hover{background:#1faa53}
+/* Hero stats */
+.hero-stats{border-left:2px solid var(--alaz);padding-left:28px}
+.hs{padding:18px 0;border-bottom:1px solid var(--borderl)}
+.hs:first-child{padding-top:0}.hs:last-child{border-bottom:none}
+.hs-num{font-family:var(--serif);font-size:40px;color:var(--onyx);line-height:1;margin-bottom:4px}
+.hs-num sup{font-size:18px;color:var(--alaz)}
+.hs-label{font-size:12px;color:var(--graym)}
+
+/* SECTIONS */
+.sw{max-width:1280px;margin:0 auto;padding:56px 16px}
+.stag{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.stag-line{width:20px;height:1.5px;background:var(--alaz)}
+.stag-text{font-size:9px;letter-spacing:2px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase}
+h2{font-family:var(--serif);font-size:clamp(22px,3vw,38px);line-height:1.2;color:var(--onyx)}
+h3{font-family:var(--serif);font-weight:400;color:var(--onyx)}
+.divider{border:none;border-top:1px solid var(--border)}
+
+/* ABOUT */
+#about{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about-text p{font-size:14px;line-height:1.85;color:var(--texts);font-weight:300;margin-bottom:12px}
+.cert-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px;padding-top:18px;border-top:1px solid var(--border)}
+.cert{font-size:9px;letter-spacing:.8px;color:var(--graym);border:1px solid var(--border);padding:5px 10px;font-family:var(--mono);background:var(--white);transition:border-color .2s,color .2s;cursor:default}
+.cert:hover{border-color:var(--alaz);color:var(--alaz)}
+.cap-table{border:1px solid var(--border);overflow:hidden}
+.cap-head{background:var(--onyx);padding:10px 16px;display:grid;grid-template-columns:32px 1fr 52px;gap:8px}
+.cap-head span{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,.35);font-family:var(--mono);text-transform:uppercase}
+.cap-row{display:grid;grid-template-columns:32px 1fr 52px;gap:8px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--borderl);transition:background .15s}
+.cap-row:last-child{border-bottom:none}
+.cap-row:hover{background:var(--alaz-l)}
+.cap-i{font-size:10px;color:var(--gray);font-family:var(--mono)}
+.cap-n{font-size:13px;color:var(--text)}
+.cap-s{font-size:9px;color:var(--alaz);text-align:right;font-family:var(--mono)}
+
+/* SECTORS */
+#sectors{background:var(--white);border-bottom:1px solid var(--border)}
+.sec-intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.sec-intro p{font-size:14px;color:var(--texts);line-height:1.75;font-weight:300}
+.sectors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+.sc{background:var(--white);padding:24px 20px 22px;position:relative;transition:background .2s}
+.sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:transparent;transition:background .2s}
+.sc:hover{background:var(--alaz-l)}
+.sc:hover::after{background:var(--alaz)}
+.sc-icon{width:38px;height:38px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--onyx);transition:border-color .2s,color .2s}
+.sc:hover .sc-icon{border-color:var(--alaz);color:var(--alaz)}
+.sc h3{font-size:14px;font-family:var(--sans);font-weight:600;margin-bottom:7px;line-height:1.3}
+.sc p{font-size:12px;color:var(--graym);line-height:1.6;font-weight:300;margin-bottom:12px}
+.sc-tags{display:flex;flex-wrap:wrap;gap:4px}
+.sct{font-size:8.5px;letter-spacing:.5px;color:var(--gray);border:1px solid var(--borderl);padding:2px 7px;background:var(--off);font-family:var(--mono);text-transform:uppercase;transition:all .2s}
+.sc:hover .sct{border-color:rgba(216,90,48,.25);color:var(--alaz)}
+
+/* SERVICES */
+#services{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.srv-intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.srv-intro p{font-size:14px;color:var(--texts);line-height:1.75;font-weight:300}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)}
+.svc{background:var(--white);padding:28px 24px;position:relative;transition:background .2s}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background .2s}
+.svc:hover{background:var(--alaz-l)}
+.svc:hover::before{background:var(--alaz)}
+.svc-num{font-size:11px;color:var(--alaz);margin-bottom:16px;display:block;font-family:var(--mono)}
+.svc-icon{width:42px;height:42px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--onyx);transition:all .2s}
+.svc:hover .svc-icon{border-color:var(--alaz);color:var(--alaz);background:var(--white)}
+.svc h3{font-size:18px;margin-bottom:10px}
+.svc p{font-size:13px;color:var(--texts);line-height:1.7;font-weight:300}
+.svc-specs{margin-top:18px;padding-top:14px;border-top:1px solid var(--borderl);display:flex;flex-direction:column;gap:6px}
+.spec{font-size:11px;color:var(--gray);display:flex;align-items:center;gap:6px;font-family:var(--mono)}
+.spec::before{content:'—';color:var(--alaz)}
+
+/* PROCESS */
+#process{background:var(--white)}
+.proc-grid{display:grid;grid-template-columns:1fr 2fr;gap:48px;margin-top:36px;align-items:start}
+.proc-grid p{font-size:14px;color:var(--texts);line-height:1.75;font-weight:300;margin-top:12px}
+.steps{border:1px solid var(--border)}
+.step{display:grid;grid-template-columns:50px 1fr;border-bottom:1px solid var(--borderl);transition:background .2s}
+.step:last-child{border-bottom:none}
+.step:hover{background:var(--alaz-l)}
+.step-n{display:flex;align-items:center;justify-content:center;border-right:1px solid var(--borderl);font-family:var(--serif);font-size:16px;color:var(--alaz);background:var(--off);transition:background .2s,color .2s}
+.step:hover .step-n{background:var(--alaz);color:var(--white)}
+.step-b{padding:16px 20px}
+.step-b h4{font-size:13px;font-weight:600;color:var(--onyx);margin-bottom:3px}
+.step-b p{font-size:12px;color:var(--graym);line-height:1.55;font-weight:300}
+
+/* REFERENCES */
+#references{background:var(--onyx)}
+#references .stag-text{color:var(--alaz)}
+#references .stag-line{background:var(--alaz)}
+#references h2{color:var(--white)}
+.ref-intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ref-intro p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.75;font-weight:300}
+.ref-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.rc{background:var(--onyx);padding:22px 18px;transition:background .2s;border-bottom:3px solid transparent;transition:all .2s}
+.rc:hover{background:#1a1c1f;border-color:var(--alaz)}
+.rc-name{font-family:var(--serif);font-size:14px;color:rgba(255,255,255,.8);margin-bottom:4px}
+.rc-sec{font-size:8.5px;letter-spacing:1.5px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;opacity:.6}
+.rc:hover .rc-sec{opacity:1}
+
+/* CONTACT */
+#contact{background:var(--white);border-top:1px solid var(--border)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.ci h2{margin-bottom:12px}
+.ci>p{font-size:14px;color:var(--texts);line-height:1.75;font-weight:300;margin-bottom:28px}
+.cd{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--borderl)}
+.cd:last-of-type{border-bottom:none;margin-bottom:0}
+.cd-icon{width:34px;height:34px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--onyx);transition:all .2s}
+.cd:hover .cd-icon{border-color:var(--alaz);color:var(--white);background:var(--alaz)}
+.cd-label{font-size:8.5px;letter-spacing:2px;color:var(--gray);font-family:var(--mono);text-transform:uppercase;margin-bottom:2px}
+.cd-val{font-size:13px;color:var(--text)}
+.cd-val a:hover{color:var(--alaz)}
+.wa-card{background:var(--greenl);border:1px solid rgba(26,138,74,.2);padding:18px 20px;display:flex;align-items:center;gap:14px;margin-top:20px;transition:background .2s;text-decoration:none}
+.wa-card:hover{background:#d4eedf}
+.wa-icon{width:42px;height:42px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wa-icon svg{width:22px;height:22px;fill:#fff}
+.wa-card strong{display:block;font-size:14px;font-weight:600;color:var(--onyx);margin-bottom:2px}
+.wa-card span{font-size:12px;color:var(--graym)}
+/* Form */
+.cf-box{background:var(--off);border:1px solid var(--border);padding:28px}
+.cf-title{font-family:var(--serif);font-size:18px;color:var(--onyx);margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid var(--alaz);display:flex;align-items:center;gap:8px}
+.cf-title::before{content:'';width:8px;height:8px;background:var(--alaz);border-radius:50%;flex-shrink:0}
+.cf{display:flex;flex-direction:column;gap:10px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fg label{font-size:8.5px;letter-spacing:2px;color:var(--gray);font-family:var(--mono);text-transform:uppercase}
+.fg input,.fg textarea,.fg select{background:var(--white);border:1px solid var(--border);color:var(--text);font-family:var(--sans);font-size:13px;font-weight:300;padding:10px 12px;outline:none;transition:border-color .2s;width:100%;appearance:none;-webkit-appearance:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--alaz)}
+.fg textarea{resize:vertical;min-height:88px}
+.fg input::placeholder,.fg textarea::placeholder{color:#bbb}
+.form-btns{display:flex;gap:8px;margin-top:4px;flex-wrap:wrap}
+.btn-submit{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--white);background:var(--onyx);border:1.5px solid var(--onyx);padding:11px 22px;cursor:pointer;transition:all .2s;flex:1;display:flex;align-items:center;justify-content:center;gap:6px}
+.btn-submit:hover{background:var(--alaz);border-color:var(--alaz)}
+.btn-wa-sm{font-family:var(--sans);font-size:12px;font-weight:500;color:#fff;background:#25d366;border:1.5px solid #25d366;padding:11px 16px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;text-decoration:none}
+.btn-wa-sm:hover{background:#1faa53}
+
+/* FOOTER */
+footer{background:var(--onyx);border-top:3px solid var(--alaz)}
+.footer-main{max-width:1280px;margin:0 auto;padding:40px 16px;display:grid;grid-template-columns:180px 1fr;gap:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.fc-title{font-size:9px;letter-spacing:2.5px;color:var(--alaz);font-family:var(--mono);text-transform:uppercase;margin-bottom:12px}
+.fc-links{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fc-links a{font-size:13px;color:rgba(255,255,255,.35);transition:color .2s}
+.fc-links a:hover{color:var(--alaz)}
+.fc-links li{font-size:13px;color:rgba(255,255,255,.25)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom span{font-size:10px;color:rgba(255,255,255,.2);font-family:var(--mono)}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:20px;right:20px;z-index:900;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);transition:transform .2s;text-decoration:none}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+
+/* HERO ANIMATIONS */
+@keyframes fup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.hero-badge{animation:fup .5s .1s both}
+#hero h1{animation:fup .5s .18s both}
+.hero-lead{animation:fup .5s .25s both}
+.hero-logo-v1{animation:fup .5s .3s both}
+.ticker{animation:fup .5s .35s both}
+.hero-btns{animation:fup .5s .4s both}
+.hero-stats{animation:fup .5s .48s both}
+
+/* ═══════════════════════════
+   MOBILE FIRST — RESPONSIVE
+═══════════════════════════ */
+@media(max-width:1023px){
+  .nav-links,.nav-cta.desk{display:none}
+  .hamburger{display:flex}
+  #hero{padding:72px 16px 48px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-stats{border-left:none;border-top:2px solid var(--alaz);padding-left:0;padding-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .hs{padding:0 16px;border-bottom:none;border-right:1px solid var(--borderl)}
+  .hs:first-child{padding-left:0}.hs:last-child{border-right:none}
+  .about-grid{grid-template-columns:1fr;gap:28px}
+  .sec-intro,.srv-intro,.ref-intro{grid-template-columns:1fr;gap:12px}
+  .sectors-grid,.ref-grid{grid-template-columns:repeat(2,1fr)}
+  .srv-grid{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr;gap:24px}
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+  .footer-main{grid-template-columns:1fr}
+  .footer-cols{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  body{font-size:15px}
+  .nav-w{height:56px}
+  #hero{padding:68px 14px 40px}
+  .hs-num{font-size:32px}
+  .hero-stats{grid-template-columns:1fr}
+  .hs{padding:14px 0;border-right:none;border-bottom:1px solid var(--borderl)}
+  .hs:last-child{border-bottom:none}
+  .sectors-grid{grid-template-columns:1fr 1fr}
+  .ref-grid{grid-template-columns:1fr 1fr}
+  .fr{grid-template-columns:1fr}
+  .sw{padding:44px 14px}
+  .footer-cols{grid-template-columns:1fr}
+  h1{font-size:30px}
+}
+@media(max-width:380px){
+  .sectors-grid,.ref-grid{grid-template-columns:1fr}
+  h1{font-size:27px}
+}
+</style>
+</head>
+<body>
+
+<!-- WA Float -->
+<a href="https://wa.me/905XXXXXXXXX?text=Merhaba%2C%20elektronik%20kart%20tamiri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-w">
+    <a href="index.html" class="nav-logo">
+      <span class="nl-word">ODSAN</span>
+      <span class="nl-line"></span>
+      <span class="nl-sub">Electronics</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="sektorler.html">Sektörler</a></li>
+      <li><a href="hizmetler.html">Hizmetler</a></li>
+      <li><a href="urunler.html">Ürünler</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta desk">İletişim</a>
+    <button class="hamburger" id="ham" aria-label="Menü" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mob-menu" id="mob">
+    <ul>
+      <li><a href="hakkimizda.html" class="ml">Hakkımızda</a></li>
+      <li><a href="sektorler.html" class="ml">Sektörler</a></li>
+      <li><a href="hizmetler.html" class="ml">Hizmetler</a></li>
+      <li><a href="urunler.html" class="ml">Ürünler</a></li>
+      <li><a href="blog.html" class="ml">Blog</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta ml">İletişim</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section aria-label="Ana Bölüm">
+<div id="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge"><div class="hb-line"></div><span class="hb-text">Kuruluş 2008 · Ankara</span></div>
+      <h1>Elektronik Kart<br>Tamiri & <em>Mühendislik</em></h1>
+      <p class="hero-lead">Endüstriyel, medikal, iş makinesi ve beyaz eşya elektronik kartlarının uzman ekiplerle tamiri. Kalıcı çözüm, yazılı garanti.</p>
+      <!-- Logo V1 -->
+      <div class="hero-logo-v1" style="margin-bottom:24px">
+        <svg width="200" height="46" viewBox="0 0 200 46">
+          <rect x="1" y="1" width="198" height="44" rx="6" fill="#111214"/>
+          <clipPath id="hl"><rect x="1" y="1" width="198" height="44" rx="6"/></clipPath>
+          <rect clip-path="url(#hl)" x="1" y="36" width="198" height="9" fill="#D85A30"/>
+          <text x="100" y="23" font-family="'DM Sans',sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="central" letter-spacing="6">ODSAN</text>
+        </svg>
+      </div>
+      <div class="ticker">
+        <div class="ticker-track">
+          <span class="ti"><b>→</b>Endüstriyel Kart Tamiri</span>
+          <span class="ti"><b>→</b>İş Makinesi Kart Tamiri</span>
+          <span class="ti"><b>→</b>Medikal Kart Tamiri</span>
+          <span class="ti"><b>→</b>Buzdolabı Kart Tamiri</span>
+          <span class="ti"><b>→</b>Çamaşır Makinesi Kart Tamiri</span>
+          <span class="ti"><b>→</b>PCB Tasarım & Üretim</span>
+          <span class="ti"><b>→</b>PLC / Servo Sürücü Tamiri</span>
+          <span class="ti"><b>→</b>BGA Yeniden Lehimleme</span>
+          <span class="ti"><b>→</b>Endüstriyel Kart Tamiri</span>
+          <span class="ti"><b>→</b>İş Makinesi Kart Tamiri</span>
+          <span class="ti"><b>→</b>Medikal Kart Tamiri</span>
+          <span class="ti"><b>→</b>Buzdolabı Kart Tamiri</span>
+          <span class="ti"><b>→</b>Çamaşır Makinesi Kart Tamiri</span>
+          <span class="ti"><b>→</b>PCB Tasarım & Üretim</span>
+          <span class="ti"><b>→</b>PLC / Servo Sürücü Tamiri</span>
+          <span class="ti"><b>→</b>BGA Yeniden Lehimleme</span>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="sektorler.html" class="btn btn-dark">Hizmet Alanları</a>
+        <a href="https://wa.me/905XXXXXXXXX" class="btn btn-wa" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#contact" class="btn btn-ghost">Teklif Al</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><div class="hs-num"><span class="cnt" data-t="15">0</span><sup>+</sup></div><div class="hs-label">Yıl deneyim</div></div>
+      <div class="hs"><div class="hs-num"><span class="cnt" data-t="500">0</span><sup>+</sup></div><div class="hs-label">Tamamlanan onarım</div></div>
+      <div class="hs"><div class="hs-num"><span class="cnt" data-t="98">0</span><sup>%</sup></div><div class="hs-label">Müşteri memnuniyeti</div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+<div class="sw">
+  <div class="about-grid">
+    <div class="about-text rev">
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Kurumsal</span></div>
+      <h2 style="margin-bottom:18px">Güvenilir Elektronik<br>Tamiri & Mühendislik</h2>
+      <p>ODSAN Elektronik, 2008 yılından bu yana Ankara'dan Türkiye geneline endüstriyel elektronik kart tamiri, medikal cihaz onarımı, iş makinesi elektroniği ve beyaz eşya kart tamiri hizmetleri sunmaktadır.</p>
+      <p>Deneyimli mühendis kadromuz; BGA yeniden lehimleme, mikroskop destekli teşhis, X-ray inceleme ve fonksiyonel test altyapısıyla kalıcı ve garanti kapsamında çözümler üretir.</p>
+      <div class="cert-row">
+        <span class="cert">ISO 9001:2015</span><span class="cert">IPC Class 3</span>
+        <span class="cert">IPC-7711/21</span><span class="cert">MIL-STD</span>
+        <span class="cert">CE Uyumlu</span><span class="cert">TSE Onaylı</span>
+      </div>
+    </div>
+    <div class="rev d2">
+      <div class="cap-table">
+        <div class="cap-head"><span>No.</span><span>Yetkinlik Alanı</span><span style="text-align:right">Durum</span></div>
+        <div class="cap-row"><span class="cap-i">01</span><span class="cap-n">İş Makinesi Elektronik Kart Tamiri</span><span class="cap-s">Aktif</span></div>
+        <div class="cap-row"><span class="cap-i">02</span><span class="cap-n">Medikal Cihaz Kart Onarımı</span><span class="cap-s">Aktif</span></div>
+        <div class="cap-row"><span class="cap-i">03</span><span class="cap-n">Beyaz Eşya Elektronik Kart Tamiri</span><span class="cap-s">Aktif</span></div>
+        <div class="cap-row"><span class="cap-i">04</span><span class="cap-n">PCB Tasarım ve Geliştirme</span><span class="cap-s">Aktif</span></div>
+        <div class="cap-row"><span class="cap-i">05</span><span class="cap-n">Endüstriyel Sistem Mühendisliği</span><span class="cap-s">Aktif</span></div>
+        <div class="cap-row"><span class="cap-i">06</span><span class="cap-n">Savunma Sistem Entegrasyonu</span><span class="cap-s">Aktif</span></div>
+        <div class="cap-row"><span class="cap-i">07</span><span class="cap-n">Ömür Uzatma & Modernizasyon</span><span class="cap-s">Aktif</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+<div class="sw">
+  <div class="sec-intro rev">
+    <div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Sektörler</span></div>
+      <h2>Hangi Sektörlere<br>Hizmet Veriyoruz?</h2>
+    </div>
+    <p>Her sektörün kendine özgü teknik gereksinimleri vardır. Geniş deneyimimizle her alanda güvenilir çözüm üretiyoruz.</p>
+  </div>
+  <div class="sectors-grid">
+    <div class="sc rev"><div class="sc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="8" width="14" height="10"/><path d="M16 10l4-4v12l-4-4"/></svg></div><h3>İş Makinesi</h3><p>Ekskavatör, forklift, vinç ECU ve hidrolik kart onarımı.</p><div class="sc-tags"><span class="sct">ECU</span><span class="sct">Hidrolik</span><span class="sct">CAN Bus</span></div></div>
+    <div class="sc rev d1"><div class="sc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Medikal</h3><p>MRI, CT, hasta monitörü kart onarımı. IEC 60601 uyumlu.</p><div class="sc-tags"><span class="sct">Görüntüleme</span><span class="sct">IEC 60601</span></div></div>
+    <div class="sc rev d2"><div class="sc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="1"/><line x1="9" y1="7" x2="15" y2="7"/><circle cx="12" cy="17" r="1.5"/></svg></div><h3>Beyaz Eşya</h3><p>Buzdolabı, çamaşır makinesi, klima kart tamiri.</p><div class="sc-tags"><span class="sct">Buzdolabı</span><span class="sct">Çamaşır</span><span class="sct">Klima</span></div></div>
+    <div class="sc rev d3"><div class="sc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16"/><rect x="9" y="9" width="6" height="6"/></svg></div><h3>Endüstriyel Otomasyon</h3><p>PLC, servo sürücü, inverter, HMI kart onarımı.</p><div class="sc-tags"><span class="sct">PLC</span><span class="sct">Servo</span><span class="sct">HMI</span></div></div>
+    <div class="sc rev"><div class="sc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Enerji Sistemleri</h3><p>UPS, solar inverter ve güç kaynağı kart onarımı.</p><div class="sc-tags"><span class="sct">UPS</span><span class="sct">Solar</span><span class="sct">IGBT</span></div></div>
+    <div class="sc rev d1"><div class="sc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Savunma Sanayii</h3><p>MIL-STD standartlarında kritik sistem onarımı.</p><div class="sc-tags"><span class="sct">MIL-STD</span><span class="sct">STANAG</span></div></div>
+    <div class="sc rev d2"><div class="sc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="14" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/><circle cx="8.5" cy="13.5" r="1"/></svg></div><h3>Raylı Sistemler</h3><p>Metro, tramvay traksiyon ve kontrol elektroniği.</p><div class="sc-tags"><span class="sct">Traksiyon</span><span class="sct">TCMS</span></div></div>
+    <div class="sc rev d3"><div class="sc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 6C1 6 5 2 12 2s11 4 11 4"/><path d="M5 10s2-2 7-2 7 2 7 2"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg></div><h3>Telekomünikasyon</h3><p>Baz istasyonu, RF ve ağ altyapısı kart onarımı.</p><div class="sc-tags"><span class="sct">RF</span><span class="sct">Baz İstasyonu</span></div></div>
+  </div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="sw">
+  <div class="srv-intro rev">
+    <div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Temel Hizmetler</span></div>
+      <h2>Üç Temel<br>Yetkinlik Alanı</h2>
+    </div>
+    <p>Kart onarımından PCB tasarımına, sistem mühendisliğine kadar tam kapsamlı çözüm ortaklığı.</p>
+  </div>
+  <div class="srv-grid">
+    <article class="svc rev">
+      <span class="svc-num">I.</span>
+      <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="4" width="20" height="16"/><rect x="6" y="8" width="5" height="4"/><rect x="13" y="8" width="5" height="4"/></svg></div>
+      <h3>Elektronik Kart Tamiri</h3>
+      <p>Endüstriyel, medikal, iş makinesi ve beyaz eşya elektronik kartlarının kapsamlı teşhis ve onarımı. Yazılı garanti ile teslim.</p>
+      <div class="svc-specs">
+        <span class="spec">BGA & Fine-Pitch Komponent</span>
+        <span class="spec">X-Ray & Mikroskop Teşhis</span>
+        <span class="spec">Tersine Mühendislik</span>
+        <span class="spec">Fonksiyonel Test & Garanti</span>
+        <span class="spec">IPC-7711/7721 Uyumu</span>
+      </div>
+    </article>
+    <article class="svc rev d1">
+      <span class="svc-num">II.</span>
+      <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+      <h3>PCB Tasarım & Geliştirme</h3>
+      <p>Konseptten seri üretime yüksek güvenilirlikli PCB tasarımı. RF ve çok katmanlı uygulamalar için uzman mühendislik.</p>
+      <div class="svc-specs">
+        <span class="spec">Çok Katmanlı PCB (2–16)</span>
+        <span class="spec">RF & Yüksek Frekans</span>
+        <span class="spec">EMC Uyumlu Tasarım</span>
+        <span class="spec">DFM / DFT Analizi</span>
+        <span class="spec">Prototip & Seri Üretim</span>
+      </div>
+    </article>
+    <article class="svc rev d2">
+      <span class="svc-num">III.</span>
+      <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+      <h3>Endüstriyel Sistem Mühendisliği</h3>
+      <p>PLC/SCADA sistem tasarımı, kontrol panosu mühendisliği ve devreye alma. Saha teknik destek güvencesi.</p>
+      <div class="svc-specs">
+        <span class="spec">PLC / SCADA Tasarımı</span>
+        <span class="spec">Kontrol Panosu</span>
+        <span class="spec">Protokol Entegrasyonu</span>
+        <span class="spec">Devreye Alma & Destek</span>
+        <span class="spec">IEC 61508 Güvenlik</span>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+<div class="sw">
+  <div class="stag rev"><div class="stag-line"></div><span class="stag-text">Çalışma Süreci</span></div>
+  <div class="proc-grid">
+    <div class="rev">
+      <h2>Talepten<br>Teslimata</h2>
+      <p>Her projede şeffaf ve belgelenmiş bir süreç. Teknik gereksinimlerinizden teslimata kadar her adım titizlikle yönetilir.</p>
+    </div>
+    <ol class="steps rev d1" style="list-style:none">
+      <li class="step"><div class="step-n">I</div><div class="step-b"><h4>Talep & Teknik Analiz</h4><p>Gereksinimler değerlendirilir, fizibilite ve risk analizi yapılır.</p></div></li>
+      <li class="step"><div class="step-n">II</div><div class="step-b"><h4>Teklif & Planlama</h4><p>Kapsam, zaman çizelgesi ve maliyet analizi onayınıza sunulur.</p></div></li>
+      <li class="step"><div class="step-n">III</div><div class="step-b"><h4>Mühendislik & Üretim</h4><p>Onarım veya tasarım işlemleri kalite kontrol dahilinde yürütülür.</p></div></li>
+      <li class="step"><div class="step-n">IV</div><div class="step-b"><h4>Test & Doğrulama</h4><p>Kapsamlı testler uygulanır, müşteri kabul kriterleri doğrulanır.</p></div></li>
+      <li class="step"><div class="step-n">V</div><div class="step-b"><h4>Teslim & Destek</h4><p>Dokümantasyon ile teslim. Satış sonrası teknik destek güvencesi.</p></div></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- REFERENCES -->
+<section id="references">
+<div class="sw">
+  <div class="ref-intro rev">
+    <div>
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">Referanslar</span></div>
+      <h2>Güvenilir<br>Ortaklıklar</h2>
+    </div>
+    <p>Savunma sanayii, sağlık sektörü ve endüstriyel kuruluşlarla uzun soluklu iş birlikleri kuruyoruz.</p>
+  </div>
+  <div class="ref-grid rev">
+    <div class="rc"><div class="rc-name">Savunma Sanayii</div><div class="rc-sec">Sistem Entegrasyonu</div></div>
+    <div class="rc"><div class="rc-name">Sağlık Sektörü</div><div class="rc-sec">Medikal Kart Onarımı</div></div>
+    <div class="rc"><div class="rc-name">İş Makinesi OEM</div><div class="rc-sec">ECU & Kontrol Kartı</div></div>
+    <div class="rc"><div class="rc-name">Enerji Sektörü</div><div class="rc-sec">Güç Elektroniği</div></div>
+    <div class="rc"><div class="rc-name">Havacılık & Uzay</div><div class="rc-sec">Gömülü Sistem</div></div>
+    <div class="rc"><div class="rc-name">Raylı Sistemler</div><div class="rc-sec">Traksiyon Elektroniği</div></div>
+    <div class="rc"><div class="rc-name">Üretim & Otomasyon</div><div class="rc-sec">PLC / SCADA</div></div>
+    <div class="rc"><div class="rc-name">Telekomünikasyon</div><div class="rc-sec">PCB Tasarım & Üretim</div></div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="sw">
+  <div class="contact-grid">
+    <div class="ci rev">
+      <div class="stag"><div class="stag-line"></div><span class="stag-text">İletişim</span></div>
+      <h2>Projenizi<br>Değerlendirelim</h2>
+      <p>Teknik gereksinimlerinizi paylaşın, mühendislik ekibimiz en kısa sürede dönüş yapsın.</p>
+      <div class="cd">
+        <div class="cd-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.3 11.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013.22 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div><div class="cd-label">Telefon</div><div class="cd-val"><a href="tel:+903120000000">+90 (312) 000 00 00</a></div></div>
+      </div>
+      <div class="cd">
+        <div class="cd-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="cd-label">E-posta</div><div class="cd-val"><a href="/cdn-cgi/l/email-protection#f49d9a929bb49b9087959ada979b99da8086"><span class="__cf_email__" data-cfemail="3e575058517e515a4d5f50105d5153104a4c">[email&#160;protected]</span></a></div></div>
+      </div>
+      <div class="cd">
+        <div class="cd-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="cd-label">Adres</div><div class="cd-val">Ankara / Türkiye</div></div>
+      </div>
+      <a href="https://wa.me/905XXXXXXXXX" class="wa-card" target="_blank" rel="noopener">
+        <div class="wa-icon"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
+        <div><strong>WhatsApp ile Hızlı İletişim</strong><span>Mesaj gönderin, hemen dönüş yapalım</span></div>
+      </a>
+    </div>
+    <div class="cf-box rev d2">
+      <div class="cf-title">Proje / Onarım Talebi</div>
+      <form class="cf" action="mailto:info@odsan.com.tr" method="post" enctype="text/plain">
+        <div class="fr">
+          <div class="fg"><label for="name">Ad Soyad</label><input type="text" id="name" name="name" placeholder="Adınız" autocomplete="name"></div>
+          <div class="fg"><label for="co">Şirket</label><input type="text" id="co" name="company" placeholder="Kuruluş"></div>
+        </div>
+        <div class="fr">
+          <div class="fg"><label for="em">E-posta</label><input type="email" id="em" name="email" placeholder="email@firma.com" autocomplete="email"></div>
+          <div class="fg"><label for="ph">Telefon</label><input type="tel" id="ph" name="phone" placeholder="+90" autocomplete="tel"></div>
+        </div>
+        <div class="fg">
+          <label for="srv">Hizmet Türü</label>
+          <select id="srv" name="service">
+            <option value="" disabled selected>Seçiniz...</option>
+            <optgroup label="── Kart Tamiri ──">
+              <option>İş Makinesi Elektronik Kart Tamiri</option>
+              <option>Medikal Cihaz Kart Onarımı</option>
+              <option>Buzdolabı / Çamaşır Makinesi Kart Tamiri</option>
+              <option>Endüstriyel Elektronik Kart Onarımı</option>
+              <option>PLC / Servo Sürücü Tamiri</option>
+              <option>Enerji / UPS Kart Onarımı</option>
+            </optgroup>
+            <optgroup label="── Mühendislik ──">
+              <option>PCB Tasarım ve Geliştirme</option>
+              <option>Endüstriyel Sistem Mühendisliği</option>
+              <option>Teknik Danışmanlık</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="msg">Açıklama</label>
+          <textarea id="msg" name="message" placeholder="Cihaz marka/model, arıza belirtisi veya proje detayları..."></textarea>
+        </div>
+        <div class="form-btns">
+          <button type="submit" class="btn-submit">Talebi Gönder →</button>
+          <a href="https://wa.me/905XXXXXXXXX" class="btn-wa-sm" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div>
+      <svg width="130" height="38" viewBox="0 0 130 38" style="margin-bottom:14px">
+        <rect x="1" y="1" width="128" height="36" rx="5" fill="#F0EEE8"/>
+        <clipPath id="fl"><rect x="1" y="1" width="128" height="36" rx="5"/></clipPath>
+        <rect clip-path="url(#fl)" x="1" y="29" width="128" height="8" fill="#D85A30"/>
+        <text x="65" y="18" font-family="'DM Sans',sans-serif" font-size="15" font-weight="700" fill="#111214" text-anchor="middle" dominant-baseline="central" letter-spacing="5">ODSAN</text>
+      </svg>
+      <p style="font-size:12px;color:rgba(255,255,255,.3);line-height:1.6;font-family:var(--mono)">Where Sparks<br>Become Solutions</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <div class="fc-title">Sayfalar</div>
+        <ul class="fc-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="sektorler.html">Sektörler</a></li>
+          <li><a href="hizmetler.html">Hizmetler</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fc-title">Hizmetler</div>
+        <ul class="fc-links">
+          <li><a href="hizmetler.html">Kart Tamiri</a></li>
+          <li><a href="hizmetler.html">PCB Tasarım</a></li>
+          <li><a href="hizmetler.html">Sistem Mühendisliği</a></li>
+          <li><a href="sektorler.html">Tüm Sektörler</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fc-title">İletişim</div>
+        <ul class="fc-links">
+          <li><a href="tel:+903120000000">+90 (312) 000 00 00</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#620b0c040d220d0611030c4c010d0f4c1610"><span class="__cf_email__" data-cfemail="93fafdf5fcd3fcf7e0f2fdbdf0fcfebde7e1">[email&#160;protected]</span></a></li>
+          <li>Ankara / Türkiye</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 ODSAN Elektronik San. Tic. A.Ş.</span>
+    <span>Tüm hakları saklıdır.</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Hamburger
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+ham.addEventListener('click',()=>{
+  const o=mob.classList.toggle('open');
+  ham.classList.toggle('open',o);
+  ham.setAttribute('aria-expanded',o);
+});
+document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',()=>{
+  mob.classList.remove('open');ham.classList.remove('open');ham.setAttribute('aria-expanded','false');
+}));
+
+// Reveal
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
+
+// Counter
+const co=new IntersectionObserver(e=>{e.forEach(x=>{
+  if(!x.isIntersecting)return;
+  const el=x.target,t=+el.dataset.t,step=Math.ceil(t/70);
+  let c=0;const tmr=setInterval(()=>{c+=step;if(c>=t){el.textContent
