@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ODSAN Elektronik — Elektronik Kart Tamiri İstanbul | PCB Tasarım</title>
+<meta name="description" content="ODSAN Elektronik, İstanbul merkezli elektronik kart tamiri laboratuvarıdır. Siemens, ABB, Fanuc, Omron başta tüm markalar. Endüstriyel, medikal, inverter, PLC, CNC, beyaz eşya. Türkiye geneli kargo. Ücretsiz ön inceleme.">
+<meta name="keywords" content="elektronik kart tamiri istanbul, Siemens kart tamiri, ABB inverter tamiri, Fanuc servo tamiri, Omron PLC tamiri, Schneider kart tamiri, Yaskawa sürücü tamiri, endüstriyel kart tamiri, medikal cihaz kart tamiri, inverter tamiri, CNC kart tamiri, servo sürücü tamiri, buzdolabı kart tamiri, PCB onarım istanbul, UPS kart tamiri">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://odsan.com.tr/">
+<meta property="og:title" content="ODSAN Elektronik — Elektronik Kart Tamiri İstanbul">
+<meta property="og:description" content="Endüstriyel, inverter, PLC, CNC ve beyaz eşya elektronik kart tamiri. İstanbul merkez, Türkiye geneline kargo servis. Ücretsiz ön inceleme.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://odsan.com.tr/">
+<meta property="og:locale" content="tr_TR">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"ODSAN Elektronik","description":"Elektronik kart tamiri, PCB onarım ve arıza analizi hizmetleri","url":"https://odsan.com.tr","telephone":"+90 (538) 263 01 64","address":{"@type":"PostalAddress","addressLocality":"Istanbul","addressCountry":"TR"},"areaServed":["Istanbul","Ankara","Bursa","Kocaeli","Izmir","Tekirdag","TR"],"serviceType":["Elektronik Kart Tamiri","Medikal Cihaz Kart Tamiri","PCB Tasarim","Inverter Tamiri","PLC Tamiri","CNC Kart Tamiri","Servo Surucü Tamiri","Beyaz Esya Kart Tamiri"]}
+<\/script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --s:'DM Serif Display',Georgia,serif;
+  --n:'DM Sans','Segoe UI',Arial,sans-serif;
+  --m:'Courier New',monospace;
+  --k:#111214;--o:#D85A30;--ol:#FAE9E2;--od:#993C1D;
+  --f:#F7F5F2;--b:#DDD9D3;--bl:#EAE7E2;
+  --g:#888780;--gm:#5a5750;--t:#1a1814;--ts:#3d3a34;--w:#fff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--n);background:var(--w);color:var(--t);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block;loading:lazy}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--n);cursor:pointer}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--o)}
+
+/* REVEAL */
+.r{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.r.on{opacity:1;transform:none}
+.r1{transition-delay:.07s}.r2{transition-delay:.14s}.r3{transition-delay:.21s}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,.97);border-bottom:1px solid var(--b);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.nw{max-width:1280px;margin:0 auto;padding:0 20px;height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;flex-direction:column;text-decoration:none;flex-shrink:0;line-height:1}
+.lw{font-family:var(--n);font-size:17px;font-weight:700;letter-spacing:5px;color:var(--k)}
+.ll{height:2px;background:var(--o);margin:3px 0 2px;width:100%}
+.ls{font-size:8px;letter-spacing:3px;color:var(--g);font-family:var(--m);text-transform:uppercase}
+.nl{display:flex;gap:22px;list-style:none}
+.nl a{font-size:13px;color:var(--gm);transition:color .2s;white-space:nowrap;position:relative;padding-bottom:2px}
+.nl a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--o);transition:width .2s}
+.nl a:hover{color:var(--k)}.nl a:hover::after{width:100%}
+.nc{font-size:12px;font-weight:500;color:var(--w);background:var(--k);padding:8px 16px;transition:background .2s;white-space:nowrap;flex-shrink:0;border:none;display:inline-block;text-decoration:none}
+.nc:hover{background:var(--o)}
+.hb{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px;width:40px;height:40px;justify-content:center;align-items:center;flex-shrink:0}
+.hb span{display:block;height:1.5px;width:22px;background:var(--k);transition:all .25s;transform-origin:center}
+.hb.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hb.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hb.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mm{display:none;background:var(--w);border-bottom:1px solid var(--b);padding:4px 20px 16px}
+.mm.open{display:block}
+.mm a{display:block;font-size:15px;color:var(--ts);padding:11px 0;border-bottom:1px solid var(--bl)}
+.mm a:last-child{border-bottom:none}
+.mm .nc{display:block;margin-top:12px;text-align:center;border-bottom:none;padding:11px}
+
+/* HERO */
+.hero{padding:82px 20px 56px;max-width:1280px;margin:0 auto}
+.hg{display:grid;grid-template-columns:1fr 240px;gap:48px;align-items:center}
+.hbadge{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px}
+.hbl{width:18px;height:1.5px;background:var(--o)}
+.hbt{font-size:10px;letter-spacing:2px;color:var(--o);font-family:var(--m);text-transform:uppercase}
+h1{font-family:var(--s);font-size:clamp(30px,4.5vw,54px);line-height:1.12;color:var(--k);margin-bottom:16px;letter-spacing:-.3px}
+h1 em{font-style:normal;color:var(--o)}
+.hl{font-size:15px;line-height:1.8;color:var(--ts);font-weight:300;max-width:480px;margin-bottom:26px}
+.logo-v1{margin-bottom:22px}
+/* ticker */
+.tk{overflow:hidden;border-top:1px solid var(--bl);border-bottom:1px solid var(--bl);padding:7px 0;margin-bottom:24px}
+.tkt{display:flex;width:max-content;animation:tka 30s linear infinite}
+.tkt:hover{animation-play-state:paused}
+.tki{font-size:9.5px;letter-spacing:1.5px;color:var(--g);text-transform:uppercase;padding:0 18px;white-space:nowrap;border-right:1px solid var(--bl);font-family:var(--m)}
+.tki b{color:var(--o);font-weight:400;margin-right:3px}
+@keyframes tka{to{transform:translateX(-50%)}}
+/* buttons */
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;padding:10px 18px;border:1.5px solid transparent;transition:all .18s;white-space:nowrap;text-decoration:none}
+.bd{background:var(--k);color:var(--w);border-color:var(--k)}.bd:hover{background:var(--o);border-color:var(--o)}
+.bo{background:var(--o);color:var(--w);border-color:var(--o)}.bo:hover{background:var(--od)}
+.bg{background:transparent;color:var(--k);border-color:var(--b)}.bg:hover{border-color:var(--o);color:var(--o)}
+.bwa{background:#25d366;color:var(--w);border-color:#25d366}.bwa:hover{background:#1faa53}
+/* stats */
+.hs{border-left:2px solid var(--o);padding-left:24px}
+.hsi{padding:16px 0;border-bottom:1px solid var(--bl)}
+.hsi:first-child{padding-top:0}.hsi:last-child{border-bottom:none}
+.hsn{font-family:var(--s);font-size:38px;color:var(--k);line-height:1;margin-bottom:4px}
+.hsn sup{font-size:16px;color:var(--o)}
+.hsl{font-size:11px;color:var(--gm);line-height:1.4}
+
+/* SECTIONS */
+.sw{max-width:1280px;margin:0 auto;padding:56px 20px}
+.tag{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.tl{width:18px;height:1.5px;background:var(--o)}
+.tt{font-size:9px;letter-spacing:2px;color:var(--o);font-family:var(--m);text-transform:uppercase}
+h2{font-family:var(--s);font-size:clamp(22px,3vw,36px);line-height:1.2;color:var(--k)}
+h3{font-family:var(--s);font-weight:400;color:var(--k)}
+.divider{border:none;border-top:1px solid var(--b)}
+
+/* ABOUT */
+.ab{background:var(--f);border-top:1px solid var(--b);border-bottom:1px solid var(--b)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.atp{font-size:14px;line-height:1.85;color:var(--ts);font-weight:300;margin-bottom:12px}
+.cr{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;padding-top:16px;border-top:1px solid var(--b)}
+.ct{font-size:9px;letter-spacing:.8px;color:var(--gm);border:1px solid var(--b);padding:5px 10px;font-family:var(--m);background:var(--w);transition:border-color .2s,color .2s}
+.ct:hover{border-color:var(--o);color:var(--o)}
+/* yetkinlik tablosu */
+.yt{border:1px solid var(--b);overflow:hidden}
+.yh{background:var(--k);padding:10px 16px;display:grid;grid-template-columns:30px 1fr 52px;gap:8px}
+.yh span{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,.3);font-family:var(--m);text-transform:uppercase}
+.yr{display:grid;grid-template-columns:30px 1fr 52px;gap:8px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--bl);transition:background .15s}
+.yr:last-child{border-bottom:none}
+.yr:hover{background:var(--ol)}
+.yi{font-size:10px;color:var(--g);font-family:var(--m)}
+.yn{font-size:13px;color:var(--t)}
+.ys{font-size:9px;color:var(--o);text-align:right;font-family:var(--m)}
+
+/* SECTORS */
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--b)}
+.sc{background:var(--w);padding:22px 18px 20px;position:relative;transition:background .2s}
+.sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:transparent;transition:background .2s}
+.sc:hover{background:var(--ol)}.sc:hover::after{background:var(--o)}
+.si{width:36px;height:36px;border:1px solid var(--b);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--k);transition:all .2s}
+.sc:hover .si{border-color:var(--o);color:var(--o)}
+.sc h3{font-size:14px;font-family:var(--n);font-weight:600;margin-bottom:6px;line-height:1.3}
+.sc p{font-size:12px;color:var(--gm);line-height:1.6;font-weight:300;margin-bottom:10px}
+.stags{display:flex;flex-wrap:wrap;gap:4px}
+.stag{font-size:8px;letter-spacing:.5px;color:var(--g);border:1px solid var(--bl);padding:2px 6px;background:var(--f);font-family:var(--m);text-transform:uppercase;transition:all .2s}
+.sc:hover .stag{border-color:rgba(216,90,48,.2);color:var(--o)}
+
+/* SERVICES */
+.svgr{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b)}
+.svc{background:var(--w);padding:26px 22px;position:relative;transition:background .2s}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background .2s}
+.svc:hover{background:var(--ol)}.svc:hover::before{background:var(--o)}
+.svn{font-size:11px;color:var(--o);margin-bottom:14px;display:block;font-family:var(--m)}
+.svi{width:40px;height:40px;border:1px solid var(--b);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--k);transition:all .2s}
+.svc:hover .svi{border-color:var(--o);color:var(--o)}
+.svc h3{font-size:17px;margin-bottom:8px}
+.svc p{font-size:13px;color:var(--ts);line-height:1.7;font-weight:300}
+.svs{margin-top:16px;padding-top:12px;border-top:1px solid var(--bl);display:flex;flex-direction:column;gap:5px}
+.svsi{font-size:11px;color:var(--g);display:flex;align-items:center;gap:6px;font-family:var(--m)}
+.svsi::before{content:'—';color:var(--o)}
+
+/* PROCESS */
+.pr{background:var(--f);border-top:1px solid var(--b);border-bottom:1px solid var(--b)}
+.pst{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--b);margin-top:32px}
+.ps{background:var(--w);padding:20px 16px;transition:background .2s}
+.ps:hover{background:var(--ol)}
+.psn{font-family:var(--s);font-size:24px;color:var(--o);line-height:1;margin-bottom:8px}
+.pst2{font-size:12px;font-weight:600;color:var(--k);margin-bottom:4px}
+.psd{font-size:11px;color:var(--gm);line-height:1.5;font-weight:300}
+
+/* WHY */
+.wg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--b);margin-top:32px}
+.wc{background:var(--w);padding:24px 20px;position:relative;transition:background .2s}
+.wc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background .2s}
+.wc:hover{background:var(--ol)}.wc:hover::before{background:var(--o)}
+.wi{width:36px;height:36px;border:1px solid var(--b);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--k);transition:all .2s}
+.wc:hover .wi{border-color:var(--o);color:var(--o)}
+.wc h3{font-size:14px;margin-bottom:6px}
+.wc p{font-size:12px;color:var(--gm);line-height:1.6;font-weight:300}
+
+/* COVERAGE */
+.cov{background:var(--k)}
+.covg{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.citi{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.07);margin-top:24px}
+.ci{background:var(--k);padding:14px 16px;transition:background .2s;border-bottom:2px solid transparent}
+.ci:hover{background:#1a1c1f;border-color:var(--o)}
+.cin{font-family:var(--s);font-size:14px;color:rgba(255,255,255,.8);margin-bottom:3px}
+.cis{font-size:9px;color:var(--o);font-family:var(--m);letter-spacing:1px;opacity:.6}
+.ci:hover .cis{opacity:1}
+.kb{display:inline-flex;align-items:center;gap:8px;background:rgba(216,90,48,.12);border:1px solid rgba(216,90,48,.25);padding:9px 14px;color:var(--o);font-size:12px;font-weight:500;margin-top:14px}
+
+/* CONTACT */
+.cog{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.cdi{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bl)}
+.cdi:last-of-type{border-bottom:none;margin-bottom:0}
+.cdic{width:32px;height:32px;border:1px solid var(--b);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--k);transition:all .2s}
+.cdi:hover .cdic{border-color:var(--o);color:var(--w);background:var(--o)}
+.cdil{font-size:8px;letter-spacing:2px;color:var(--g);font-family:var(--m);text-transform:uppercase;margin-bottom:2px}
+.cdiv{font-size:13px;color:var(--t)}
+.cdiv a:hover{color:var(--o)}
+.wac{background:#e6f4ed;border:1px solid rgba(26,138,74,.2);padding:16px 18px;display:flex;align-items:center;gap:12px;margin-top:18px;text-decoration:none;transition:background .2s}
+.wac:hover{background:#d4eedf}
+.wai{width:38px;height:38px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wai svg{width:20px;height:20px;fill:#fff}
+.wac strong{display:block;font-size:14px;font-weight:600;color:var(--k);margin-bottom:2px}
+.wac span{font-size:12px;color:var(--gm)}
+/* form */
+.cfb{background:var(--f);border:1px solid var(--b);padding:26px}
+.cft{font-family:var(--s);font-size:17px;color:var(--k);margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--o);display:flex;align-items:center;gap:8px}
+.cft::before{content:'';width:7px;height:7px;background:var(--o);border-radius:50%;flex-shrink:0}
+.cf{display:flex;flex-direction:column;gap:10px}
+.cfr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fg label{font-size:8px;letter-spacing:2px;color:var(--g);font-family:var(--m);text-transform:uppercase}
+.fg input,.fg textarea,.fg select{background:var(--w);border:1px solid var(--b);color:var(--t);font-family:var(--n);font-size:13px;font-weight:300;padding:9px 11px;outline:none;transition:border-color .2s;width:100%;appearance:none;-webkit-appearance:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--o)}
+.fg textarea{resize:vertical;min-height:84px}
+.fg input::placeholder,.fg textarea::placeholder{color:#ccc}
+.cfbt{display:flex;gap:8px;margin-top:4px;flex-wrap:wrap}
+.cfsb{font-family:var(--n);font-size:12px;font-weight:500;color:var(--w);background:var(--k);border:1.5px solid var(--k);padding:10px 20px;cursor:pointer;transition:all .2s;flex:1;display:flex;align-items:center;justify-content:center;gap:5px}
+.cfsb:hover{background:var(--o);border-color:var(--o)}
+.cfwa{font-family:var(--n);font-size:12px;font-weight:500;color:#fff;background:#25d366;border:1.5px solid #25d366;padding:10px 14px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:5px;text-decoration:none}
+.cfwa:hover{background:#1faa53}
+
+/* FOOTER */
+footer{background:var(--k);border-top:3px solid var(--o)}
+.fm{max-width:1280px;margin:0 auto;padding:40px 20px;display:grid;grid-template-columns:170px 1fr;gap:36px;border-bottom:1px solid rgba(255,255,255,.07)}
+.fc{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.fct{font-size:9px;letter-spacing:2.5px;color:var(--o);font-family:var(--m);text-transform:uppercase;margin-bottom:10px}
+.fca{list-style:none;display:flex;flex-direction:column;gap:6px}
+.fca a{font-size:13px;color:rgba(255,255,255,.3);transition:color .2s}.fca a:hover{color:var(--o)}
+.fca li{font-size:13px;color:rgba(255,255,255,.22)}
+.fb2{max-width:1280px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fb2 span{font-size:9.5px;color:rgba(255,255,255,.18);font-family:var(--m)}
+
+/* WA FLOAT */
+.waf{position:fixed;bottom:20px;right:20px;z-index:900;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(37,211,102,.4);transition:transform .2s;text-decoration:none}
+.waf:hover{transform:scale(1.08)}.waf svg{width:26px;height:26px;fill:#fff}
+
+/* ANIMATIONS */
+@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hbadge{animation:fu .45s .1s both}
+.hero h1{animation:fu .45s .18s both}
+.hero .hl{animation:fu .45s .24s both}
+.logo-v1{animation:fu .45s .28s both}
+.tk{animation:fu .45s .32s both}
+.btns{animation:fu .45s .36s both}
+.hs{animation:fu .45s .44s both}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:1023px){
+  .nl,.nc.desk{display:none}
+  .hb{display:flex}
+  .hg{grid-template-columns:1fr;gap:28px}
+  .hs{border-left:none;border-top:2px solid var(--o);padding-left:0;padding-top:20px;display:grid;grid-template-columns:repeat(3,1fr)}
+  .hsi{padding:0 14px;border-bottom:none;border-right:1px solid var(--bl)}
+  .hsi:first-child{padding-left:0}.hsi:last-child{border-right:none}
+  .ag{grid-template-columns:1fr;gap:24px}
+  .sg{grid-template-columns:repeat(2,1fr)}
+  .svgr{grid-template-columns:1fr}
+  .pst{grid-template-columns:repeat(3,1fr)}
+  .wg{grid-template-columns:repeat(2,1fr)}
+  .covg{grid-template-columns:1fr;gap:24px}
+  .citi{grid-template-columns:repeat(2,1fr)}
+  .cog{grid-template-columns:1fr;gap:32px}
+  .fm{grid-template-columns:1fr}.fc{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  body{font-size:15px}
+  .nw{height:58px;padding:0 16px}
+  .hero{padding:74px 16px 44px}
+  .sw{padding:44px 16px}
+  .hs{grid-template-columns:1fr}
+  .hsi{padding:12px 0;border-right:none;border-bottom:1px solid var(--bl)}.hsi:last-child{border-bottom:none}
+  .hsn{font-size:32px}
+  .sg{grid-template-columns:1fr 1fr}
+  .pst{grid-template-columns:repeat(2,1fr)}
+  .wg{grid-template-columns:1fr}
+  .citi{grid-template-columns:1fr 1fr}
+  .cfr{grid-template-columns:1fr}
+  .fc{grid-template-columns:1fr}
+  h1{font-size:28px}
+  .mm{padding:4px 16px 14px}
+}
+@media(max-width:380px){
+  .sg,.citi{grid-template-columns:1fr}
+  h1{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/905382630164?text=Merhaba%2C%20elektronik%20kart%20tamiri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="waf" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<nav id="topnav">
+  <div class="nw">
+    <a href="index.html" class="logo">
+      <span class="lw">ODSAN</span>
+      <span class="ll"></span>
+      <span class="ls">Electronics</span>
+    </a>
+    <ul class="nl">
+      <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      <li><a href="sektorler.html">Sektörler</a></li>
+      <li><a href="hizmetler.html">Hizmetler</a></li>
+      <li><a href="markalar.html">Markalar</a></li>
+      <li><a href="urunler.html">Ürünler</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="#contact" class="nc desk">İletişim</a>
+    <button class="hb" id="HB" aria-label="Menü" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mm" id="MM">
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="sektorler.html">Sektörler</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="markalar.html">Markalar</a>
+    <a href="urunler.html">Ürünler</a>
+    <a href="blog.html">Blog</a>
+    <a href="#contact" class="nc" id="MM_contact">İletişim</a>
+  </div>
+</nav>
+
+<section aria-label="Ana Bölüm">
+<div class="hero">
+  <div class="hg">
+    <div>
+      <div class="hbadge"><div class="hbl"></div><span class="hbt">İstanbul Merkez · Türkiye Geneli Kargo Servis</span></div>
+      <h1>Elektronik Kart<br>Tamiri & <em>PCB</em><br>Mühendisliği</h1>
+      <p class="hl">Endüstriyel, inverter, PLC, CNC ve beyaz eşya elektronik kartlarının tamiri. Sistematik arıza analizi, ekonomik onarım, yazılı garanti.</p>
+      <div class="logo-v1">
+        <svg width="190" height="44" viewBox="0 0 190 44">
+          <rect x="1" y="1" width="188" height="42" rx="6" fill="#111214"/>
+          <clipPath id="lv1"><rect x="1" y="1" width="188" height="42" rx="6"/></clipPath>
+          <rect clip-path="url(#lv1)" x="1" y="34" width="188" height="9" fill="#D85A30"/>
+          <text x="95" y="22" font-family="'DM Sans',sans-serif" font-size="19" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="central" letter-spacing="6">ODSAN</text>
+        </svg>
+      </div>
+      <div class="tk">
+        <div class="tkt">
+          <span class="tki"><b>→</b>Endüstriyel Kart Tamiri</span>
+          <span class="tki"><b>→</b>İnverter &amp; Sürücü Tamiri</span>
+          <span class="tki"><b>→</b>PLC &amp; Otomasyon Kartları</span>
+          <span class="tki"><b>→</b>CNC Kart Tamiri</span>
+          <span class="tki"><b>→</b>Beyaz Eşya Kart Tamiri</span>
+          <span class="tki"><b>→</b>UPS &amp; Güç Elektroniği</span>
+          <span class="tki"><b>→</b>PCB Tasarım &amp; Prototipleme</span>
+          <span class="tki"><b>→</b>BGA Yeniden Lehimleme</span>
+          <span class="tki"><b>→</b>Türkiye Geneli Kargo Servis</span>
+          <span class="tki"><b>→</b>Medikal Cihaz Kart Tamiri</span>
+          <span class="tki"><b>→</b>Endüstriyel Kart Tamiri</span>
+          <span class="tki"><b>→</b>İnverter &amp; Sürücü Tamiri</span>
+          <span class="tki"><b>→</b>PLC &amp; Otomasyon Kartları</span>
+          <span class="tki"><b>→</b>CNC Kart Tamiri</span>
+          <span class="tki"><b>→</b>Beyaz Eşya Kart Tamiri</span>
+          <span class="tki"><b>→</b>UPS &amp; Güç Elektroniği</span>
+          <span class="tki"><b>→</b>PCB Tasarım &amp; Prototipleme</span>
+          <span class="tki"><b>→</b>BGA Yeniden Lehimleme</span>
+          <span class="tki"><b>→</b>Türkiye Geneli Kargo Servis</span>
+        </div>
+      </div>
+      <div class="btns">
+        <a href="hizmetler.html" class="btn bd">Hizmetlerimiz</a>
+        <a href="https://wa.me/905382630164?text=Merhaba" class="btn bwa" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#contact" class="btn bg">Teklif Al</a>
+      </div>
+    </div>
+    <div class="hs">
+      <div class="hsi"><div class="hsn"><span class="cnt" data-t="8">0</span></div><div class="hsl">Yetkinlik alanı</div></div>
+      <div class="hsi"><div class="hsn"><span class="cnt" data-t="6">0</span></div><div class="hsl">İl + Türkiye geneli kargo</div></div>
+      <div class="hsi"><div class="hsn">%<span class="cnt" data-t="100">0</span></div><div class="hsl">Ücretsiz ön inceleme</div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- HAKKIMIZDA -->
+<section id="about" class="ab">
+<div class="sw">
+  <div class="ag">
+    <div class="r">
+      <div class="tag"><div class="tl"></div><span class="tt">Biz Kimiz</span></div>
+      <h2 style="margin-bottom:16px">Mühendislik Odaklı<br>Elektronik Laboratuvarı</h2>
+      <p class="atp">ODSAN Elektronik, endüstriyel ve tüketici elektroniği alanında elektronik kart onarımı, arıza analizi ve PCB mühendislik hizmetleri sunan teknik bir mühendislik laboratuvarıdır.</p>
+      <p class="atp">Her arızalı kart sistematik analiz sürecinden geçirilir. Kritik komponentler test edilir, arızalı bileşenler profesyonel ekipmanlarla değiştirilir ve fonksiyonel testlerle teslim edilir.</p>
+      <p class="atp">İstanbul merkezli olup Türkiye genelinde kargo ile servis sunmaktayız.</p>
+      <div class="cr">
+        <span class="ct">Yazılı Garanti</span><span class="ct">Ücretsiz Ön İnceleme</span>
+        <span class="ct">Şeffaf Raporlama</span><span class="ct">SMD &amp; THT Onarım</span>
+        <span class="ct">BGA Lehimleme</span><span class="ct">Kargo Servis</span>
+      </div>
+    </div>
+    <div class="r r2">
+      <div class="yt">
+        <div class="yh"><span>No.</span><span>Yetkinlik Alanı</span><span style="text-align:right">Durum</span></div>
+        <div class="yr"><span class="yi">01</span><span class="yn">Endüstriyel Elektronik Kart Tamiri</span><span class="ys">Aktif</span></div>
+        <div class="yr"><span class="yi">02</span><span class="yn">İş Makinesi &amp; Otomasyon Kart Onarımı</span><span class="ys">Aktif</span></div>
+        <div class="yr"><span class="yi">03</span><span class="yn">Beyaz Eşya Elektronik Kart Tamiri</span><span class="ys">Aktif</span></div>
+        <div class="yr"><span class="yi">04</span><span class="yn">Güç Elektroniği &amp; Sürücü Kartları Onarımı</span><span class="ys">Aktif</span></div>
+        <div class="yr"><span class="yi">05</span><span class="yn">PCB Onarım ve Revizyon Hizmetleri</span><span class="ys">Aktif</span></div>
+        <div class="yr"><span class="yi">06</span><span class="yn">PCB Tasarım ve Prototipleme</span><span class="ys">Aktif</span></div>
+        <div class="yr"><span class="yi">07</span><span class="yn">Elektronik Arıza Analizi &amp; Test</span><span class="ys">Aktif</span></div>
+        <div class="yr"><span class="yi">08</span><span class="yn">Kart Modernizasyon &amp; Ömür Uzatma</span><span class="ys">Aktif</span></div>
+        <div class="yr"><span class="yi">09</span><span class="yn">Medikal Cihaz Elektronik Kart Tamiri</span><span class="ys">Aktif</span></div>
+      </div>
+      <div style="margin-top:12px;text-align:right">
+        <a href="hakkimizda.html" class="btn bd" style="font-size:12px;padding:8px 14px">Detaylı Bilgi →</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- SEKTÖRLER -->
+<section id="sectors">
+<div class="sw">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--b)" class="r">
+    <div>
+      <div class="tag"><div class="tl"></div><span class="tt">Sektörler</span></div>
+      <h2>Hizmet Verdiğimiz<br>Sektörler</h2>
+    </div>
+    <p style="font-size:14px;color:var(--ts);line-height:1.75;font-weight:300">Endüstriyel otomasyondan beyaz eşyaya, CNC sistemlerinden güç elektroniğine geniş yelpazede teknik hizmet.</p>
+  </div>
+  <div class="sg">
+    <div class="sc r"><div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16"/><rect x="9" y="9" width="6" height="6"/></svg></div><h3>Endüstriyel Otomasyon</h3><p>PLC, servo sürücü, frekans invertörü ve HMI kart onarımı.</p><div class="stags"><span class="stag">PLC</span><span class="stag">Servo</span><span class="stag">HMI</span></div></div>
+    <div class="sc r r1"><div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="8" width="14" height="10"/><path d="M16 10l4-4v12l-4-4"/></svg></div><h3>İş Makinesi</h3><p>Ekskavatör, forklift ve ağır taşıt ECU ile kontrol kartı onarımı.</p><div class="stags"><span class="stag">ECU</span><span class="stag">Hidrolik</span><span class="stag">CAN Bus</span></div></div>
+    <div class="sc r r2"><div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="2" width="14" height="20" rx="1"/><line x1="9" y1="7" x2="15" y2="7"/></svg></div><h3>Beyaz Eşya</h3><p>Buzdolabı, çamaşır makinesi, bulaşık makinesi ve klima kartı.</p><div class="stags"><span class="stag">Buzdolabı</span><span class="stag">Çamaşır</span><span class="stag">Klima</span></div></div>
+    <div class="sc r r3"><div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div><h3>CNC &amp; Makine Kontrol</h3><p>CNC tezgah, lazer kesim ve işleme merkezi kontrol kartı onarımı.</p><div class="stags"><span class="stag">CNC</span><span class="stag">Lazer</span><span class="stag">Kontrol</span></div></div>
+    <div class="sc r"><div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>İnverter &amp; Sürücü</h3><p>Frekans inverteri, soft starter ve motor sürücü kart onarımı.</p><div class="stags"><span class="stag">İnverter</span><span class="stag">IGBT</span><span class="stag">Sürücü</span></div></div>
+    <div class="sc r r1"><div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div><h3>UPS &amp; Güç Elektroniği</h3><p>UPS, güç kaynağı ve solar inverter kart onarımı.</p><div class="stags"><span class="stag">UPS</span><span class="stag">Solar</span><span class="stag">IGBT</span></div></div>
+    <div class="sc r r2"><div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>PCB Tasarım</h3><p>Sıfırdan PCB tasarımı, tersine mühendislik ve revizyon.</p><div class="stags"><span class="stag">Tasarım</span><span class="stag">Prototip</span><span class="stag">Revizyon</span></div></div>
+    <div class="sc r r3"><div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Medikal Elektronik</h3><p>Hasta monitörü, görüntüleme ve laboratuvar cihazı kart onarımı.</p><div class="stags"><span class="stag">Monitör</span><span class="stag">Görüntüleme</span><span class="stag">Lab</span></div></div>
+  </div>
+  <div style="text-align:center;margin-top:24px"><a href="sektorler.html" class="btn bd">Tüm Sektörler →</a></div>
+</div>
+</section>
+
+<!-- HİZMETLER -->
+<section id="services" style="background:var(--f);border-top:1px solid var(--b);border-bottom:1px solid var(--b)">
+<div class="sw">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--b)" class="r">
+    <div>
+      <div class="tag"><div class="tl"></div><span class="tt">Temel Hizmetler</span></div>
+      <h2>Ne Yapıyoruz?</h2>
+    </div>
+    <p style="font-size:14px;color:var(--ts);line-height:1.75;font-weight:300">Kart onarımından PCB tasarımına, arıza analizinden kart modernizasyonuna tek çatı altında teknik çözüm.</p>
+  </div>
+  <div class="svgr">
+    <article class="svc r">
+      <span class="svn">I.</span>
+      <div class="svi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="4" width="20" height="16"/><rect x="6" y="8" width="5" height="4"/><rect x="13" y="8" width="5" height="4"/></svg></div>
+      <h3>Elektronik Kart Tamiri</h3>
+      <p>Her arızalı kart sistematik analiz sürecinden geçirilir. Kritik komponentler test edilir, arızalı bileşenler değiştirilir ve fonksiyonel testlerle teslim edilir.</p>
+      <div class="svs">
+        <span class="svsi">SMD &amp; THT Komponent Onarımı</span>
+        <span class="svsi">BGA &amp; Fine-Pitch Lehimleme</span>
+        <span class="svsi">Güç Devresi Analizi</span>
+        <span class="svsi">Mikrodenetleyici Tabanlı Kartlar</span>
+        <span class="svsi">Fonksiyonel Test &amp; Yazılı Garanti</span>
+      </div>
+    </article>
+    <article class="svc r r1">
+      <span class="svn">II.</span>
+      <div class="svi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+      <h3>PCB Tasarım &amp; Prototipleme</h3>
+      <p>Sıfırdan PCB tasarımı veya mevcut kartların revize edilmesi. Tersine mühendislik dahil, prototipten seri üretime kadar tam destek.</p>
+      <div class="svs">
+        <span class="svsi">Çok Katmanlı PCB Tasarımı</span>
+        <span class="svsi">Tersine Mühendislik</span>
+        <span class="svsi">Kart Modernizasyonu</span>
+        <span class="svsi">Prototip Üretimi</span>
+        <span class="svsi">EMC Uyumlu Tasarım</span>
+      </div>
+    </article>
+    <article class="svc r r2">
+      <span class="svn">III.</span>
+      <div class="svi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+      <h3>Arıza Analizi &amp; Ömür Uzatma</h3>
+      <p>Sistematik arıza analizi ile kök neden tespiti. Kart modernizasyonu ve ömür uzatma hizmetleriyle mevcut ekipmanınızı değerlendirin.</p>
+      <div class="svs">
+        <span class="svsi">Detaylı Arıza Raporu</span>
+        <span class="svsi">İnverter &amp; Sürücü Kartları</span>
+        <span class="svsi">Endüstriyel Kontrol Kartları</span>
+        <span class="svsi">Röle &amp; Güç Anahtarlama</span>
+        <span class="svsi">Kart Modernizasyonu</span>
+      </div>
+    </article>
+  </div>
+  <div style="text-align:center;margin-top:24px"><a href="hizmetler.html" class="btn bd">Detaylı Bilgi →</a></div>
+</div>
+</section>
+
+<!-- SÜREÇ -->
+<section id="process" class="pr">
+<div class="sw">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--b)" class="r">
+    <div>
+      <div class="tag"><div class="tl"></div><span class="tt">Servis Süreci</span></div>
+      <h2>6 Adımda<br>Servis Süreci</h2>
+    </div>
+    <p style="font-size:14px;color:var(--ts);line-height:1.75;font-weight:300">Kartınızı göndermeden teslimatına kadar her adım şeffaf ve belgelenmiş şekilde yürütülür. Onay vermeden onarıma başlamıyoruz.</p>
+  </div>
+  <div class="pst">
+    <div class="ps r"><div class="psn">1</div><div class="pst2">Kart Gönderimi</div><div class="psd">Kargo veya elden teslim. Türkiye geneli kargo servis.</div></div>
+    <div class="ps r r1"><div class="psn">2</div><div class="pst2">Ücretsiz İnceleme</div><div class="psd">İlk inceleme tamamen ücretsiz. Arıza tipi belirlenir.</div></div>
+    <div class="ps r r2"><div class="psn">3</div><div class="pst2">Arıza Raporu</div><div class="psd">Detaylı teknik rapor ve fiyat onayınıza sunulur.</div></div>
+    <div class="ps r r3"><div class="psn">4</div><div class="pst2">Onarım</div><div class="psd">Arızalı bileşenler profesyonel ekipmanlarla değiştirilir.</div></div>
+    <div class="ps r"><div class="psn">5</div><div class="pst2">Test &amp; Kontrol</div><div class="psd">Fonksiyonel testler ve kalite kontrol tamamlanır.</div></div>
+    <div class="ps r r1"><div class="psn">6</div><div class="pst2">Güvenli Teslimat</div><div class="psd">Yazılı garanti ile iade, kargo takip bilgisi iletilir.</div></div>
+  </div>
+</div>
+</section>
+
+<!-- NEDEN BİZ -->
+<section id="why">
+<div class="sw">
+  <div class="tag r"><div class="tl"></div><span class="tt">Neden Biz</span></div>
+  <h2 class="r" style="margin-bottom:0">Neden ODSAN Elektronik?</h2>
+  <div class="wg">
+    <div class="wc r"><div class="wi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Sistematik Arıza Analizi</h3><p>Her kart belirlenmiş adımlardan geçer. Tahmine değil teknik analize dayalı teşhis.</p></div>
+    <div class="wc r r1"><div class="wi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><h3>Ekonomik Onarım</h3><p>Yeni kart fiyatının çok altında onarım. Maliyet avantajı, kaliteden ödün vermez.</p></div>
+    <div class="wc r r2"><div class="wi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div><h3>Şeffaf Teknik Raporlama</h3><p>Onarım öncesi detaylı arıza raporu. Ne yapıldığını açıkça bildiriyoruz.</p></div>
+    <div class="wc r"><div class="wi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Yazılı Servis Garantisi</h3><p>Her onarım yazılı garanti kapsamında. Garanti süresinde sorun çıkarsa ücretsiz bakım.</p></div>
+    <div class="wc r r1"><div class="wi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Ücretsiz Ön İnceleme</h3><p>Kartınızı gönderin, ücretsiz ön inceleme yapıyoruz. Onay olmadan onarıma başlamıyoruz.</p></div>
+    <div class="wc r r2"><div class="wi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Türkiye Geneli Kargo Servis</h3><p>İstanbul merkezli olup tüm Türkiye'ye kargo ile servis. Nerede olursanız olun hizmet alabilirsiniz.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- HİZMET BÖLGELERİ -->
+<section id="coverage" class="cov">
+<div class="sw">
+  <div class="covg">
+    <div class="r">
+      <div class="tag"><div class="tl"></div><span class="tt" style="color:var(--o)">Hizmet Bölgeleri</span></div>
+      <h2 style="color:var(--w);margin-bottom:12px">İstanbul'dan<br>Türkiye Geneline</h2>
+      <p style="font-size:14px;color:rgba(255,255,255,.45);font-weight:300;line-height:1.8;margin-bottom:4px">İstanbul merkezli firmamız, Türkiye genelinde kargo ile servis sunmaktadır. Kartınızı güvenle gönderebilir, onarım sonrası kapınıza teslim alabilirsiniz.</p>
+      <div class="kb">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        Türkiye geneli kargo ile servis
+      </div>
+    </div>
+    <div class="r r2">
+      <div class="citi">
+        <div class="ci"><div class="cin">İstanbul</div><div class="cis">Merkez Ofis</div></div>
+        <div class="ci"><div class="cin">Ankara</div><div class="cis">Kargo Servis</div></div>
+        <div class="ci"><div class="cin">Bursa</div><div class="cis">Kargo Servis</div></div>
+        <div class="ci"><div class="cin">Kocaeli</div><div class="cis">Kargo Servis</div></div>
+        <div class="ci"><div class="cin">İzmir</div><div class="cis">Kargo Servis</div></div>
+        <div class="ci"><div class="cin">Tekirdağ</div><div class="cis">Kargo Servis</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="contact">
+<div class="sw">
+  <div class="cog">
+    <div class="r">
+      <div class="tag"><div class="tl"></div><span class="tt">İletişim</span></div>
+      <h2 style="margin-bottom:12px">Kartınızı<br>Değerlendirelim</h2>
+      <p style="font-size:14px;color:var(--ts);line-height:1.75;font-weight:300;margin-bottom:24px">Arıza bilgilerinizi paylaşın, teknik ekibimiz en kısa sürede dönüş yapsın. Ön inceleme tamamen ücretsizdir.</p>
+      <div class="cdi">
+        <div class="cdic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.3 11.8a19.79 19.79 0 01-3.07-8.67A2 2 0 013.22 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div><div class="cdil">Telefon / WhatsApp</div><div class="cdiv"><a href="tel:+90 (538) 263 01 64">+90 (538) 263 01 64</a></div></div>
+      </div>
+      <div class="cdi">
+        <div class="cdic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="cdil">E-posta</div><div class="cdiv"><a href="mailto:info&#64;odsan&#46;com&#46;tr">info&#64;odsan&#46;com&#46;tr</a></div></div>
+      </div>
+      <div class="cdi">
+        <div class="cdic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="cdil">Merkez</div><div class="cdiv">İstanbul / Türkiye</div></div>
+      </div>
+      <a href="https://wa.me/905382630164?text=Merhaba%2C%20bilgi%20almak%20istiyorum." class="wac" target="_blank" rel="noopener">
+        <div class="wai"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
+        <div><strong>WhatsApp Destek</strong><span>Hızlı cevap · Teknik analiz · Ücretsiz ön inceleme</span></div>
+      </a>
+    </div>
+    <div class="cfb r r2">
+      <div class="cft">Servis / Teklif Talebi</div>
+      <form class="cf" action="mailto:info&#64;odsan&#46;com&#46;tr" method="post" enctype="text/plain">
+        <div class="cfr">
+          <div class="fg"><label for="nm">Ad Soyad</label><input type="text" id="nm" name="name" placeholder="Adınız" autocomplete="name"></div>
+          <div class="fg"><label for="co">Şirket</label><input type="text" id="co" name="company" placeholder="Opsiyonel"></div>
+        </div>
+        <div class="cfr">
+          <div class="fg"><label for="em">E-posta</label><input type="email" id="em" name="email" placeholder="email@firma.com" autocomplete="email"></div>
+          <div class="fg"><label for="ph">Telefon</label><input type="tel" id="ph" name="phone" placeholder="+90" autocomplete="tel"></div>
+        </div>
+        <div class="fg">
+          <label for="sv">Hizmet Türü</label>
+          <select id="sv" name="service">
+            <option value="" disabled selected>Seçiniz...</option>
+            <optgroup label="Kart Tamiri">
+              <option>Endüstriyel Elektronik Kart Tamiri</option>
+              <option>İnverter / Motor Sürücü Tamiri</option>
+              <option>PLC Kart Onarımı</option>
+              <option>CNC Kart Tamiri</option>
+              <option>İş Makinesi Elektronik Kart Tamiri</option>
+              <option>Beyaz Eşya Kart Tamiri</option>
+              <option>UPS / Güç Kaynağı Kart Onarımı</option>
+            </optgroup>
+            <optgroup label="Mühendislik">
+              <option>PCB Tasarım ve Prototipleme</option>
+              <option>Kart Modernizasyonu</option>
+              <option>Arıza Analizi ve Test</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="mg">Arıza / Kart Açıklaması</label>
+          <textarea id="mg" name="message" placeholder="Cihaz marka/modeli, arıza belirtisi, kargo mı elden mi teslim edeceğiniz..."></textarea>
+        </div>
+        <div class="cfbt">
+          <button type="submit" class="cfsb">Talebi Gönder →</button>
+          <a href="https://wa.me/905382630164" class="cfwa" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.123 1.524 5.859L.057 23.882a.5.5 0 00.611.61l6.041-1.459A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.497-5.2-1.366l-.373-.213-3.867.934.967-3.786-.234-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="fm">
+    <div>
+      <svg width="128" height="36" viewBox="0 0 128 36" style="margin-bottom:12px">
+        <rect x="1" y="1" width="126" height="34" rx="5" fill="#F0EEE8"/>
+        <clipPath id="fl"><rect x="1" y="1" width="126" height="34" rx="5"/></clipPath>
+        <rect clip-path="url(#fl)" x="1" y="27" width="126" height="8" fill="#D85A30"/>
+        <text x="64" y="17" font-family="'DM Sans',sans-serif" font-size="14" font-weight="700" fill="#111214" text-anchor="middle" dominant-baseline="central" letter-spacing="5">ODSAN</text>
+      </svg>
+      <p style="font-size:11px;color:rgba(255,255,255,.28);line-height:1.6;font-family:var(--m)">Elektronik Kart Tamiri<br>İstanbul · Türkiye Geneli</p>
+    </div>
+    <div class="fc">
+      <div>
+        <div class="fct">Sayfalar</div>
+        <ul class="fca">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="sektorler.html">Sektörler</a></li>
+          <li><a href="hizmetler.html">Hizmetler</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fct">Hizmetler</div>
+        <ul class="fca">
+          <li><a href="hizmetler.html">Kart Tamiri</a></li>
+          <li><a href="hizmetler.html">PCB Tasarım</a></li>
+          <li><a href="hizmetler.html">Arıza Analizi</a></li>
+          <li><a href="hizmetler.html">Ömür Uzatma</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fct">İletişim</div>
+        <ul class="fca">
+          <li><a href="tel:+90 (538) 263 01 64">+90 (538) 263 01 64</a></li>
+          <li><a href="mailto:info&#64;odsan&#46;com&#46;tr">info&#64;odsan&#46;com&#46;tr</a></li>
+          <li>İstanbul / Türkiye</li>
+          <li>Kargo ile Türkiye Geneli</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fb2">
+    <span>© 2024 ODSAN Elektronik — Tüm hakları saklıdır.</span>
+    <span>Elektronik Kart Tamiri · PCB Tasarım · İstanbul</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Hamburger menü — garantili çalışır
+  var hb = document.getElementById('HB');
+  var mm = document.getElementById('MM');
+  if(hb && mm){
+    hb.addEventListener('click', function(){
+      var isOpen = mm.classList.toggle('open');
+      hb.classList.toggle('open', isOpen);
+      hb.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    // Menüdeki linklere tıklanınca kapat
+    var links = mm.querySelectorAll('a');
+    links.forEach(function(link){
+      link.addEventListener('click', function(){
+        mm.classList.remove('open');
+        hb.classList.remove('open');
+        hb.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Scroll reveal
+  var els = document.querySelectorAll('.r');
+  if('IntersectionObserver' in window){
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('on'); ro.unobserve(e.target); }
+      });
+    },{threshold:0.08,rootMargin:'0px 0px -16px 0px'});
+    els.forEach(function(el){ ro.observe(el); });
+  } else {
+    // Fallback: IE/eski browser
+    els.forEach(function(el){ el.classList.add('on'); });
+  }
+
+  // Sayaç animasyonu
+  var cnts = document.querySelectorAll('.cnt');
+  if(cnts.length && 'IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el = e.target;
+        var target = parseInt(el.getAttribute('data-t'), 10);
+        var step = Math.ceil(target / 60);
+        var current = 0;
+        var timer = setInterval(function(){
+          current += step;
+          if(current >= target){ el.textContent = target; clearInterval(timer); }
+          else { el.textContent = current; }
+        }, 20);
+        co.unobserve(el);
+      });
+    },{threshold:0.5});
+    cnts.forEach(function(el){ co.observe(el); });
+  } else {
+    cnts.forEach(function(el){ el.textContent = el.getAttribute('data-t'); });
+  }
+})();
+</script>
+</body>
+</html>
