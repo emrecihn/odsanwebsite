@@ -425,7 +425,7 @@ footer{background:var(--onyx);border-top:3px solid var(--alaz)}
   window.filterCat=function(cat,btn){
     document.querySelectorAll('.cat-btn').forEach(function(b){b.classList.remove('active');});
     btn.classList.add('active');
-    document.querySelectorAll('.bc').forEach(function(el){
+    ectorAll('.bc').forEach(function(el){
       el.style.display=(cat==='all'||el.dataset.cat.includes(cat))?'':'none';
     });
   };
